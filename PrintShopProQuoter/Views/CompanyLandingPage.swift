@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct CompanyLandingPage : View {
+	
 	var company : Company?
 	
 	var body: some View {
 		
 		NavigationView{
 			ZStack {
-				
 				AngularGradient(gradient: Gradient(colors: [
 					Color(UIColor(red: 0.25, green: 0.81, blue: 1, alpha: 0.3)),
 					Color(UIColor(red: 0.0, green: 0.39, blue: 0.95, alpha: 1))
@@ -23,6 +23,7 @@ struct CompanyLandingPage : View {
 								center: .bottomLeading,
 								angle: Angle(degrees: 0.45))
 					.edgesIgnoringSafeArea(.all)
+				
 				HStack {
 					VStack {
 						ItemButton(company: company, text: "Quotes")
@@ -46,9 +47,9 @@ struct ItemButton: View {
 	
 	@State var isPresenting :Bool = false
 	var company : Company?
-	
 	var text : String
 	var body: some View {
+		
 		Button(action: {
 			self.isPresenting = true
 		}){
@@ -56,13 +57,18 @@ struct ItemButton: View {
 				RoundedRectangle(cornerRadius: 10)
 					.aspectRatio(contentMode: .fit)
 					.foregroundColor(Color(.white))
-				Text(text)
-					.foregroundColor(Color(.link))
-					.bold()
+				
+				VStack{
+					Text(text)
+						.foregroundColor(Color(.link))
+						.bold()
+				}
 			}
 		}
 	}
 }
+
+
 struct Preview : PreviewProvider {
 	
 	static var previews: some View {
