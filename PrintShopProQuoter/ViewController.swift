@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import SwiftUI
 
-class ViewController: UIViewController {
+class MainVC : UIHostingController<MainView> {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+	override init?(coder aDecoder: NSCoder, rootView: MainView) {
+		super.init(coder: aDecoder, rootView: rootView)
 	}
-
-
+	
+	@objc required dynamic init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder, rootView: MainView())
+	}
 }
 
+struct MainView : View {
+	
+	var body : some View {
+		
+		Text("Time to start work!")
+	}
+}
+
+
+struct ViewController_Previews: PreviewProvider {
+	static var previews: some View {
+		MainView()
+	}
+}
