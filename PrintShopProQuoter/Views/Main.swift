@@ -38,7 +38,10 @@ class MainVC : UIHostingController<Main> {
 struct Main : View {
 	
 	private var displayText : String
-	private var customerList : Customers?
+	
+	@ObservedObject private var customerList: Customers = Customers()
+	
+	@State private var isPresentingView = false
 	
 	// Retrieved company list from coredata.
 	private var retrievedList : [CoreCompany]?
