@@ -67,11 +67,94 @@ struct Main : View {
 		self.displayText = displayText
 		self.retrievedList = retrievedList
 	}
-}
-
-
-struct ViewController_Previews: PreviewProvider {
-	static var previews: some View {
-		Main()
+	
+	var body : some View {
+		
+		NavigationView{
+			VStack{
+				List(customerList.companies) { company in
+					NavigationLink(destination: CompanyLandingPage(company: company)) {
+						ItemRow(company: company)
+					}
+				}
+			}
+			.navigationBarTitle("Customer List")
+			.navigationBarItems(trailing:
+				AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList))
+				.environment(\.managedObjectContext, self.context)
+				.navigationBarTitle("Customer List")
+		}
+		.onAppear {
+			
+			let restoredList = self.retrievedList!.map { item -> Company in
+				Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
+			}
+			self.customerList.companies = restoredList
+		}
 	}
 }
+
+struct ItemRow: View {
+	
+	
+	var company : Company
+	
+	var body: some View {
+		HStack{
+			VStack(alignment:.leading) {
+				Text(company.name)
+					.fontWeight(.heavy)
+					.font(.headline)
+					.foregroundColor(.blue)
+				Text(company.address.street)
+					.fontWeight(.light)
+					.font(Font.system(size: 10))
+			}
+			
+			Spacer()
+			VStack{
+				company.quotes?.count != nil ? Text(String(describing: company.quotes?.count)) : Text("0")
+					.bold()
+				Text("Quotes")
+			}
+			.padding()
+			
+			VStack{
+				company.orders?.count != nil ? Text(String(describing: company.orders?.count)) : Text("0")
+					.bold()
+				Text("Orders")
+			}
+			.padding()
+		}
+	}
+}
+
+struct AddCompanyNavigationBarTrailingButton: View {
+	
+	@Binding var isPresentingView : Bool
+	@Environment(\.managedObjectContext) var context
+	
+	var customerList : Customers
+	
+	var body: some View {
+		HStack {
+			Button(action: {
+				self.isPresentingView = true
+			}, label: {
+				VStack{
+					Image(systemName: "plus")
+					Text("Add Customer")
+						.font(Font.system(size: 10))
+						.bold()
+				}
+			})
+				.sheet(isPresented: $isPresentingView, content: {
+					AddCompany().environment(\.managedObjectContext,self.context)
+						.environmentObject(self.customerList)
+				})
+				.padding(.top, 5)
+		}
+	}
+}
+
+
