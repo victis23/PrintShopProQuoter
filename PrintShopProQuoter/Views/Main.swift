@@ -16,11 +16,29 @@ class MainVC : UIHostingController<Main> {
 	}
 	
 	@objc required dynamic init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder, rootView: Main())
+		
+		// Retrieves the persistent container for CoreData Entities from our AppDelegate.
+		let context = (UIApplication.shared.delegate as! AppDelegate)
+			.persistentContainer.viewContext
+		
+		/// In a pure SwiftUI project these would be instanciated inside the SceneDelegate however when being hosted we declare these during initalization.
+		// Create an instance of Main and link coredata context to its managedObjectContext property.
+		// Add instance of Customer class as an environmentObject
+		let mainSwiftUI = Main()
+		.environment(\.managedObjectContext, context)
+			.environmentObject(Customers())
+		
+		super.init(coder: aDecoder, rootView: mainSwiftUI as! Main)
 	}
 }
 
 struct Main : View {
+	
+	// Observed object that contains the current list of customers.
+	@EnvironmentObject var customerList : Customers
+	
+	// Fetch request retrieves list of saved companies stored in coredata.
+	@FetchRequest<CoreCompany>(entity: CoreCompany.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CoreCompany.name, ascending: true)]) var savedCompanies
 	
 	var body : some View {
 		
