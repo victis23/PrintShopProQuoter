@@ -9,18 +9,18 @@
 import UIKit
 import SwiftUI
 
-class MainVC : UIHostingController<MainView> {
+class MainVC : UIHostingController<Main> {
 
-	override init?(coder aDecoder: NSCoder, rootView: MainView) {
+	override init?(coder aDecoder: NSCoder, rootView: Main) {
 		super.init(coder: aDecoder, rootView: rootView)
 	}
 	
 	@objc required dynamic init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder, rootView: MainView())
+		super.init(coder: aDecoder, rootView: Main())
 	}
 }
 
-struct MainView : View {
+struct Main : View {
 	
 	var body : some View {
 		
@@ -31,6 +31,6 @@ struct MainView : View {
 
 struct ViewController_Previews: PreviewProvider {
 	static var previews: some View {
-		MainView()
+		Main()
 	}
 }
