@@ -101,6 +101,9 @@
 		7D5DE3FD240BD56D00130319 /* PrintShopProQuoter */ = {
 			isa = PBXGroup;
 			children = (
+				7D5DE431240BD9A800130319 /* Models */,
+				7D5DE432240BD9AF00130319 /* Views */,
+				7D5DE433240BD9B400130319 /* Controllers */,
 				7D5DE3FE240BD56D00130319 /* AppDelegate.swift */,
 				7D5DE400240BD56D00130319 /* SceneDelegate.swift */,
 				7D5DE402240BD56D00130319 /* ViewController.swift */,
@@ -129,6 +132,27 @@
 				7D5DE425240BD56E00130319 /* Info.plist */,
 			);
 			path = PrintShopProQuoterUITests;
+			sourceTree = "<group>";
+		};
+		7D5DE431240BD9A800130319 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D5DE432240BD9AF00130319 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D5DE433240BD9B400130319 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
