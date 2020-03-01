@@ -18,6 +18,7 @@
 		7D5DE424240BD56E00130319 /* PrintShopProQuoterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE423240BD56E00130319 /* PrintShopProQuoterUITests.swift */; };
 		7D5DE437240BDBA500130319 /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE436240BDBA500130319 /* Customers.swift */; };
 		7D5DE439240BDBFE00130319 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE438240BDBFE00130319 /* Company.swift */; };
+		7D5DE43B240BDCA400130319 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE43A240BDCA400130319 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7D5DE425240BD56E00130319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D5DE436240BDBA500130319 /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
 		7D5DE438240BDBFE00130319 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		7D5DE43A240BDCA400130319 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				7D5DE436240BDBA500130319 /* Customers.swift */,
 				7D5DE438240BDBFE00130319 /* Company.swift */,
+				7D5DE43A240BDCA400130319 /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				7D5DE401240BD56D00130319 /* SceneDelegate.swift in Sources */,
 				7D5DE437240BDBA500130319 /* Customers.swift in Sources */,
 				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,
+				7D5DE43B240BDCA400130319 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
