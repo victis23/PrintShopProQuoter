@@ -39,11 +39,17 @@ class MainVC : UIHostingController<Main> {
 
 struct Main : View {
 	
-	// Observed object that contains the current list of customers.
-	@EnvironmentObject var customerList : Customers
+	private var displayText : String
+	private var customerList : Customers?
 	
-	// Fetch request retrieves list of saved companies stored in coredata.
-	@FetchRequest<CoreCompany>(entity: CoreCompany.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \CoreCompany.name, ascending: true)]) var savedCompanies
+	// Retrieved company list from coredata.
+	private var retrievedList : [CoreCompany]?
+	
+	private var context : NSManagedObjectContext {
+		let context = (UIApplication.shared.delegate as! AppDelegate)
+			.persistentContainer.viewContext
+		return context
+	}
 	
 	var body : some View {
 		
