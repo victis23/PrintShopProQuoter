@@ -21,6 +21,7 @@
 		7D5DE43B240BDCA400130319 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE43A240BDCA400130319 /* Contact.swift */; };
 		7D5DE43D240BDCCF00130319 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE43C240BDCCF00130319 /* Address.swift */; };
 		7D5DE43F240BDD0000130319 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE43E240BDD0000130319 /* Quote.swift */; };
+		7D5DE441240BDD4E00130319 /* QuoteOrderPrimaryElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE440240BDD4E00130319 /* QuoteOrderPrimaryElements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		7D5DE43A240BDCA400130319 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		7D5DE43C240BDCCF00130319 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		7D5DE43E240BDD0000130319 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		7D5DE440240BDD4E00130319 /* QuoteOrderPrimaryElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteOrderPrimaryElements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				7D5DE43A240BDCA400130319 /* Contact.swift */,
 				7D5DE43C240BDCCF00130319 /* Address.swift */,
 				7D5DE43E240BDD0000130319 /* Quote.swift */,
+				7D5DE440240BDD4E00130319 /* QuoteOrderPrimaryElements.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				7D5DE3FF240BD56D00130319 /* AppDelegate.swift in Sources */,
 				7D5DE401240BD56D00130319 /* SceneDelegate.swift in Sources */,
 				7D5DE43F240BDD0000130319 /* Quote.swift in Sources */,
+				7D5DE441240BDD4E00130319 /* QuoteOrderPrimaryElements.swift in Sources */,
 				7D5DE437240BDBA500130319 /* Customers.swift in Sources */,
 				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,
 				7D5DE43D240BDCCF00130319 /* Address.swift in Sources */,
