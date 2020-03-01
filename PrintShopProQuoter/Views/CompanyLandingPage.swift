@@ -12,20 +12,31 @@ struct CompanyLandingPage : View {
 	var company : Company?
 	
 	var body: some View {
+		
 		NavigationView{
-			HStack {
-				VStack {
-					ItemButton(company: company, text: "Quotes")
-					ItemButton(company: company, text: "Orders")
-					Spacer()
+			ZStack {
+				
+				AngularGradient(gradient: Gradient(colors: [
+					Color(UIColor(red: 0.25, green: 0.81, blue: 1, alpha: 0.3)),
+					Color(UIColor(red: 0.0, green: 0.39, blue: 0.95, alpha: 1))
+				]),
+								center: .bottomLeading,
+								angle: Angle(degrees: 0.45))
+					.edgesIgnoringSafeArea(.all)
+				HStack {
+					VStack {
+						ItemButton(company: company, text: "Quotes")
+						ItemButton(company: company, text: "Orders")
+						Spacer()
+					}
+					VStack {
+						ItemButton(company: company, text: "Contact Info")
+						ItemButton(company: company, text: "Location")
+						Spacer()
+					}
 				}
-				VStack {
-					ItemButton(company: company, text: "Contact Info")
-					ItemButton(company: company, text: "Location")
-					Spacer()
-				}
+				.padding()
 			}
-		.padding()
 		}
 		.navigationBarTitle(company?.name ?? "No Company")
 	}
