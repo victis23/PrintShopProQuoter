@@ -53,7 +53,19 @@ struct Main : View {
 	
 	var body : some View {
 		
-		Text("Time to start work!")
+		Text(displayText)
+			.onAppear {
+				
+				let restoredList = self.retrievedList!.map { item -> Company in
+					Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
+				}
+				self.customerList?.companies = restoredList
+		}
+	}
+	
+	init(displayText : String = "Text For Preview", retrievedList : [CoreCompany]? = nil) {
+		self.displayText = displayText
+		self.retrievedList = retrievedList
 	}
 }
 
