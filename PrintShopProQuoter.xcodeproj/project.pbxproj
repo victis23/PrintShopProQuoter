@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D5DE3FF240BD56D00130319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE3FE240BD56D00130319 /* AppDelegate.swift */; };
+		7D5DE401240BD56D00130319 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE400240BD56D00130319 /* SceneDelegate.swift */; };
+		7D5DE403240BD56D00130319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE402240BD56D00130319 /* ViewController.swift */; };
+		7D5DE406240BD56D00130319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5DE404240BD56D00130319 /* Main.storyboard */; };
+		7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE407240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld */; };
+		7D5DE40B240BD56E00130319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5DE40A240BD56E00130319 /* Assets.xcassets */; };
+		7D5DE40E240BD56E00130319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5DE40C240BD56E00130319 /* LaunchScreen.storyboard */; };
+		7D5DE419240BD56E00130319 /* PrintShopProQuoterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE418240BD56E00130319 /* PrintShopProQuoterTests.swift */; };
+		7D5DE424240BD56E00130319 /* PrintShopProQuoterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE423240BD56E00130319 /* PrintShopProQuoterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D5DE415240BD56E00130319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D5DE3F3240BD56D00130319 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5DE3FA240BD56D00130319;
+			remoteInfo = PrintShopProQuoter;
+		};
+		7D5DE420240BD56E00130319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D5DE3F3240BD56D00130319 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5DE3FA240BD56D00130319;
+			remoteInfo = PrintShopProQuoter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D5DE3FB240BD56D00130319 /* PrintShopProQuoter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintShopProQuoter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5DE3FE240BD56D00130319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D5DE400240BD56D00130319 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7D5DE402240BD56D00130319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D5DE405240BD56D00130319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D5DE408240BD56D00130319 /* PrintShopProQuoter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PrintShopProQuoter.xcdatamodel; sourceTree = "<group>"; };
+		7D5DE40A240BD56E00130319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D5DE40D240BD56E00130319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D5DE40F240BD56E00130319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5DE414240BD56E00130319 /* PrintShopProQuoterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintShopProQuoterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5DE418240BD56E00130319 /* PrintShopProQuoterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintShopProQuoterTests.swift; sourceTree = "<group>"; };
+		7D5DE41A240BD56E00130319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5DE41F240BD56E00130319 /* PrintShopProQuoterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintShopProQuoterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5DE423240BD56E00130319 /* PrintShopProQuoterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintShopProQuoterUITests.swift; sourceTree = "<group>"; };
+		7D5DE425240BD56E00130319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D5DE3F8240BD56D00130319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5DE411240BD56E00130319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5DE41C240BD56E00130319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D5DE3F2240BD56D00130319 = {
+			isa = PBXGroup;
+			children = (
+				7D5DE3FD240BD56D00130319 /* PrintShopProQuoter */,
+				7D5DE417240BD56E00130319 /* PrintShopProQuoterTests */,
+				7D5DE422240BD56E00130319 /* PrintShopProQuoterUITests */,
+				7D5DE3FC240BD56D00130319 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D5DE3FC240BD56D00130319 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D5DE3FB240BD56D00130319 /* PrintShopProQuoter.app */,
+				7D5DE414240BD56E00130319 /* PrintShopProQuoterTests.xctest */,
+				7D5DE41F240BD56E00130319 /* PrintShopProQuoterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D5DE3FD240BD56D00130319 /* PrintShopProQuoter */ = {
+			isa = PBXGroup;
+			children = (
+				7D5DE3FE240BD56D00130319 /* AppDelegate.swift */,
+				7D5DE400240BD56D00130319 /* SceneDelegate.swift */,
+				7D5DE402240BD56D00130319 /* ViewController.swift */,
+				7D5DE404240BD56D00130319 /* Main.storyboard */,
+				7D5DE40A240BD56E00130319 /* Assets.xcassets */,
+				7D5DE40C240BD56E00130319 /* LaunchScreen.storyboard */,
+				7D5DE40F240BD56E00130319 /* Info.plist */,
+				7D5DE407240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld */,
+			);
+			path = PrintShopProQuoter;
+			sourceTree = "<group>";
+		};
+		7D5DE417240BD56E00130319 /* PrintShopProQuoterTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D5DE418240BD56E00130319 /* PrintShopProQuoterTests.swift */,
+				7D5DE41A240BD56E00130319 /* Info.plist */,
+			);
+			path = PrintShopProQuoterTests;
+			sourceTree = "<group>";
+		};
+		7D5DE422240BD56E00130319 /* PrintShopProQuoterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D5DE423240BD56E00130319 /* PrintShopProQuoterUITests.swift */,
+				7D5DE425240BD56E00130319 /* Info.plist */,
+			);
+			path = PrintShopProQuoterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D5DE3FA240BD56D00130319 /* PrintShopProQuoter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D5DE428240BD56E00130319 /* Build configuration list for PBXNativeTarget "PrintShopProQuoter" */;
+			buildPhases = (
+				7D5DE3F7240BD56D00130319 /* Sources */,
+				7D5DE3F8240BD56D00130319 /* Frameworks */,
+				7D5DE3F9240BD56D00130319 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrintShopProQuoter;
+			productName = PrintShopProQuoter;
+			productReference = 7D5DE3FB240BD56D00130319 /* PrintShopProQuoter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D5DE413240BD56E00130319 /* PrintShopProQuoterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D5DE42B240BD56E00130319 /* Build configuration list for PBXNativeTarget "PrintShopProQuoterTests" */;
+			buildPhases = (
+				7D5DE410240BD56E00130319 /* Sources */,
+				7D5DE411240BD56E00130319 /* Frameworks */,
+				7D5DE412240BD56E00130319 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D5DE416240BD56E00130319 /* PBXTargetDependency */,
+			);
+			name = PrintShopProQuoterTests;
+			productName = PrintShopProQuoterTests;
+			productReference = 7D5DE414240BD56E00130319 /* PrintShopProQuoterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D5DE41E240BD56E00130319 /* PrintShopProQuoterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D5DE42E240BD56E00130319 /* Build configuration list for PBXNativeTarget "PrintShopProQuoterUITests" */;
+			buildPhases = (
+				7D5DE41B240BD56E00130319 /* Sources */,
+				7D5DE41C240BD56E00130319 /* Frameworks */,
+				7D5DE41D240BD56E00130319 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D5DE421240BD56E00130319 /* PBXTargetDependency */,
+			);
+			name = PrintShopProQuoterUITests;
+			productName = PrintShopProQuoterUITests;
+			productReference = 7D5DE41F240BD56E00130319 /* PrintShopProQuoterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D5DE3F3240BD56D00130319 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = DuhMarket;
+				TargetAttributes = {
+					7D5DE3FA240BD56D00130319 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					7D5DE413240BD56E00130319 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 7D5DE3FA240BD56D00130319;
+					};
+					7D5DE41E240BD56E00130319 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 7D5DE3FA240BD56D00130319;
+					};
+				};
+			};
+			buildConfigurationList = 7D5DE3F6240BD56D00130319 /* Build configuration list for PBXProject "PrintShopProQuoter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D5DE3F2240BD56D00130319;
+			productRefGroup = 7D5DE3FC240BD56D00130319 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D5DE3FA240BD56D00130319 /* PrintShopProQuoter */,
+				7D5DE413240BD56E00130319 /* PrintShopProQuoterTests */,
+				7D5DE41E240BD56E00130319 /* PrintShopProQuoterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D5DE3F9240BD56D00130319 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5DE40E240BD56E00130319 /* LaunchScreen.storyboard in Resources */,
+				7D5DE40B240BD56E00130319 /* Assets.xcassets in Resources */,
+				7D5DE406240BD56D00130319 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5DE412240BD56E00130319 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5DE41D240BD56E00130319 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D5DE3F7240BD56D00130319 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5DE403240BD56D00130319 /* ViewController.swift in Sources */,
+				7D5DE3FF240BD56D00130319 /* AppDelegate.swift in Sources */,
+				7D5DE401240BD56D00130319 /* SceneDelegate.swift in Sources */,
+				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5DE410240BD56E00130319 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5DE419240BD56E00130319 /* PrintShopProQuoterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5DE41B240BD56E00130319 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5DE424240BD56E00130319 /* PrintShopProQuoterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D5DE416240BD56E00130319 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5DE3FA240BD56D00130319 /* PrintShopProQuoter */;
+			targetProxy = 7D5DE415240BD56E00130319 /* PBXContainerItemProxy */;
+		};
+		7D5DE421240BD56E00130319 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5DE3FA240BD56D00130319 /* PrintShopProQuoter */;
+			targetProxy = 7D5DE420240BD56E00130319 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D5DE404240BD56D00130319 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D5DE405240BD56D00130319 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D5DE40C240BD56E00130319 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D5DE40D240BD56E00130319 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D5DE426240BD56E00130319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D5DE427240BD56E00130319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D5DE429240BD56E00130319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55P567K3FP;
+				INFOPLIST_FILE = PrintShopProQuoter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duhmarket.PrintShopProQuoter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D5DE42A240BD56E00130319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55P567K3FP;
+				INFOPLIST_FILE = PrintShopProQuoter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duhmarket.PrintShopProQuoter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D5DE42C240BD56E00130319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55P567K3FP;
+				INFOPLIST_FILE = PrintShopProQuoterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duhmarket.PrintShopProQuoterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrintShopProQuoter.app/PrintShopProQuoter";
+			};
+			name = Debug;
+		};
+		7D5DE42D240BD56E00130319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55P567K3FP;
+				INFOPLIST_FILE = PrintShopProQuoterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duhmarket.PrintShopProQuoterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrintShopProQuoter.app/PrintShopProQuoter";
+			};
+			name = Release;
+		};
+		7D5DE42F240BD56E00130319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55P567K3FP;
+				INFOPLIST_FILE = PrintShopProQuoterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duhmarket.PrintShopProQuoterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrintShopProQuoter;
+			};
+			name = Debug;
+		};
+		7D5DE430240BD56E00130319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55P567K3FP;
+				INFOPLIST_FILE = PrintShopProQuoterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duhmarket.PrintShopProQuoterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrintShopProQuoter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D5DE3F6240BD56D00130319 /* Build configuration list for PBXProject "PrintShopProQuoter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5DE426240BD56E00130319 /* Debug */,
+				7D5DE427240BD56E00130319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D5DE428240BD56E00130319 /* Build configuration list for PBXNativeTarget "PrintShopProQuoter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5DE429240BD56E00130319 /* Debug */,
+				7D5DE42A240BD56E00130319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D5DE42B240BD56E00130319 /* Build configuration list for PBXNativeTarget "PrintShopProQuoterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5DE42C240BD56E00130319 /* Debug */,
+				7D5DE42D240BD56E00130319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D5DE42E240BD56E00130319 /* Build configuration list for PBXNativeTarget "PrintShopProQuoterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5DE42F240BD56E00130319 /* Debug */,
+				7D5DE430240BD56E00130319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D5DE407240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D5DE408240BD56D00130319 /* PrintShopProQuoter.xcdatamodel */,
+			);
+			currentVersion = 7D5DE408240BD56D00130319 /* PrintShopProQuoter.xcdatamodel */;
+			path = PrintShopProQuoter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7D5DE3F3240BD56D00130319 /* Project object */;
+}
