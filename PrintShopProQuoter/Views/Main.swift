@@ -61,18 +61,20 @@ struct Main : View {
 	var body : some View {
 		
 		NavigationView{
-			VStack{
-				List(customerList.companies) { company in
-					NavigationLink(destination: CompanyLandingPage(company: company)) {
-						ItemRow(company: company)
+			ZStack{
+				VStack{
+					List(customerList.companies) { company in
+						NavigationLink(destination: CompanyLandingPage(company: company)) {
+							ItemRow(company: company)
+						}
 					}
 				}
-			}
-			.navigationBarTitle("Customer List")
-			.navigationBarItems(trailing:
-				AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList))
-				.environment(\.managedObjectContext, self.context)
 				.navigationBarTitle("Customer List")
+				.navigationBarItems(trailing:
+					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList))
+					.environment(\.managedObjectContext, self.context)
+					.navigationBarTitle("Customer List")
+			}
 		}
 		.onAppear {
 			
