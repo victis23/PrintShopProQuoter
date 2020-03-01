@@ -25,8 +25,6 @@ class MainVC : UIHostingController<Main> {
 		return response
 	}
 	
-	 
-
 	override init?(coder aDecoder: NSCoder, rootView: Main) {
 		super.init(coder: aDecoder, rootView: rootView)
 	}
@@ -45,22 +43,11 @@ struct Main : View {
 	// Retrieved company list from coredata.
 	private var retrievedList : [CoreCompany]?
 	
+	// Retrieves and saves reference to persistent container that will be passed to subsequent views.
 	private var context : NSManagedObjectContext {
 		let context = (UIApplication.shared.delegate as! AppDelegate)
 			.persistentContainer.viewContext
 		return context
-	}
-	
-	var body : some View {
-		
-		Text(displayText)
-			.onAppear {
-				
-				let restoredList = self.retrievedList!.map { item -> Company in
-					Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
-				}
-				self.customerList?.companies = restoredList
-		}
 	}
 	
 	init(displayText : String = "Text For Preview", retrievedList : [CoreCompany]? = nil) {
