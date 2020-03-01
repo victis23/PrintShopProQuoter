@@ -55,9 +55,9 @@ struct ItemButton: View {
 			ZStack {
 				RoundedRectangle(cornerRadius: 10)
 					.aspectRatio(contentMode: .fit)
-					.foregroundColor(Color(.secondarySystemFill))
+					.foregroundColor(Color(.white))
 				Text(text)
-					.foregroundColor(Color(.label))
+					.foregroundColor(Color(.link))
 					.bold()
 			}
 		}
