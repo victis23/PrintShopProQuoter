@@ -61,11 +61,20 @@ struct ItemButton: View {
 						.foregroundColor(Color(.link))
 						.bold()
 					Spacer()
-					Image(text)
-						.resizable()
-						.aspectRatio(contentMode: .fit)
-						.frame(width: 100, height: 100, alignment: .center)
-					Spacer()
+					
+					if text == "Contact Info" {
+						Image(text)
+							.resizable()
+							.aspectRatio(contentMode: .fit)
+							.frame(width: 150, height: 150, alignment: .center)
+						Spacer()
+					}else{
+						Image(text)
+							.resizable()
+							.aspectRatio(contentMode: .fit)
+							.frame(width: 100, height: 100, alignment: .center)
+						Spacer()
+					}
 				}
 			}
 		}
