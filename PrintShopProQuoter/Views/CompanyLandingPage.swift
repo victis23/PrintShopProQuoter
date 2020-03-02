@@ -21,19 +21,24 @@ struct CompanyLandingPage : View {
 		NavigationView{
 			ZStack {
 				GradientBackground()
-				HStack {
-					VStack {
-						ItemButton(company: company, text: "Quotes")
-						ItemButton(company: company, text: "Orders")
-						Spacer()
+				VStack{
+					ItemButton(company: company, text: "Contact Info")
+						.padding(.leading)
+						.padding(.trailing)
+					HStack {
+						VStack {
+							ItemButton(company: company, text: "Quotes")
+							ItemButton(company: company, text: "Orders")
+							Spacer()
+						}
+						VStack {
+							
+							ItemButton(company: company, text: "Location")
+							Spacer()
+						}
 					}
-					VStack {
-						ItemButton(company: company, text: "Contact Info")
-						ItemButton(company: company, text: "Location")
-						Spacer()
-					}
+					.padding()
 				}
-				.padding()
 			}
 		}
 		.navigationBarTitle(company?.name ?? "No Company")
@@ -52,17 +57,18 @@ struct ItemButton: View {
 		}){
 			ZStack {
 				RoundedRectangle(cornerRadius: 10)
-					.aspectRatio(contentMode: .fit)
 					.foregroundColor(Color(.white))
 				
 				VStack{
 					Text(text)
 						.foregroundColor(Color(.link))
 						.bold()
+					Spacer()
 					Image(text)
 						.resizable()
 						.aspectRatio(contentMode: .fit)
 						.frame(width: 100, height: 100, alignment: .center)
+					Spacer()
 				}
 			}
 		}
