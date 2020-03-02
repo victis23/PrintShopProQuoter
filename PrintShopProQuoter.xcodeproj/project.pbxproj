@@ -12,6 +12,7 @@
 		7D46F0BE240C0BB500B2EC35 /* AddAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */; };
 		7D46F0BF240C0BB500B2EC35 /* AddContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BD240C0BB500B2EC35 /* AddContact.swift */; };
 		7D46F0C1240C165000B2EC35 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0C0240C165000B2EC35 /* MainController.swift */; };
+		7D46F0C4240C848000B2EC35 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0C3240C848000B2EC35 /* GradientBackground.swift */; };
 		7D5DE3FF240BD56D00130319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE3FE240BD56D00130319 /* AppDelegate.swift */; };
 		7D5DE401240BD56D00130319 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE400240BD56D00130319 /* SceneDelegate.swift */; };
 		7D5DE403240BD56D00130319 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE402240BD56D00130319 /* Main.swift */; };
@@ -53,6 +54,7 @@
 		7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddress.swift; sourceTree = "<group>"; };
 		7D46F0BD240C0BB500B2EC35 /* AddContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContact.swift; sourceTree = "<group>"; };
 		7D46F0C0240C165000B2EC35 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		7D46F0C3240C848000B2EC35 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		7D5DE3FB240BD56D00130319 /* PrintShopProQuoter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintShopProQuoter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5DE3FE240BD56D00130319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D5DE400240BD56D00130319 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D46F0C2240C843300B2EC35 /* ComponentViews */ = {
+			isa = PBXGroup;
+			children = (
+				7D46F0C3240C848000B2EC35 /* GradientBackground.swift */,
+			);
+			path = ComponentViews;
+			sourceTree = "<group>";
+		};
 		7D5DE3F2240BD56D00130319 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		7D5DE432240BD9AF00130319 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D46F0C2240C843300B2EC35 /* ComponentViews */,
 				7D5DE402240BD56D00130319 /* Main.swift */,
 				7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */,
 				7D46F0BA240C0B9900B2EC35 /* AddCompany.swift */,
@@ -351,6 +362,7 @@
 				7D5DE437240BDBA500130319 /* Customers.swift in Sources */,
 				7D46F0BB240C0B9900B2EC35 /* AddCompany.swift in Sources */,
 				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,
+				7D46F0C4240C848000B2EC35 /* GradientBackground.swift in Sources */,
 				7D46F0BF240C0BB500B2EC35 /* AddContact.swift in Sources */,
 				7D5DE43D240BDCCF00130319 /* Address.swift in Sources */,
 				7D5DE43B240BDCA400130319 /* Contact.swift in Sources */,
