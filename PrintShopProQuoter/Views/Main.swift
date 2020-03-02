@@ -40,10 +40,12 @@ struct Main : View {
 							ItemRow(company: company)
 						}
 					}
+					.listRowBackground(Color.clear)
 				}
 				.navigationBarTitle("Customer List")
 				.navigationBarItems(trailing:
 					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList))
+					.foregroundColor(.white)
 					.environment(\.managedObjectContext, self.context)
 					.navigationBarTitle("Customer List")
 			}
@@ -70,7 +72,6 @@ struct ItemRow: View {
 				Text(company.name)
 					.fontWeight(.heavy)
 					.font(.headline)
-					.foregroundColor(.blue)
 				Text(company.address.street)
 					.fontWeight(.light)
 					.font(Font.system(size: 10))
