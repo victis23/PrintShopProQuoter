@@ -106,7 +106,7 @@ struct AddCompanyNavigationBarTrailingButton: View {
 	var body: some View {
 		HStack {
 			Button(action: {
-				self.isPresentingView = true
+				self.isPresentingView.toggle()
 			}, label: {
 				VStack{
 					Image(systemName: "plus")
