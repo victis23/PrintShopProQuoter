@@ -13,6 +13,7 @@
 		7D46F0BF240C0BB500B2EC35 /* AddContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BD240C0BB500B2EC35 /* AddContact.swift */; };
 		7D46F0C1240C165000B2EC35 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0C0240C165000B2EC35 /* MainController.swift */; };
 		7D46F0C4240C848000B2EC35 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0C3240C848000B2EC35 /* GradientBackground.swift */; };
+		7D46F0C7240C8CD200B2EC35 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0C6240C8CD200B2EC35 /* File.swift */; };
 		7D5DE3FF240BD56D00130319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE3FE240BD56D00130319 /* AppDelegate.swift */; };
 		7D5DE401240BD56D00130319 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE400240BD56D00130319 /* SceneDelegate.swift */; };
 		7D5DE403240BD56D00130319 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE402240BD56D00130319 /* Main.swift */; };
@@ -55,6 +56,7 @@
 		7D46F0BD240C0BB500B2EC35 /* AddContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContact.swift; sourceTree = "<group>"; };
 		7D46F0C0240C165000B2EC35 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		7D46F0C3240C848000B2EC35 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		7D46F0C6240C8CD200B2EC35 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7D5DE3FB240BD56D00130319 /* PrintShopProQuoter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintShopProQuoter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5DE3FE240BD56D00130319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D5DE400240BD56D00130319 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			path = ComponentViews;
 			sourceTree = "<group>";
 		};
+		7D46F0C5240C8CBB00B2EC35 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				7D46F0C6240C8CD200B2EC35 /* File.swift */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
 		7D5DE3F2240BD56D00130319 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 				7D5DE431240BD9A800130319 /* Models */,
 				7D5DE432240BD9AF00130319 /* Views */,
 				7D5DE433240BD9B400130319 /* Controllers */,
+				7D46F0C5240C8CBB00B2EC35 /* HelperClasses */,
 				7D5DE435240BDAEA00130319 /* StoryBoards */,
 				7D5DE40A240BD56E00130319 /* Assets.xcassets */,
 				7D5DE40F240BD56E00130319 /* Info.plist */,
@@ -356,6 +367,7 @@
 				7D5DE401240BD56D00130319 /* SceneDelegate.swift in Sources */,
 				7D5DE443240BDD7C00130319 /* Order.swift in Sources */,
 				7D46F0BE240C0BB500B2EC35 /* AddAddress.swift in Sources */,
+				7D46F0C7240C8CD200B2EC35 /* File.swift in Sources */,
 				7D5DE43F240BDD0000130319 /* Quote.swift in Sources */,
 				7D46F0C1240C165000B2EC35 /* MainController.swift in Sources */,
 				7D5DE441240BDD4E00130319 /* QuoteOrderPrimaryElements.swift in Sources */,
