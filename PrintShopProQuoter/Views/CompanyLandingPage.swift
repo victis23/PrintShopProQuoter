@@ -29,12 +29,9 @@ struct CompanyLandingPage : View {
 						VStack {
 							ItemButton(company: company, text: "Quotes")
 							ItemButton(company: company, text: "Orders")
-							Spacer()
 						}
 						VStack {
-							
 							ItemButton(company: company, text: "Location")
-							Spacer()
 						}
 					}
 					.padding()
