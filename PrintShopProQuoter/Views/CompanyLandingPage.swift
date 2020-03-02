@@ -60,7 +60,7 @@ struct ItemButton: View {
 					Text(text)
 						.foregroundColor(Color(.link))
 						.bold()
-					Spacer()
+						.padding(.top)
 					
 					if text == "Contact Info" {
 						Image(text)
@@ -69,13 +69,14 @@ struct ItemButton: View {
 							.frame(width: 150, height: 150, alignment: .center)
 						Spacer()
 					}else{
+						
 						Image(text)
 							.resizable()
 							.aspectRatio(contentMode: .fit)
 							.frame(width: 100, height: 100, alignment: .center)
-						Spacer()
 					}
 				}
+				.padding(.bottom)
 			}
 		}
 		.sheet(isPresented: $isPresenting, content: {
@@ -89,7 +90,7 @@ struct Preview : PreviewProvider {
 	
 	static var previews: some View {
 		CompanyLandingPage()
-			.previewDevice("iPhone X")
+			.previewDevice("iPhone Xs")
 			.colorScheme(.light)
 		//			.previewLayout(.sizeThatFits)
 	}
