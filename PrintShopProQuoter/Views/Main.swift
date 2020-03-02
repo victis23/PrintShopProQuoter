@@ -12,8 +12,6 @@ import CoreData
 
 struct Main : View {
 	
-	private var displayText : String
-	
 	@ObservedObject private var customerList: Customers = Customers()
 	
 	@State private var isPresentingView = false
@@ -28,8 +26,7 @@ struct Main : View {
 		return context
 	}
 	
-	init(displayText : String = "Text For Preview", retrievedList : [CoreCompany]? = nil) {
-		self.displayText = displayText
+	init(retrievedList : [CoreCompany]? = nil) {
 		self.retrievedList = retrievedList
 	}
 	
@@ -51,8 +48,8 @@ struct Main : View {
 					.navigationBarTitle("Customer List")
 			}
 		}
-		.onAppear {
 			
+		.onAppear {
 			let restoredList = self.retrievedList!.map { item -> Company in
 				Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
 			}
@@ -67,6 +64,7 @@ struct ItemRow: View {
 	var company : Company
 	
 	var body: some View {
+		
 		HStack{
 			VStack(alignment:.leading) {
 				Text(company.name)
