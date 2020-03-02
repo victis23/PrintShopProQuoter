@@ -43,55 +43,46 @@ protocol AccessControllerProtocol : UIViewController {
 class OrdersViewController: UIViewController, AccessControllerProtocol {
 	
 	var company : Company!
-	@IBOutlet var companyNameLabel : UILabel!
+//	@IBOutlet var companyNameLabel : UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		if let company = company {
-			companyNameLabel.text = company.name
-		}
+//		if let company = company {
+//			companyNameLabel.text = company.name
+//		}
 	}
 }
 
 class QuotesViewController: UIViewController, AccessControllerProtocol {
 	
 	var company : Company!
-	@IBOutlet var companyNameLabel : UILabel!
+
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		if let company = company {
-			companyNameLabel.text = company.name
-		}
+		
 	}
 }
 
 class LocationViewController: UIViewController, AccessControllerProtocol {
 	
 	var company : Company!
-	@IBOutlet var companyNameLabel : UILabel!
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		if let company = company {
-			companyNameLabel.text = company.name
-		}
+
 	}
 }
 
 class ContactViewController: UIViewController, AccessControllerProtocol {
 	
 	var company : Company!
-	@IBOutlet var companyNameLabel : UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		if let company = company {
-			companyNameLabel.text = company.name
-		}
 	}
 }

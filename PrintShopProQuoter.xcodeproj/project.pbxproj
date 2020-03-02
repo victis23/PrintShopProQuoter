@@ -31,6 +31,10 @@
 		7D5DE441240BDD4E00130319 /* QuoteOrderPrimaryElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE440240BDD4E00130319 /* QuoteOrderPrimaryElements.swift */; };
 		7D5DE443240BDD7C00130319 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DE442240BDD7C00130319 /* Order.swift */; };
 		7D757BEA240CA8D7007ADD64 /* UikitWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D757BE9240CA8D7007ADD64 /* UikitWrapper.swift */; };
+		7D757BEC240CAE4A007ADD64 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BEB240CAE4A007ADD64 /* Orders.storyboard */; };
+		7D757BF1240CB11E007ADD64 /* Quotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF0240CB11E007ADD64 /* Quotes.storyboard */; };
+		7D757BF3240CB1AB007ADD64 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF2240CB1AB007ADD64 /* Location.storyboard */; };
+		7D757BF5240CB1C8007ADD64 /* Contact Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		7D5DE440240BDD4E00130319 /* QuoteOrderPrimaryElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteOrderPrimaryElements.swift; sourceTree = "<group>"; };
 		7D5DE442240BDD7C00130319 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		7D757BE9240CA8D7007ADD64 /* UikitWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UikitWrapper.swift; sourceTree = "<group>"; };
+		7D757BEB240CAE4A007ADD64 /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
+		7D757BF0240CB11E007ADD64 /* Quotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quotes.storyboard; sourceTree = "<group>"; };
+		7D757BF2240CB1AB007ADD64 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Contact Info.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +236,10 @@
 			children = (
 				7D5DE40C240BD56E00130319 /* LaunchScreen.storyboard */,
 				7D5DE404240BD56D00130319 /* Main.storyboard */,
+				7D757BF0240CB11E007ADD64 /* Quotes.storyboard */,
+				7D757BEB240CAE4A007ADD64 /* Orders.storyboard */,
+				7D757BF2240CB1AB007ADD64 /* Location.storyboard */,
+				7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -339,6 +351,10 @@
 				7D5DE40E240BD56E00130319 /* LaunchScreen.storyboard in Resources */,
 				7D5DE40B240BD56E00130319 /* Assets.xcassets in Resources */,
 				7D5DE406240BD56D00130319 /* Main.storyboard in Resources */,
+				7D757BF3240CB1AB007ADD64 /* Location.storyboard in Resources */,
+				7D757BF5240CB1C8007ADD64 /* Contact Info.storyboard in Resources */,
+				7D757BEC240CAE4A007ADD64 /* Orders.storyboard in Resources */,
+				7D757BF1240CB11E007ADD64 /* Quotes.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
