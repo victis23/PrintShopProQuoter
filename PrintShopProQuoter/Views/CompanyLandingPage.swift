@@ -66,6 +66,9 @@ struct ItemButton: View {
 				}
 			}
 		}
+		.sheet(isPresented: $isPresenting, content: {
+			UIKitWrapper(company: self.company!, storyboardPointer: self.text)
+		})
 	}
 }
 
