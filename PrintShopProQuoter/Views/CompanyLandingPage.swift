@@ -10,7 +10,11 @@ import SwiftUI
 
 struct CompanyLandingPage : View {
 	
-	var company : Company?
+	private var company : Company?
+	
+	init(company : Company? = nil){
+		self.company = company
+	}
 	
 	var body: some View {
 		

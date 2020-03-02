@@ -11,14 +11,14 @@ import CoreData
 
 struct AddCompany: View {
 	
-	@Environment(\.presentationMode) var presentationMode
-	@Environment(\.managedObjectContext) var context
+	@Environment(\.presentationMode) private var presentationMode
+	@Environment(\.managedObjectContext) private var context
 	
-	@EnvironmentObject var customerList : Customers
+	@EnvironmentObject private var customerList : Customers
 	
-	@State var name = ""
-	@State var address = "Default Address"
-	@State var contact = "Defalut Contact Name"
+	@State private var name = ""
+	@State private var address = "Default Address"
+	@State private var contact = "Defalut Contact Name"
 	
 	var body: some View {
 		
