@@ -8,7 +8,9 @@
 
 import SwiftUI
 
+/// Creates a background that scales in depth starting from the buttom left of the screen.
 struct GradientBackground: View {
+	
 	var body: some View {
 		AngularGradient(gradient: Gradient(colors: [
 			Color(UIColor(red: 0.25, green: 0.81, blue: 1, alpha: 0.3)),
@@ -21,7 +23,9 @@ struct GradientBackground: View {
 }
 
 struct GradientBackground_Previews: PreviewProvider {
-    static var previews: some View {
-        GradientBackground()
-    }
+   
+	static var previews: some View {
+		GradientBackground()
+		.previewLayout(.sizeThatFits)
+	}
 }
