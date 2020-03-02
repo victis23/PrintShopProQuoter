@@ -34,6 +34,7 @@ struct Main : View {
 		
 		NavigationView{
 			ZStack{
+				GradientBackground()
 				VStack{
 					List(customerList.companies) { company in
 						NavigationLink(destination: CompanyLandingPage(company: company)) {
