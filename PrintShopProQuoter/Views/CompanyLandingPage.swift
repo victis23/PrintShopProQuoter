@@ -77,6 +77,9 @@ struct Preview : PreviewProvider {
 	
 	static var previews: some View {
 		CompanyLandingPage()
+			.previewDevice("iPhone X")
+			.colorScheme(.light)
+		//			.previewLayout(.sizeThatFits)
 	}
 }
 
