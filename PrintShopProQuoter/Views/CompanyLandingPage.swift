@@ -16,14 +16,7 @@ struct CompanyLandingPage : View {
 		
 		NavigationView{
 			ZStack {
-				AngularGradient(gradient: Gradient(colors: [
-					Color(UIColor(red: 0.25, green: 0.81, blue: 1, alpha: 0.3)),
-					Color(UIColor(red: 0.0, green: 0.39, blue: 0.95, alpha: 1))
-				]),
-								center: .bottomLeading,
-								angle: Angle(degrees: 0.45))
-					.edgesIgnoringSafeArea(.all)
-				
+				GradientBackground()
 				HStack {
 					VStack {
 						ItemButton(company: company, text: "Quotes")
@@ -75,3 +68,4 @@ struct Preview : PreviewProvider {
 		CompanyLandingPage()
 	}
 }
+
