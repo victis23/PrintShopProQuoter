@@ -59,6 +59,10 @@ struct ItemButton: View {
 					Text(text)
 						.foregroundColor(Color(.link))
 						.bold()
+					Image(text)
+						.resizable()
+						.aspectRatio(contentMode: .fit)
+						.frame(width: 100, height: 100, alignment: .center)
 				}
 			}
 		}
