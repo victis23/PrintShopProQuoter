@@ -57,7 +57,42 @@ struct AddressForm: View {
 				Text("Save")
 			}
 		}
-		.foregroundColor(.white)
+		.navigationBarTitle("Address")
+	}
+}
+
+
+struct AddressForm: View {
+	
+	@Binding private var street : String
+	@Binding private var city : String
+	@Binding private var state : String
+	@Binding private var country : String
+	@Binding private var zipcode : String
+	
+	init(street:Binding<String>, city: Binding<String>, state: Binding<String>, country : Binding<String>, zipcode: Binding<String>){
+		self._street = street
+		self._city = city
+		self._state = state
+		self._country = country
+		self._zipcode = zipcode
+	}
+	
+	var body: some View {
+		
+		Form{
+			TextField("Street", text: $street)
+				.padding()
+			TextField("City", text: $city)
+				.padding()
+			TextField("State", text: $state)
+				.padding()
+			TextField("Country", text: $country)
+				.padding()
+			TextField("Zipcode", text: $zipcode)
+				.padding()
+		}
+		.font(.title)
 	}
 }
 
