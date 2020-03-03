@@ -53,7 +53,7 @@ struct AddCompany: View {
 						company.name = newCompany.name
 						company.id = newCompany.id
 						let address = CoreAddress(context: self.context)
-						address.street = newCompany.address.street
+						address.street = newCompany.address?.street
 						company.companyAddress?.street = address.street
 						try? self.context.save()
 						
