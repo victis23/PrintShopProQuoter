@@ -28,11 +28,11 @@ struct AddAddress: View {
 
 struct AddressForm: View {
 	
-	@State  var street : String = ""
-	@State  var city : String = ""
-	@State  var state : String = ""
-	@State  var country : String = ""
-	@State  var zipcode : String = ""
+	@State private var street : String = ""
+	@State private var city : String = ""
+	@State private var state : String = ""
+	@State private var country : String = ""
+	@State private var zipcode : String = ""
 	
 	var body: some View {
 		
