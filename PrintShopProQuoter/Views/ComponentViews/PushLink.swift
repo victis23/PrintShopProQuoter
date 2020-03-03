@@ -34,24 +34,3 @@ struct PushLink<Content:View,Destination:View>: View {
 	}
 }
 
-extension View {
-	
-//	public func sheet<Content>(isPresented: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View where Content : View
-	
-	public func pushSheet<Content:View>(isPresenting: Binding<Bool>, @ViewBuilder content : @escaping () -> Content) -> some View {
-		
-		var isPresenting = isPresenting.wrappedValue
-		
-		var body : some View {
-			
-			ZStack{
-			
-				if isPresenting {
-					content()
-						.transition(.move(edge: .trailing))
-				}
-			}
-		}
-		return body
-	}
-}
