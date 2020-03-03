@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 import CoreData
 
 @UIApplicationMain
@@ -15,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		
+		// IQKeyboard Manager
+		let keyboardManager = IQKeyboardManager.shared
+		keyboardManager.enable = true
+		keyboardManager.enableAutoToolbar = false
+		keyboardManager.shouldResignOnTouchOutside = true
+		keyboardManager.keyboardDistanceFromTextField = 100
+		
+		
 		
 		// Set background of tableView to transparent globally.
 		UITableView.appearance().backgroundColor = UIColor.clear
