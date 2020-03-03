@@ -10,24 +10,6 @@ import SwiftUI
 
 struct AddAddress: View {
 	
-	
-	@Environment(\.presentationMode) private var presentationMode
-	
-	var body: some View {
-		
-		NavigationView{
-			ZStack{
-				GradientBackground()
-				AddressForm()
-			}
-		}
-		.navigationBarTitle("Address")
-	}
-}
-
-
-struct AddressForm: View {
-	
 	@State private var street : String = ""
 	@State private var city : String = ""
 	@State private var state : String = ""
