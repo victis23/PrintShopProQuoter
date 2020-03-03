@@ -52,13 +52,15 @@ struct AddCompany: View {
 						let company = CoreCompany(context: self.context)
 						company.name = newCompany.name
 						company.id = newCompany.id
+						
 						let address = CoreAddress(context: self.context)
 						address.street = newCompany.address?.street
 						company.companyAddress?.street = address.street
+						
 						try? self.context.save()
 						
-						
 						self.presentationMode.wrappedValue.dismiss()
+						
 					}, label: {
 						ZStack {
 							Capsule()
