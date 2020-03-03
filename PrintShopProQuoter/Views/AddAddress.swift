@@ -16,27 +16,23 @@ struct AddAddress: View {
 	@State private var country : String = ""
 	@State private var zipcode : String = ""
 	
+	@Environment(\.presentationMode) private var presentationMode
+	
 	var body: some View {
 		
-		VStack{
-			Form{
-				TextField("Street", text: $street)
-					.padding()
-				TextField("City", text: $city)
-					.padding()
-				TextField("State", text: $state)
-					.padding()
-				TextField("Country", text: $country)
-					.padding()
-				TextField("Zipcode", text: $zipcode)
-					.padding()
-			}
-			.font(.title)
-			
-			Button(action: {
-				print(self.street)
-			}) {
-				Text("Save")
+		NavigationView{
+			ZStack{
+				GradientBackground()
+				VStack{
+					AddressForm(street: $street, city: $city, state: $state, country: $country, zipcode: $zipcode)
+					Button(action: {
+						print(self.street)
+						self.presentationMode.wrappedValue.dismiss()
+					}) {
+						Text("Submit")
+					}
+				}
+				.foregroundColor(.white)
 			}
 		}
 		.navigationBarTitle("Address")
