@@ -32,7 +32,11 @@ struct AddAddress: View {
 				VStack{
 					AddressForm(street: $street, city: $city, state: $state, country: $country, zipcode: $zipcode)
 					Button(action: {
-						print(self.street)
+						self.address.street = self.street
+						self.address.city = self.city
+						self.address.state = self.state
+						self.address.country = self.country
+						self.address.zipcode = self.zipcode
 						self.presentationMode.wrappedValue.dismiss()
 					}) {
 						Text("Submit")
@@ -81,6 +85,7 @@ struct AddressForm: View {
 }
 
 struct AddAddress_Previews: PreviewProvider {
+	
 	static var previews: some View {
 		AddAddress()
 	}
