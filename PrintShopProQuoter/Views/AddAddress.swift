@@ -16,6 +16,8 @@ struct AddAddress: View {
 	@State private var country : String = ""
 	@State private var zipcode : String = ""
 	
+	@Binding private var address : Address
+	
 	@Environment(\.presentationMode) private var presentationMode
 	
 	var body: some View {
