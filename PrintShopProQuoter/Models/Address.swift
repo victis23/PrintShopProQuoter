@@ -10,7 +10,7 @@ import Foundation
 
 struct Address {
 	
-	var street : String
+	var street : String?
 	var city : String?
 	var state : String?
 	var country : String?
