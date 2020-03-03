@@ -17,7 +17,7 @@ struct AddCompany: View {
 	@EnvironmentObject private var customerList : Customers
 	
 	@State private var name = ""
-	@State private var address : Address = Address(street: "Default", city: nil, state: nil, country: nil, zipcode: nil)
+	@State private var address : Address = Address(street: nil, city: nil, state: nil, country: nil, zipcode: nil)
 	@State private var contact = "Defalut Contact Name"
 	
 	var body: some View {
@@ -31,7 +31,7 @@ struct AddCompany: View {
 						TextField("Company Name", text: $name)
 							.padding()
 						
-						NavigationLink(destination: AddAddress(), label: {
+						NavigationLink(destination: AddAddress(address: $address), label: {
 							Text("Address")
 								.padding(.all, 20)
 						})
