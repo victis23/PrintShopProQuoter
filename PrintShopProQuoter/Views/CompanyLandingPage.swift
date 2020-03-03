@@ -50,7 +50,7 @@ struct ItemButton: View {
 	var body: some View {
 		
 		Button(action: {
-			self.isPresenting = true
+			self.isPresenting.toggle()
 		}){
 			ZStack {
 				RoundedRectangle(cornerRadius: 10)
