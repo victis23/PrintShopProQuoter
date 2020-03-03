@@ -15,8 +15,8 @@ struct PushLink<Content:View,Destination:View>: View {
 	var destination : () -> Destination
 	
 	init(isPresenting:Binding<Bool>,
-		 @ViewBuilder destination: @escaping () -> Destination,
-					  @ViewBuilder content: @escaping () -> Content) {
+		 @ViewBuilder content: @escaping () -> Content,
+					  @ViewBuilder destination: @escaping () -> Destination) {
 		
 		self.content = content
 		self.destination = destination
