@@ -17,7 +17,7 @@ struct AddCompany: View {
 	@EnvironmentObject private var customerList : Customers
 	
 	@State private var name = ""
-	@State private var address = "Default Address"
+	@State private var address : Address = Address(street: "Default", city: nil, state: nil, country: nil, zipcode: nil)
 	@State private var contact = "Defalut Contact Name"
 	
 	var body: some View {
