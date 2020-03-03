@@ -52,10 +52,12 @@ struct AddCompany: View {
 						let company = CoreCompany(context: self.context)
 						company.name = newCompany.name
 						company.id = newCompany.id
-						
-						let address = CoreAddress(context: self.context)
-						address.street = newCompany.address?.street
-						company.companyAddress?.street = address.street
+						company.companyAddress = CoreAddress(context: self.context)
+						company.companyAddress?.street = newCompany.address?.street
+						company.companyAddress?.city = newCompany.address?.city
+						company.companyAddress?.state = newCompany.address?.state
+						company.companyAddress?.country = newCompany.address?.country
+						company.companyAddress?.zipcode = newCompany.address?.zipcode
 						
 						try? self.context.save()
 						
