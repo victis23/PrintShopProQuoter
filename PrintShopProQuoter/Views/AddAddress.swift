@@ -87,6 +87,6 @@ struct AddressForm: View {
 struct AddAddress_Previews: PreviewProvider {
 	
 	static var previews: some View {
-		AddAddress()
+		AddAddress(address: .constant(Address(street: nil, city: nil, state: nil, country: nil, zipcode: nil)))
 	}
 }
