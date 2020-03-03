@@ -20,6 +20,10 @@ struct AddAddress: View {
 	
 	@Environment(\.presentationMode) private var presentationMode
 	
+	init(address: Binding<Address>){
+		self._address = address
+	}
+	
 	var body: some View {
 		
 		NavigationView{
