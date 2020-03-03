@@ -45,7 +45,7 @@ struct AddCompany: View {
 					Spacer()
 					
 					Button(action: {
-						let newCompany = Company(name: self.name, address: Address(street: self.address), contact: Contact(name: self.contact), quotes: nil, orders: nil)
+						let newCompany = Company(name: self.name, address: self.address, contact: Contact(name: self.contact), quotes: nil, orders: nil)
 						self.customerList.companies.append(newCompany)
 						
 						
