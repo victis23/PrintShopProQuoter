@@ -46,8 +46,8 @@ struct AddCompany: View {
 					
 					Button(action: {
 						let newCompany = Company(name: self.name, address: self.address, contact: Contact(name: self.contact), quotes: nil, orders: nil)
-						self.customerList.companies.append(newCompany)
 						
+						self.customerList.companies.append(newCompany)
 						
 						let company = CoreCompany(context: self.context)
 						company.name = newCompany.name
