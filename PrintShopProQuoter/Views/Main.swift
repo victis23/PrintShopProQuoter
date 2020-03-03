@@ -70,10 +70,10 @@ struct ItemRow: View {
 		
 		HStack{
 			VStack(alignment:.leading) {
-				Text(company.name)
+				Text(company.name ?? "Error No Value")
 					.fontWeight(.heavy)
 					.font(.headline)
-				Text(company.address.street)
+				Text(company.address?.street ?? "Error No Value")
 					.fontWeight(.light)
 					.font(Font.system(size: 10))
 			}
