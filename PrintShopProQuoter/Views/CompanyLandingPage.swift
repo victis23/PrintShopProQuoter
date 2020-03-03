@@ -79,9 +79,9 @@ struct ItemButton: View {
 				.padding(.bottom)
 			}
 		}
-		.sheet(isPresented: $isPresenting, content: {
+		.sheet(isPresented: $isPresenting) {
 			UIKitWrapper(company: self.company!, storyboardPointer: self.text)
-		})
+		}
 	}
 }
 
