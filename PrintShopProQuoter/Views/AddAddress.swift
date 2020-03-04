@@ -26,7 +26,6 @@ struct AddAddress: View {
 	
 	var body: some View {
 		
-		NavigationView{
 			ZStack{
 				GradientBackground()
 				VStack{
@@ -43,7 +42,6 @@ struct AddAddress: View {
 					}
 				}
 				.foregroundColor(.white)
-			}
 		}
 		.navigationBarTitle("Address")
 	}
