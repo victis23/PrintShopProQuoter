@@ -25,6 +25,7 @@ struct AddCompany: View {
 		NavigationView {
 			ZStack{
 				GradientBackground()
+				
 				VStack{
 					List(content: {
 						
@@ -42,6 +43,7 @@ struct AddCompany: View {
 						})
 					})
 						.foregroundColor(.white)
+					
 					Spacer()
 					
 					Button(action: {
@@ -64,10 +66,14 @@ struct AddCompany: View {
 						self.presentationMode.wrappedValue.dismiss()
 						
 					}, label: {
+						
 						ZStack {
-							Capsule()
-								.frame(minWidth: 250, idealWidth: 265, maxWidth: 350, minHeight: 50, idealHeight: 55, maxHeight: 60, alignment: .center)
+							
+							RoundedRectangle(cornerRadius: 10	 , style: .continuous)
 								.foregroundColor(.white)
+								.frame(height: 75, alignment: .center)
+								.shadow(color: Color(UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)), radius: 10, x: 0, y: 10)
+							
 							Text("Save New Company")
 								.font(.largeTitle)
 								.foregroundColor(Color(.link))
@@ -81,6 +87,7 @@ struct AddCompany: View {
 			}
 			.navigationBarTitle("Add Company")
 		}
+		.navigationViewStyle(StackNavigationViewStyle())
 	}
 }
 
