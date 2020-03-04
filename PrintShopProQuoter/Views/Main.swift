@@ -51,7 +51,8 @@ struct Main : View {
 					.navigationBarTitle("Customer List")
 			}
 		}
-			
+			.navigationViewStyle(StackNavigationViewStyle())
+		
 		.onAppear {
 			let restoredList = self.retrievedList!.map { item -> Company in
 				Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
