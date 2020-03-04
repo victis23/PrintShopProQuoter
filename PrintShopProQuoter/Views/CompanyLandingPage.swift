@@ -18,7 +18,6 @@ struct CompanyLandingPage : View {
 	
 	var body: some View {
 		
-		NavigationView{
 			ZStack {
 				GradientBackground()
 				VStack{
@@ -37,7 +36,6 @@ struct CompanyLandingPage : View {
 					.padding()
 				}
 			}
-		}
 		.navigationBarTitle(company?.name ?? "No Company")
 	}
 }
