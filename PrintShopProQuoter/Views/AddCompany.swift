@@ -9,6 +9,7 @@
 import SwiftUI
 import CoreData
 
+/// View that allows user to add a company to main view.
 struct AddCompany: View {
 	
 	//Tracks current state of view and dismissal.

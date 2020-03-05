@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+///View that allows user to access contact information, location, quotes & orders.
 struct CompanyLandingPage : View {
 	
 	private var company : Company?

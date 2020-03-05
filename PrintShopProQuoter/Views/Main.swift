@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 import CoreData
 
+/// Handles view that contains a list of current companies user is doing business with.
 struct Main : View {
 	
 	@ObservedObject private var customerList: Customers = Customers()
@@ -33,11 +34,18 @@ struct Main : View {
 	var body : some View {
 		
 		NavigationView{
+			
 			ZStack{
+				
 				GradientBackground()
+				
 				VStack{
+					
+					//Creates list of current companies user has added to application.
 					List(customerList.companies) { company in
+						
 						NavigationLink(destination: CompanyLandingPage(company: company)) {
+							
 							ItemRow(company: company)
 						}
 					}
@@ -45,6 +53,7 @@ struct Main : View {
 				}
 				.navigationBarTitle("Customer List")
 				.navigationBarItems(trailing:
+					
 					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList))
 					.foregroundColor(.white)
 					.environment(\.managedObjectContext, self.context)
@@ -53,10 +62,13 @@ struct Main : View {
 		}
 			.navigationViewStyle(StackNavigationViewStyle())
 		
+			///When view appears use CoreData Objects to create an instance of Company for each item in array.
+			/// - Note: `[CoreCompany] —> [Company]`
 		.onAppear {
 			let restoredList = self.retrievedList!.map { item -> Company in
 				Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
 			}
+			
 			self.customerList.companies = restoredList
 		}
 	}
@@ -70,16 +82,20 @@ struct ItemRow: View {
 	var body: some View {
 		
 		HStack{
+			
 			VStack(alignment:.leading) {
+				
 				Text(company.name ?? "Error No Value")
 					.fontWeight(.heavy)
 					.font(.headline)
+				
 				Text(company.address?.street ?? "Error No Value")
 					.fontWeight(.light)
 					.font(Font.system(size: 10))
 			}
 			
 			Spacer()
+			
 			VStack{
 				company.quotes?.count != nil ? Text(String(describing: company.quotes?.count)) : Text("0")
 					.bold()
@@ -99,18 +115,25 @@ struct ItemRow: View {
 
 struct AddCompanyNavigationBarTrailingButton: View {
 	
-	@Binding var isPresentingView : Bool
+	//Instance property that holds reference to persistent container context.
 	@Environment(\.managedObjectContext) var context
+	
+	//Determines if view is being presented or not.
+	@Binding var isPresentingView : Bool
 	
 	var customerList : Customers
 	
 	var body: some View {
+		
 		HStack {
+			
 			Button(action: {
 				self.isPresentingView.toggle()
 			}, label: {
+				
 				VStack{
 					Image(systemName: "plus")
+					
 					Text("Add Customer")
 						.font(Font.system(size: 10))
 						.bold()
