@@ -39,13 +39,13 @@ struct AddContact: View {
 				Form{
 					
 					TextField("Name", text: $name)
-					.padding()
+						.padding()
 					
 					TextField("Phone Number", text: $phoneNumber)
-					.padding()
+						.padding()
 					
 					TextField("Email", text: $email)
-					.padding()
+						.padding()
 				}
 				.foregroundColor(.white)
 				
@@ -62,6 +62,7 @@ struct AddContact: View {
 				}
 			}
 		}
+		.navigationBarTitle("Contact")
 	}
 }
 
