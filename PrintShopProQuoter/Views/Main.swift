@@ -33,6 +33,19 @@ struct Main : View {
 	
 	//Selects item that will be removed during edit mode from list.
 	func deleteItems(at index : IndexSet){
+		
+		guard let position = index.first else {return}
+		
+		let id = customerList.companies[position].id
+		
+		do{
+			let deleter = CompanyDeleter(index: id, context: context)
+			try deleter?.removeObject()
+		}
+		catch(let e){
+			print(e.localizedDescription)
+		}
+		
 		customerList.companies.remove(atOffsets: index)
 	}
 	
