@@ -31,11 +31,14 @@ struct Main : View {
 		self.retrievedList = retrievedList
 	}
 	
-	//Selects item that will be removed during edit mode from list.
+	///Selects item that will be removed during edit mode from list.
+	/// [S]OLID — CompanyDeleter handles actual deleting of selected object from persistent container.
 	func deleteItems(at index : IndexSet){
 		
+		// returns index for selected row in ForEach view while in edit mode.
 		guard let position = index.first else {return}
 		
+		// returns string value for item's identifier.
 		let id = customerList.companies[position].id
 		
 		do{
@@ -46,6 +49,7 @@ struct Main : View {
 			print(e.localizedDescription)
 		}
 		
+		// Removes item from current list.
 		customerList.companies.remove(atOffsets: index)
 	}
 	
