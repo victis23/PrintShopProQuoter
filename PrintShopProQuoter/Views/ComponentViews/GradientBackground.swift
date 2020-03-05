@@ -12,6 +12,7 @@ import SwiftUI
 struct GradientBackground: View {
 	
 	var body: some View {
+		
 		AngularGradient(gradient: Gradient(colors: [
 			Color(UIColor(red: 0.25, green: 0.81, blue: 1, alpha: 0.3)),
 			Color(UIColor(red: 0.0, green: 0.39, blue: 0.95, alpha: 1))
