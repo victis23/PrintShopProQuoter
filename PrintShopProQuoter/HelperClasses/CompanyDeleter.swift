@@ -33,11 +33,9 @@ class CompanyDeleter {
 	private func getCoreDataObject()-> NSManagedObject?{
 		
 		let data = CompanyFetcher()
-		
-		let object = data.fetchFromCoreData()?.first(where: { item -> Bool in
-			item.id == itemIdentifier
-		})
-		
+		let query : NSPredicate? = NSPredicate(format: "id = %@", itemIdentifier)
+		let object = data.fetchFromCoreData(predicate: query)?.first
+
 		return object
 	}
 }
