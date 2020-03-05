@@ -11,11 +11,11 @@ import CoreData
 
 class CompanyDeleter {
 	
-	private let index : String
+	private let itemIdentifier : String
 	private let context : NSManagedObjectContext
 	
-	init?(index: String, context : NSManagedObjectContext){
-		self.index = index
+	init?(identifier: String, context : NSManagedObjectContext){
+		self.itemIdentifier = identifier
 		self.context = context
 	}
 	
@@ -24,7 +24,7 @@ class CompanyDeleter {
 		let data = CompanyFetcher()
 		
 		let object = data.fetchFromCoreData()?.first(where: { item -> Bool in
-			item.id == index
+			item.id == itemIdentifier
 		})
 		
 		return object

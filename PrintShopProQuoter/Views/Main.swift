@@ -39,7 +39,7 @@ struct Main : View {
 		let id = customerList.companies[position].id
 		
 		do{
-			let deleter = CompanyDeleter(index: id, context: context)
+			let deleter = CompanyDeleter(identifier: id, context: context)
 			try deleter?.removeObject()
 		}
 		catch(let e){
