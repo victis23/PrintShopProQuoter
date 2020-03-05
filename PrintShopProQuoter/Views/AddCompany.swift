@@ -18,7 +18,7 @@ struct AddCompany: View {
 	
 	@State private var name = ""
 	@State private var address : Address = Address(street: nil, city: nil, state: nil, country: nil, zipcode: nil)
-	@State private var contact = "Defalut Contact Name"
+	@State private var contact : Contact = Contact()
 	
 	var body: some View {
 		
@@ -37,7 +37,7 @@ struct AddCompany: View {
 								.padding(.all, 20)
 						})
 						
-						NavigationLink(destination: AddContact(), label: {
+						NavigationLink(destination: AddContact(contact: $contact), label: {
 							Text("Contact Info")
 								.padding(.all, 20)
 						})
@@ -47,7 +47,7 @@ struct AddCompany: View {
 					Spacer()
 					
 					Button(action: {
-						let newCompany = Company(name: self.name, address: self.address, contact: Contact(name: self.contact), quotes: nil, orders: nil)
+						let newCompany = Company(name: self.name, address: self.address, contact: self.contact, quotes: nil, orders: nil)
 						
 						self.customerList.companies.append(newCompany)
 						
