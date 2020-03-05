@@ -17,7 +17,7 @@ struct Main : View {
 	
 	@State private var isPresentingView = false
 	
-	// Retrieved company list from coredata.
+	// Retrieved company list from coredata assigned in MainVC().
 	private var retrievedList : [CoreCompany]?
 	
 	// Retrieves and saves reference to persistent container that will be passed to subsequent views.
