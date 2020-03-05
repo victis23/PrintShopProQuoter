@@ -11,11 +11,16 @@ import CoreData
 
 struct AddCompany: View {
 	
+	//Tracks current state of view and dismissal.
 	@Environment(\.presentationMode) private var presentationMode
+	
+	//Handles Managed Object Contect for Coredata's persistant container.
 	@Environment(\.managedObjectContext) private var context
 	
+	//Holds Instance of observable object held in the apps environment.
 	@EnvironmentObject private var customerList : Customers
 	
+	//Properties that will be assigned to the instance of Company when user taps submit button..
 	@State private var name = ""
 	@State private var address : Address = Address(street: nil, city: nil, state: nil, country: nil, zipcode: nil)
 	@State private var contact : Contact = Contact()
@@ -23,10 +28,15 @@ struct AddCompany: View {
 	var body: some View {
 		
 		NavigationView {
+			
 			ZStack{
+				
+				// Sets background gradient color for current view.
 				GradientBackground()
 				
 				VStack{
+					
+					///List that handles fields for user input.
 					List(content: {
 						
 						TextField("Company Name", text: $name)
@@ -46,12 +56,19 @@ struct AddCompany: View {
 					
 					Spacer()
 					
+					///Handles `save new company` button.
 					Button(action: {
+						
+						//Creates instance of Company using user input.
 						let newCompany = Company(name: self.name, address: self.address, contact: self.contact, quotes: nil, orders: nil)
 						
+						//Created company is appended to observable object class that will be displayed on customer list page.
 						self.customerList.companies.append(newCompany)
 						
+						//Creates instance of coredata entity CoreCompany.
 						let company = CoreCompany(context: self.context)
+						
+						/// Block assigns values to persistent container.
 						company.name = newCompany.name
 						company.id = newCompany.id
 						company.companyAddress = CoreAddress(context: self.context)
@@ -61,12 +78,15 @@ struct AddCompany: View {
 						company.companyAddress?.country = newCompany.address?.country
 						company.companyAddress?.zipcode = newCompany.address?.zipcode
 						
+						//Save values to persistent container.
 						try? self.context.save()
 						
+						//Dismiss current view.
 						self.presentationMode.wrappedValue.dismiss()
 						
 					}, label: {
 						
+						/// Views for drawing save button and its corresponding label.
 						ZStack {
 							
 							RoundedRectangle(cornerRadius: 10	 , style: .continuous)

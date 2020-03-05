@@ -10,16 +10,20 @@ import SwiftUI
 
 struct AddAddress: View {
 	
+	//Tracks and controls the state of the current view.
+	@Environment(\.presentationMode) private var presentationMode
+	
+	//Property recieved from parent view.
+	@Binding private var address : Address
+	
+	//Properties that will be assigned to the class instance address property.
 	@State private var street : String = ""
 	@State private var city : String = ""
 	@State private var state : String = ""
 	@State private var country : String = ""
 	@State private var zipcode : String = ""
 	
-	@Binding private var address : Address
-	
-	@Environment(\.presentationMode) private var presentationMode
-	
+	//Captures Binding Address from Parent view.
 	init(address: Binding<Address>){
 		self._address = address
 	}
@@ -27,15 +31,24 @@ struct AddAddress: View {
 	var body: some View {
 		
 			ZStack{
+				
+				//Set background to gradient.
 				GradientBackground()
+				
 				VStack{
+					
+					//Calls instance of AddressForm which presents a form on parent view that access user input for given properties.
 					AddressForm(street: $street, city: $city, state: $state, country: $country, zipcode: $zipcode)
+					
+					//Sets values to address property using gathered user input.
 					Button(action: {
 						self.address.street = self.street
 						self.address.city = self.city
 						self.address.state = self.state
 						self.address.country = self.country
 						self.address.zipcode = self.zipcode
+						
+						//Dismiss current view.
 						self.presentationMode.wrappedValue.dismiss()
 					}) {
 						Text("Submit")
@@ -50,12 +63,14 @@ struct AddAddress: View {
 
 struct AddressForm: View {
 	
+	// Binding properties recieved from parent view.
 	@Binding private var street : String
 	@Binding private var city : String
 	@Binding private var state : String
 	@Binding private var country : String
 	@Binding private var zipcode : String
 	
+	//Assigns rawvalues to struct properties.
 	init(street:Binding<String>, city: Binding<String>, state: Binding<String>, country : Binding<String>, zipcode: Binding<String>){
 		self._street = street
 		self._city = city
@@ -66,6 +81,7 @@ struct AddressForm: View {
 	
 	var body: some View {
 		
+		///Handles textfields for user input.
 		Form{
 			TextField("Street", text: $street)
 				.padding()

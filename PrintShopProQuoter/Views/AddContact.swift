@@ -8,14 +8,21 @@
 
 import SwiftUI
 
+///Holds view that will be setting contact details for `Company's Contact Property`.
 struct AddContact: View {
 	
+	//Tracks and controls the state of the current view.
 	@Environment(\.presentationMode) private var presentationMode
+	
+	//Property recieved from parent view.
 	@Binding private var contact : Contact
+	
+	//Properties that will be assigned to the class instance contact property.
 	@State private var name : String = ""
 	@State private var phoneNumber : String = ""
 	@State private var email : String = ""
 	
+	/// Initalizer that captures a binding property from parent view.
 	init(contact: Binding<Contact>){
 		self._contact = contact
 	}
@@ -24,6 +31,7 @@ struct AddContact: View {
 		
 		ZStack{
 			
+			//Calls method that sets background color of current view to a gradient.
 			GradientBackground()
 			
 			VStack{

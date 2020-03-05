@@ -12,6 +12,7 @@ struct CompanyLandingPage : View {
 	
 	private var company : Company?
 	
+	//Injects instance of Company to instance property company.
 	init(company : Company? = nil){
 		self.company = company
 	}
@@ -19,21 +20,29 @@ struct CompanyLandingPage : View {
 	var body: some View {
 		
 			ZStack {
+				
+				//Sets background gradient for current view.
 				GradientBackground()
+				
 				VStack{
+					
 					ItemButton(company: company, text: "Contact Info")
 						.padding(.leading)
 						.padding(.trailing)
+					
 					HStack {
+						
 						VStack {
 							ItemButton(company: company, text: "Quotes")
 							ItemButton(company: company, text: "Orders")
 						}
+						
 						VStack {
 							ItemButton(company: company, text: "Location")
 						}
 					}
 					.padding()
+					
 				}
 			}
 		.navigationBarTitle(company?.name ?? "No Company")
@@ -43,6 +52,7 @@ struct CompanyLandingPage : View {
 struct ItemButton: View {
 	
 	@State var isPresenting :Bool = false
+	
 	var company : Company?
 	var text : String
 	var body: some View {
@@ -50,6 +60,7 @@ struct ItemButton: View {
 		Button(action: {
 			self.isPresenting.toggle()
 		}){
+			
 			ZStack {
 				RoundedRectangle(cornerRadius: 10)
 					.foregroundColor(Color(.white))
@@ -60,6 +71,7 @@ struct ItemButton: View {
 						.bold()
 						.padding(.top)
 					
+					//Checks which button is being drawn. Contact Info button is the primary button on this view so it needs to have a larger version of its icon drawn.
 					if text == "Contact Info" {
 						Image(text)
 							.resizable()
