@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+/// Handles removing items from core data using item identifiers.
 class CompanyDeleter {
 	
 	private let itemIdentifier : String
@@ -19,6 +20,16 @@ class CompanyDeleter {
 		self.context = context
 	}
 	
+	/// Removes returned item from persistant data storage.
+	public func removeObject() throws {
+		guard let coreDataObject = getCoreDataObject() else {throw CoreDataDeleterError.valueNotFound}
+		
+		context.delete(coreDataObject)
+		
+		try context.save()
+	}
+	
+	/// Creates fetch request and returns first object in return set that matches search identifier.
 	private func getCoreDataObject()-> NSManagedObject?{
 		
 		let data = CompanyFetcher()
@@ -28,14 +39,6 @@ class CompanyDeleter {
 		})
 		
 		return object
-	}
-	
-	public func removeObject() throws {
-		guard let coreDataObject = getCoreDataObject() else {throw CoreDataDeleterError.valueNotFound}
-		
-		context.delete(coreDataObject)
-		
-		try context.save()
 	}
 }
 
