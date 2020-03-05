@@ -60,16 +60,16 @@ struct Main : View {
 					.navigationBarTitle("Customer List")
 			}
 		}
-			.navigationViewStyle(StackNavigationViewStyle())
-		
+		.navigationViewStyle(StackNavigationViewStyle())
+			
 			///When view appears use CoreData Objects to create an instance of Company for each item in array.
 			/// - Note: `[CoreCompany] —> [Company]`
-		.onAppear {
-			let restoredList = self.retrievedList!.map { item -> Company in
-				Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
-			}
-			
-			self.customerList.companies = restoredList
+			.onAppear {
+				let restoredList = self.retrievedList!.map { item -> Company in
+					Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
+				}
+				
+				self.customerList.companies = restoredList
 		}
 	}
 }
