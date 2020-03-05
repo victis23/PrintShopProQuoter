@@ -15,6 +15,7 @@ class MainVC : UIHostingController<Main> {
 		super.init(coder: aDecoder, rootView: rootView)
 	}
 	
+	///Uses array of Coredata objects to instantiate `Main`.
 	@objc required dynamic init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder, rootView: Main(retrievedList: CompanyFetcher().fetchFromCoreData()))
 	}
