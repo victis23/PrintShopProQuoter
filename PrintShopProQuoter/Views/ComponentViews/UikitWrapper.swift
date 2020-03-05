@@ -8,32 +8,42 @@
 
 import SwiftUI
 
+/// Wraps UIKIT instance in a representable that swiftUI can present.
 struct UIKitWrapper: UIViewControllerRepresentable {
 	
+	//Specify what type of controller is being wrapped in an associated type.
 	typealias UIViewControllerType = UINavigationController
+	
+	//Company property passed from parent view. Represents the company the user selected from main view.
 	private var company : Company
+	
+	//Determines which viewcontroller will be presented to user. This string corresponds to the name of the storyboard file in the main bundle.
 	private var storyboardPointer : String
-	
-	func makeUIViewController(context: Context) -> UINavigationController {
-		
-		let storyboard = UIStoryboard(name: storyboardPointer, bundle: .main)
-		
-		guard let viewController = storyboard.instantiateInitialViewController() as? AccessControllerProtocol else { fatalError() }
-		
-		viewController.company = company
-		
-		return UINavigationController(rootViewController: viewController)
-	}
-	
-	func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
-		
-	}
 	
 	init(company: Company, storyboardPointer: String){
 		self.company = company
 		self.storyboardPointer = storyboardPointer
 	}
 	
+	func makeUIViewController(context: Context) -> UIViewControllerType {
+		
+		//Find user defined storyboard in bundle using name.
+		let storyboard = UIStoryboard(name: storyboardPointer, bundle: .main)
+		
+		//Downcast returned controller to protocol AccessControllerProtocol.
+		//FIXME: Remove fatalError and create error enum asap.
+		guard let viewController = storyboard.instantiateInitialViewController() as? AccessControllerProtocol else { fatalError() }
+		
+		//Assign user selected company object to instance property on incoming viewController.
+		viewController.company = company
+		
+		//Return UINavigationController with storyboard instance view controller as root controller.
+		return UINavigationController(rootViewController: viewController)
+	}
+	
+	func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+		
+	}
 }
 
 
