@@ -31,6 +31,11 @@ struct Main : View {
 		self.retrievedList = retrievedList
 	}
 	
+	//Selects item that will be removed during edit mode from list.
+	func deleteItems(at index : IndexSet){
+		customerList.companies.remove(atOffsets: index)
+	}
+	
 	var body : some View {
 		
 		NavigationView{
@@ -42,19 +47,22 @@ struct Main : View {
 				VStack{
 					
 					//Creates list of current companies user has added to application.
-					List(customerList.companies) { company in
-						
-						NavigationLink(destination: CompanyLandingPage(company: company)) {
+					List{
+						ForEach(customerList.companies) { company in
 							
-							ItemRow(company: company)
-						}
+							NavigationLink(destination: CompanyLandingPage(company: company)) {
+								
+								ItemRow(company: company)
+							}
+							}
+						.onDelete(perform: deleteItems)
+						.listRowBackground(Color.clear)
 					}
-					.listRowBackground(Color.clear)
 				}
 				.navigationBarTitle("Customer List")
-				.navigationBarItems(trailing:
+				.navigationBarItems(leading:
 					
-					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList))
+					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList), trailing: EditButton())
 					.foregroundColor(.white)
 					.environment(\.managedObjectContext, self.context)
 					.navigationBarTitle("Customer List")
