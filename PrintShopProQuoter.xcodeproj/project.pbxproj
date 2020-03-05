@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D468AF624108F3200184813 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AF524108F3200184813 /* OrdersViewController.swift */; };
+		7D468AF824108F6B00184813 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AF724108F6B00184813 /* QuotesViewController.swift */; };
+		7D468AFA24108F8D00184813 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AF924108F8D00184813 /* LocationViewController.swift */; };
+		7D468AFC24108FB700184813 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AFB24108FB700184813 /* ContactViewController.swift */; };
+		7D468AFF2410902F00184813 /* AccessController+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AFE2410902F00184813 /* AccessController+Protocol.swift */; };
 		7D46F0B9240C0AB100B2EC35 /* CompanyLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */; };
 		7D46F0BB240C0B9900B2EC35 /* AddCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BA240C0B9900B2EC35 /* AddCompany.swift */; };
 		7D46F0BE240C0BB500B2EC35 /* AddAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */; };
@@ -57,6 +62,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D468AF524108F3200184813 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		7D468AF724108F6B00184813 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		7D468AF924108F8D00184813 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		7D468AFB24108FB700184813 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		7D468AFE2410902F00184813 /* AccessController+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccessController+Protocol.swift"; sourceTree = "<group>"; };
 		7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyLandingPage.swift; sourceTree = "<group>"; };
 		7D46F0BA240C0B9900B2EC35 /* AddCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompany.swift; sourceTree = "<group>"; };
 		7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddress.swift; sourceTree = "<group>"; };
@@ -120,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D468AFD24108FE200184813 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7D468AFE2410902F00184813 /* AccessController+Protocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		7D46F0C2240C843300B2EC35 /* ComponentViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +179,7 @@
 		7D5DE3FD240BD56D00130319 /* PrintShopProQuoter */ = {
 			isa = PBXGroup;
 			children = (
+				7D468AFD24108FE200184813 /* Protocols */,
 				7D5DE434240BDAB600130319 /* AppStateManagment */,
 				7D5DE431240BD9A800130319 /* Models */,
 				7D5DE432240BD9AF00130319 /* Views */,
@@ -223,6 +242,10 @@
 			isa = PBXGroup;
 			children = (
 				7D46F0C0240C165000B2EC35 /* MainVC.swift */,
+				7D468AF724108F6B00184813 /* QuotesViewController.swift */,
+				7D468AF524108F3200184813 /* OrdersViewController.swift */,
+				7D468AF924108F8D00184813 /* LocationViewController.swift */,
+				7D468AFB24108FB700184813 /* ContactViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -395,20 +418,25 @@
 				7D5DE439240BDBFE00130319 /* Company.swift in Sources */,
 				7D757BEA240CA8D7007ADD64 /* UikitWrapper.swift in Sources */,
 				7D5DE3FF240BD56D00130319 /* AppDelegate.swift in Sources */,
+				7D468AF824108F6B00184813 /* QuotesViewController.swift in Sources */,
 				7D5DE401240BD56D00130319 /* SceneDelegate.swift in Sources */,
 				7D5DE443240BDD7C00130319 /* Order.swift in Sources */,
 				7D46F0BE240C0BB500B2EC35 /* AddAddress.swift in Sources */,
 				7D46F0C7240C8CD200B2EC35 /* CompanyFetcher.swift in Sources */,
 				7D5DE43F240BDD0000130319 /* Quote.swift in Sources */,
+				7D468AF624108F3200184813 /* OrdersViewController.swift in Sources */,
+				7D468AFA24108F8D00184813 /* LocationViewController.swift in Sources */,
 				7D46F0C1240C165000B2EC35 /* MainVC.swift in Sources */,
 				7DACECC2240E62D6004A0F80 /* PushLink.swift in Sources */,
 				7D5DE441240BDD4E00130319 /* QuoteOrderPrimaryElements.swift in Sources */,
 				7D5DE437240BDBA500130319 /* Customers.swift in Sources */,
+				7D468AFC24108FB700184813 /* ContactViewController.swift in Sources */,
 				7D46F0BB240C0B9900B2EC35 /* AddCompany.swift in Sources */,
 				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,
 				7D46F0C4240C848000B2EC35 /* GradientBackground.swift in Sources */,
 				7D46F0BF240C0BB500B2EC35 /* AddContact.swift in Sources */,
 				7D5DE43D240BDCCF00130319 /* Address.swift in Sources */,
+				7D468AFF2410902F00184813 /* AccessController+Protocol.swift in Sources */,
 				7D5DE43B240BDCA400130319 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
