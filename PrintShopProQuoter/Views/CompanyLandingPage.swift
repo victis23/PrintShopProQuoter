@@ -65,6 +65,7 @@ struct ItemButton: View {
 			ZStack {
 				RoundedRectangle(cornerRadius: 10)
 					.foregroundColor(Color(.white))
+					.shadow(radius: 10)
 				
 				VStack{
 					Text(text)
