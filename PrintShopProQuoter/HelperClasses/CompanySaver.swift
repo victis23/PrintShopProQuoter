@@ -10,11 +10,16 @@ import CoreData
 import UIKit
 
 
+class Saver {
+	
+	public static var context : NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+}
+
 class CompanySaver  {
 	
 	private var newCompany : Company
 	
-	public static var context : NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+	
 	
 	init(company : Company){
 		self.newCompany = company
@@ -23,12 +28,12 @@ class CompanySaver  {
 	func set() {
 		
 		//Creates instance of coredata entity CoreCompany.
-		let company = CoreCompany(context: CompanySaver.context)
+		let company = CoreCompany(context: Saver.context)
 		
 		/// Block assigns values to persistent container.
 		company.name = newCompany.name
 		company.id = newCompany.id
-		company.companyAddress = CoreAddress(context: CompanySaver.context)
+		company.companyAddress = CoreAddress(context: Saver.context)
 		company.companyAddress?.street = newCompany.address?.street
 		company.companyAddress?.city = newCompany.address?.city
 		company.companyAddress?.state = newCompany.address?.state
@@ -42,7 +47,7 @@ class CompanySaver  {
 	private func save() {
 		
 		do {
-			try CompanySaver.context.save()
+			try Saver.context.save()
 		}
 			
 		catch(let error){

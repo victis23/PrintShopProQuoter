@@ -25,7 +25,7 @@ class CoreDataFetcher<R,V,ReturnValue> : CoreDataFetcherProtocol where ReturnVal
 	}
 	
 	private var context : NSManagedObjectContext {
-		let context = CompanySaver.context
+		let context = Saver.context
 		return context
 	}
 	
