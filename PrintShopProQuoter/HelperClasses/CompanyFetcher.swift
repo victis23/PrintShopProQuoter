@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-protocol setKeyPath {
+protocol CoreDataFetcherProtocol {
 	associatedtype Root
 	associatedtype Value
 	associatedtype ManagedObject : NSFetchRequestResult
@@ -19,7 +19,7 @@ protocol setKeyPath {
 }
 
 /// FetchCompanies retrieves data from persistent container and returns an array of CoreCompany objects.
-class CoreDataFetcher<R,V,ReturnValue> : setKeyPath where ReturnValue : NSFetchRequestResult {
+class CoreDataFetcher<R,V,ReturnValue> : CoreDataFetcherProtocol where ReturnValue : NSFetchRequestResult {
 	
 	typealias Root = R
 	typealias Value = V
