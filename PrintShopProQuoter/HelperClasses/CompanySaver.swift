@@ -13,13 +13,27 @@ import UIKit
 class Saver {
 	
 	public static var context : NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+	func set() {
+		
+	}
+	
+	//Save values to persistent container.
+	public func save() {
+		
+		do {
+			try Saver.context.save()
+		}
+			
+		catch(let error){
+			print(error.localizedDescription)
+		}
+	}
 }
 
-class CompanySaver  {
+class CompanySaver : Saver {
 	
 	private var newCompany : Company
-	
-	
 	
 	init(company : Company){
 		self.newCompany = company
@@ -41,17 +55,5 @@ class CompanySaver  {
 		company.companyAddress?.zipcode = newCompany.address?.zipcode
 		
 		save()
-	}
-	
-	//Save values to persistent container.
-	private func save() {
-		
-		do {
-			try Saver.context.save()
-		}
-			
-		catch(let error){
-			print(error.localizedDescription)
-		}
 	}
 }
