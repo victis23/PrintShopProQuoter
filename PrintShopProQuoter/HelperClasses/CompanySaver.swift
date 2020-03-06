@@ -39,7 +39,7 @@ class CompanySaver : Saver {
 		self.newCompany = company
 	}
 	
-	func set() {
+	override func set() {
 		
 		//Creates instance of coredata entity CoreCompany.
 		let company = CoreCompany(context: Saver.context)
