@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftUI
-import CoreData
 
 /// Handles view that contains a list of current companies user is doing business with.
 struct Main : View {
@@ -19,13 +18,6 @@ struct Main : View {
 	
 	// Retrieved company list from coredata assigned in MainVC().
 	private var retrievedList : [CoreCompany]?
-	
-	// Retrieves and saves reference to persistent container that will be passed to subsequent views.
-	private var context : NSManagedObjectContext {
-		let context = (UIApplication.shared.delegate as! AppDelegate)
-			.persistentContainer.viewContext
-		return context
-	}
 	
 	init(retrievedList : [CoreCompany]? = nil) {
 		self.retrievedList = retrievedList
@@ -42,7 +34,7 @@ struct Main : View {
 		let id = customerList.companies[position].id
 		
 		do{
-			let deleter = CompanyDeleter(identifier: id, context: context)
+			let deleter = CompanyDeleter(identifier: id)
 			try deleter?.removeObject()
 		}
 		catch(let e){
