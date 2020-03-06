@@ -81,7 +81,6 @@ struct Main : View {
 					
 					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList), trailing: EditButton())
 					.foregroundColor(.white)
-					.environment(\.managedObjectContext, self.context)
 					.navigationBarTitle("Customer List")
 			}
 		}
@@ -139,10 +138,7 @@ struct ItemRow: View {
 }
 
 struct AddCompanyNavigationBarTrailingButton: View {
-	
-	//Instance property that holds reference to persistent container context.
-	@Environment(\.managedObjectContext) var context
-	
+		
 	//Determines if view is being presented or not.
 	@Binding var isPresentingView : Bool
 	
@@ -165,7 +161,7 @@ struct AddCompanyNavigationBarTrailingButton: View {
 				}
 			})
 				.sheet(isPresented: $isPresentingView, content: {
-					AddCompany().environment(\.managedObjectContext,self.context)
+					AddCompany()
 						.environmentObject(self.customerList)
 				})
 				.padding(.top, 5)
