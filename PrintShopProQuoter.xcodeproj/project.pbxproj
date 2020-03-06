@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D357E542411D09900EC4F94 /* CompanySaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D357E532411D09900EC4F94 /* CompanySaver.swift */; };
 		7D468AF624108F3200184813 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AF524108F3200184813 /* OrdersViewController.swift */; };
 		7D468AF824108F6B00184813 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AF724108F6B00184813 /* QuotesViewController.swift */; };
 		7D468AFA24108F8D00184813 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AF924108F8D00184813 /* LocationViewController.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D357E532411D09900EC4F94 /* CompanySaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanySaver.swift; sourceTree = "<group>"; };
 		7D468AF524108F3200184813 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		7D468AF724108F6B00184813 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		7D468AF924108F8D00184813 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				7D46F0C6240C8CD200B2EC35 /* CompanyFetcher.swift */,
+				7D357E532411D09900EC4F94 /* CompanySaver.swift */,
 				7D468B022410AD8600184813 /* CompanyDeleter.swift */,
 			);
 			path = HelperClasses;
@@ -448,6 +451,7 @@
 				7D5DE437240BDBA500130319 /* Customers.swift in Sources */,
 				7D468AFC24108FB700184813 /* ContactViewController.swift in Sources */,
 				7D46F0BB240C0B9900B2EC35 /* AddCompany.swift in Sources */,
+				7D357E542411D09900EC4F94 /* CompanySaver.swift in Sources */,
 				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,
 				7D46F0C4240C848000B2EC35 /* GradientBackground.swift in Sources */,
 				7D46F0BF240C0BB500B2EC35 /* AddContact.swift in Sources */,
