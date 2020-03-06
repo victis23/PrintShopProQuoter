@@ -13,8 +13,8 @@ This project was designed completely in **xCode** using Swift.
 ### Main Frameworks & APIs used in this project:
 
 SWIFTUI \
-GraphQL \
-Amazon AWS \
+GraphQL (Coming Soon) \
+Amazon AWS (Coming Soon) \
 UIKit (Foundation)\
 Combine \
 Core Data
