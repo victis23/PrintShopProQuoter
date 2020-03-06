@@ -30,7 +30,7 @@ struct UIKitWrapper: UIViewControllerRepresentable {
 		//Find user defined storyboard in bundle using name.
 		let storyboard = UIStoryboard(name: storyboardPointer, bundle: .main)
 		
-		//Downcast returned controller to protocol AccessControllerProtocol.
+		//Downcast returned controller to protocol AccessControllerProtocol. This step is required because we are not sure which storyboard will be accessed. Potential storyboard controllers that can be called all conform to this protocol. 
 		//FIXME: Remove fatalError and create error enum asap.
 		guard let viewController = storyboard.instantiateInitialViewController() as? AccessControllerProtocol else { fatalError() }
 		
