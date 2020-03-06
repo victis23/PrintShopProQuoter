@@ -17,7 +17,19 @@ protocol setKeyPath {
 }
 
 /// FetchCompanies retrieves data from persistent container and returns an array of CoreCompany objects.
-class CompanyFetcher {
+class CompanyFetcher<R,V,C> : setKeyPath where C : NSManagedObject {
+	
+	typealias Root = R
+	typealias Value = V
+	typealias ManagedObject = C
+	
+	internal var keypath: KeyPath<R, V>
+	private var coreDataClass : C
+	
+	init(keypath : KeyPath<R,V>, coreDataClass : C){
+		self.keypath = keypath
+		self.coreDataClass = coreDataClass
+	}
 	
 	private var context : NSManagedObjectContext {
 		let context = CompanySaver.context
