@@ -17,5 +17,5 @@ UIKit (Foundation)\
 Combine \
 Core Data \ 
 GraphQL (Coming) \
-Amazon AWS (Coming) 
+Amazon AWS (Coming) \
 
