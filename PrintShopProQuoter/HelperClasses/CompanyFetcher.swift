@@ -17,7 +17,7 @@ class CoreDataFetcher<R,V,ReturnValue> : CoreDataFetcherProtocol where ReturnVal
 	typealias ManagedObject = ReturnValue
 	
 	internal var keypath: KeyPath<R, V>
-	internal var request : NSFetchRequest<ReturnValue> // = NSFetchRequest(entityName: "CoreCompany")
+	internal var request : NSFetchRequest<ReturnValue> 
 	
 	init(sortBy keypath : KeyPath<R,V>, request : NSFetchRequest<ReturnValue>){
 		self.keypath = keypath
