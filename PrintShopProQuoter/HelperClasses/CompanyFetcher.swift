@@ -28,7 +28,7 @@ class CompanyFetcher {
 	
 	/// Returns list of CoreCompany objects that will be used to initialize `MainVC`
 	func fetchFromCoreData(predicate : NSPredicate? = nil) -> [CoreCompany]? {
-		request.sortDescriptors = [NSSortDescriptor(keyPath: \CoreCompany.name, ascending: true)]
+		request.sortDescriptors = [NSSortDescriptor(keyPath: keypath, ascending: true)]
 		request.predicate = predicate
 		let response = try? context.fetch(request)
 		return response
