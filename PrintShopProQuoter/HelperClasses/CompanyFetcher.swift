@@ -24,11 +24,9 @@ class CompanyFetcher<R,V,C> : setKeyPath where C : NSManagedObject {
 	typealias ManagedObject = C
 	
 	internal var keypath: KeyPath<R, V>
-	private var coreDataClass : C
 	
-	init(keypath : KeyPath<R,V>, coreDataClass : C){
+	init(sortBy keypath : KeyPath<R,V>){
 		self.keypath = keypath
-		self.coreDataClass = coreDataClass
 	}
 	
 	private var context : NSManagedObjectContext {

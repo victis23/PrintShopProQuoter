@@ -31,7 +31,7 @@ class CompanyDeleter {
 	/// Creates fetch request and returns first object in return set that matches search identifier.
 	private func getCoreDataObject()-> NSManagedObject?{
 		
-		let data = CompanyFetcher(keypath: \CoreCompany.name)
+		let data = CompanyFetcher(sortBy: \CoreCompany.name)
 		let query : NSPredicate? = NSPredicate(format: "id = %@", itemIdentifier)
 		let object = data.fetchFromCoreData(predicate: query)?.first
 
