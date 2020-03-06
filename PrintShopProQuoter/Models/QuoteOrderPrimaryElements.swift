@@ -20,7 +20,12 @@ enum StockColors {
 }
 
 enum StockWeight {
-	case _80Gloss
+	case _20
+	case _60
+	case _80
+	case _100
+	case _7pt
+	case _12Pt
 }
 
 enum StockFinish {
