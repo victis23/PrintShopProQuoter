@@ -13,11 +13,17 @@ This project was designed completely in **xCode** using Swift.
 ### Main Frameworks & APIs used in this project:
 
 SWIFTUI \
-GraphQL (Coming Soon) \
-Amazon AWS (Coming Soon) \
+Core Data \
 UIKit (Foundation)\
 Combine \
-Core Data
+IQKeyboard Manager \
+GraphQL (Planned) \
+Amazon AWS (Planned) \
+GooglePlaces (Planned) \
+GoogleMaps (Planned) \
+CoreLocation (Planned) 
+
+
 
 
 
