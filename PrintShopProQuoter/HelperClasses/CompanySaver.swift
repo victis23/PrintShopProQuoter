@@ -7,16 +7,16 @@
 //
 
 import CoreData
+import UIKit
 
 
 class CompanySaver  {
 	
 	private var newCompany : Company
-	private var context : NSManagedObjectContext
+	private var context : NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 	
-	init(company : Company, context : NSManagedObjectContext){
+	init(company : Company){
 		self.newCompany = company
-		self.context = context
 	}
 	
 	func set() {

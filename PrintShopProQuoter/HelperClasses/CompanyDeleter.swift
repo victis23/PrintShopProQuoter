@@ -13,11 +13,10 @@ import CoreData
 class CompanyDeleter {
 	
 	private let itemIdentifier : String
-	private let context : NSManagedObjectContext
+	private let context : NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 	
-	init?(identifier: String, context : NSManagedObjectContext){
+	init?(identifier: String){
 		self.itemIdentifier = identifier
-		self.context = context
 	}
 	
 	/// Removes returned item from persistant data storage.
