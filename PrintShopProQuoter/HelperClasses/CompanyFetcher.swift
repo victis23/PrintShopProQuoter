@@ -9,6 +9,13 @@
 import UIKit
 import CoreData
 
+protocol setKeyPath {
+	associatedtype Root
+	associatedtype Value
+	associatedtype ManagedObject
+	var keypath : KeyPath<Root,Value> {get set}
+}
+
 /// FetchCompanies retrieves data from persistent container and returns an array of CoreCompany objects.
 class CompanyFetcher {
 	
