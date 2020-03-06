@@ -7,16 +7,12 @@
 //
 
 import SwiftUI
-import CoreData
 
 /// View that allows user to add a company to main view.
 struct AddCompany: View {
 	
 	//Tracks current state of view and dismissal.
 	@Environment(\.presentationMode) private var presentationMode
-	
-	//Handles Managed Object Contect for Coredata's persistant container.
-	@Environment(\.managedObjectContext) private var context
 	
 	//Holds Instance of observable object held in the apps environment.
 	@EnvironmentObject private var customerList : Customers
@@ -67,7 +63,7 @@ struct AddCompany: View {
 						self.customerList.companies.append(newCompany)
 						
 						//Create instance of company saver that controls saving values to coredata.
-						let companySaver = CompanySaver(company: newCompany, context: self.context)
+						let companySaver = CompanySaver(company: newCompany)
 						
 						//Save to persistant container.
 						companySaver.set()
