@@ -19,7 +19,7 @@ protocol setKeyPath {
 }
 
 /// FetchCompanies retrieves data from persistent container and returns an array of CoreCompany objects.
-class CompanyFetcher<R,V,ReturnValue> : setKeyPath where ReturnValue : NSFetchRequestResult {
+class CoreDataFetcher<R,V,ReturnValue> : setKeyPath where ReturnValue : NSFetchRequestResult {
 	
 	typealias Root = R
 	typealias Value = V
