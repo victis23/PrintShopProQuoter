@@ -66,21 +66,11 @@ struct AddCompany: View {
 						//Created company is appended to observable object class that will be displayed on customer list page.
 						self.customerList.companies.append(newCompany)
 						
-						//Creates instance of coredata entity CoreCompany.
-						let company = CoreCompany(context: self.context)
+						//Create instance of company saver that controls saving values to coredata.
+						let companySaver = CompanySaver(company: newCompany, context: self.context)
 						
-						/// Block assigns values to persistent container.
-						company.name = newCompany.name
-						company.id = newCompany.id
-						company.companyAddress = CoreAddress(context: self.context)
-						company.companyAddress?.street = newCompany.address?.street
-						company.companyAddress?.city = newCompany.address?.city
-						company.companyAddress?.state = newCompany.address?.state
-						company.companyAddress?.country = newCompany.address?.country
-						company.companyAddress?.zipcode = newCompany.address?.zipcode
-						
-						//Save values to persistent container.
-						try? self.context.save()
+						//Save to persistant container.
+						companySaver.set()
 						
 						//Dismiss current view.
 						self.presentationMode.wrappedValue.dismiss()
