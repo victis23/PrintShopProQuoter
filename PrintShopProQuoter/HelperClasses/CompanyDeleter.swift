@@ -13,7 +13,7 @@ import CoreData
 class CompanyDeleter {
 	
 	private let itemIdentifier : String
-	private let context : NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+	private let context : NSManagedObjectContext = CompanySaver.context
 	
 	init?(identifier: String){
 		self.itemIdentifier = identifier

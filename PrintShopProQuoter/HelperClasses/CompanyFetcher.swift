@@ -13,8 +13,7 @@ import CoreData
 class CompanyFetcher {
 	
 	private var context : NSManagedObjectContext {
-		let context = (UIApplication.shared.delegate as! AppDelegate)
-			.persistentContainer.viewContext
+		let context = CompanySaver.context
 		return context
 	}
 	
