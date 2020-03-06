@@ -9,15 +9,6 @@
 import UIKit
 import CoreData
 
-protocol CoreDataFetcherProtocol {
-	associatedtype Root
-	associatedtype Value
-	associatedtype ManagedObject : NSFetchRequestResult
-	var keypath : KeyPath<Root,Value> {get set}
-	var request : NSFetchRequest<ManagedObject>  {get set}
-	
-}
-
 /// FetchCompanies retrieves data from persistent container and returns an array of CoreCompany objects.
 class CoreDataFetcher<R,V,ReturnValue> : CoreDataFetcherProtocol where ReturnValue : NSFetchRequestResult {
 	
