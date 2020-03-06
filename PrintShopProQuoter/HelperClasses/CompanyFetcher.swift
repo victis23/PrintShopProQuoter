@@ -12,21 +12,25 @@ import CoreData
 protocol setKeyPath {
 	associatedtype Root
 	associatedtype Value
-	associatedtype ManagedObject
+	associatedtype ManagedObject : NSFetchRequestResult
 	var keypath : KeyPath<Root,Value> {get set}
+	var request : NSFetchRequest<ManagedObject>  {get set}
+	
 }
 
 /// FetchCompanies retrieves data from persistent container and returns an array of CoreCompany objects.
-class CompanyFetcher<R,V,C> : setKeyPath where C : NSManagedObject {
+class CompanyFetcher<R,V,ReturnValue> : setKeyPath where ReturnValue : NSFetchRequestResult {
 	
 	typealias Root = R
 	typealias Value = V
-	typealias ManagedObject = C
+	typealias ManagedObject = ReturnValue
 	
 	internal var keypath: KeyPath<R, V>
+	internal var request : NSFetchRequest<ReturnValue> // = NSFetchRequest(entityName: "CoreCompany")
 	
-	init(sortBy keypath : KeyPath<R,V>){
+	init(sortBy keypath : KeyPath<R,V>, request : NSFetchRequest<ReturnValue>){
 		self.keypath = keypath
+		self.request = request
 	}
 	
 	private var context : NSManagedObjectContext {
@@ -34,10 +38,9 @@ class CompanyFetcher<R,V,C> : setKeyPath where C : NSManagedObject {
 		return context
 	}
 	
-	private let request : NSFetchRequest<CoreCompany> = NSFetchRequest(entityName: "CoreCompany")
 	
 	/// Returns list of CoreCompany objects that will be used to initialize `MainVC`
-	func fetchFromCoreData(predicate : NSPredicate? = nil) -> [CoreCompany]? {
+	func fetchFromCoreData(predicate : NSPredicate? = nil) -> [ReturnValue]? {
 		request.sortDescriptors = [NSSortDescriptor(keyPath: keypath, ascending: true)]
 		request.predicate = predicate
 		let response = try? context.fetch(request)
