@@ -14,9 +14,7 @@ class Saver {
 	
 	public static var context : NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-	func set() {
-		
-	}
+	func set() {}
 	
 	//Save values to persistent container.
 	public func save() {
