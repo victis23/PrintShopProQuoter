@@ -8,13 +8,14 @@
 
 
 import SwiftUI
+import CoreData
 
 //Hosts a view that will contain a struct class that conforms to swiftUI's View protocol.
 class MainVC : UIHostingController<Main> {
 	
 	///1. — Uses array of Coredata objects to instantiate `Main`.
 	@objc required dynamic init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder, rootView: Main(retrievedList: CompanyFetcher(sortBy: \CoreCompany.name).fetchFromCoreData()))
+		super.init(coder: aDecoder, rootView: Main(retrievedList: CompanyFetcher(sortBy: \CoreCompany.name, request: NSFetchRequest<CoreCompany>(entityName: "CoreCompany")).fetchFromCoreData()))
 	}
 	
 	///2. — Called by `@objc required dynamic init?` to construct view.
