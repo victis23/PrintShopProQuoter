@@ -13,9 +13,11 @@ This project was designed completely in **xCode** using Swift.
 ### Main Frameworks & APIs used in this project:
 
 SWIFTUI \
+GraphQL \
+Amazon AWS \
 UIKit (Foundation)\
 Combine \
-Core Data \ 
-GraphQL  \
-Amazon AWS  \
+Core Data
+
+
 
