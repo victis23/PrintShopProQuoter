@@ -26,7 +26,7 @@ class CompanyDeleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtoc
 	private let itemIdentifier : String
 	private let context : NSManagedObjectContext = Saver.context
 	
-	init?(identifier: String){
+	init?(identifier: String, keypath: KeyPath<R,V>, CDType type : NSFetchRequest<Object>, filter nsPredicateFormat : String){
 		self.itemIdentifier = identifier
 	}
 	
