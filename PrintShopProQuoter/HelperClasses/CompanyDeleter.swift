@@ -45,9 +45,9 @@ class CompanyDeleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtoc
 	/// Creates fetch request and returns first object in return set that matches search identifier.
 	private func getCoreDataObject()-> NSManagedObject?{
 		
-		let data = CoreDataFetcher(sortBy: \CoreCompany.name, request: NSFetchRequest<CoreCompany>(entityName: "CoreCompany"))
-		let query : NSPredicate? = NSPredicate(format: "id = %@", itemIdentifier)
-		let object = data.fetchFromCoreData(predicate: query)?.first
+		let data = CoreDataFetcher(sortBy: keypath, request: request)
+		let query : NSPredicate? = NSPredicate(format: nsPredicateFormat, itemIdentifier)
+		let object = data.fetchFromCoreData(predicate: query)?.first as! NSManagedObject
 
 		return object
 	}
