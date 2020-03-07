@@ -28,6 +28,9 @@ class CompanyDeleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtoc
 	
 	init?(identifier: String, keypath: KeyPath<R,V>, CDType type : NSFetchRequest<Object>, filter nsPredicateFormat : String){
 		self.itemIdentifier = identifier
+		self.keypath = keypath
+		self.request = type
+		self.nsPredicateFormat = nsPredicateFormat
 	}
 	
 	/// Removes returned item from persistant data storage.
