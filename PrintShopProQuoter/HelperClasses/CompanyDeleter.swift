@@ -10,7 +10,18 @@ import UIKit
 import CoreData
 
 /// Handles removing items from core data using item identifiers.
-class CompanyDeleter {
+class CompanyDeleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtocol {
+	
+	typealias Root = R
+	
+	typealias Value = V
+	
+	typealias ManagedObject = Object
+	
+	var keypath: KeyPath<R, V>
+	var request: NSFetchRequest<Object>
+	var nsPredicateFormat : String
+	
 	
 	private let itemIdentifier : String
 	private let context : NSManagedObjectContext = Saver.context
