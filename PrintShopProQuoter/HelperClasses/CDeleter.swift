@@ -42,11 +42,15 @@ class Deleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtocol {
 		try context.save()
 	}
 	
-	/// Creates fetch request and returns first object in return set that matches search identifier.
+	/// Uses instance of `Fetcher` class to retrieve the first matching object that meets the users query.
 	private func getCoreDataObject()-> NSManagedObject?{
 		
 		let data = Fetcher(sortBy: keypath, request: request)
+		
+		//Create query argument.
 		let query : NSPredicate? = NSPredicate(format: nsPredicateFormat, itemIdentifier)
+		
+		//Actually query and retrieve first item.
 		let object = data.fetchFromCoreData(predicate: query)?.first as! NSManagedObject
 
 		return object
