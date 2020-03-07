@@ -1,5 +1,5 @@
 //
-//  CompanyDeleter.swift
+//  Deleter.swift
 //  PrintShopProQuoter
 //
 //  Created by Scott Leonard on 3/4/20.
@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 /// Handles removing items from core data using item identifiers.
-class CompanyDeleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtocol {
+class Deleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtocol {
 	
 	typealias Root = R
 	
@@ -45,7 +45,7 @@ class CompanyDeleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtoc
 	/// Creates fetch request and returns first object in return set that matches search identifier.
 	private func getCoreDataObject()-> NSManagedObject?{
 		
-		let data = CoreDataFetcher(sortBy: keypath, request: request)
+		let data = Fetcher(sortBy: keypath, request: request)
 		let query : NSPredicate? = NSPredicate(format: nsPredicateFormat, itemIdentifier)
 		let object = data.fetchFromCoreData(predicate: query)?.first as! NSManagedObject
 

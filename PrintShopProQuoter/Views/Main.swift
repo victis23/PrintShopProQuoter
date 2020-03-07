@@ -25,7 +25,7 @@ struct Main : View {
 	}
 	
 	///Selects item that will be removed during edit mode from list.
-	/// [S]OLID — CompanyDeleter handles actual deleting of selected object from persistent container.
+	/// [S]OLID — Deleter handles actual deleting of selected object from persistent container.
 	func deleteItems(at index : IndexSet){
 		
 		// returns index for selected row in ForEach view while in edit mode.
@@ -35,7 +35,7 @@ struct Main : View {
 		let id = customerList.companies[position].id
 		
 		do{
-			let deleter = CompanyDeleter(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest<CoreCompany>(entityName: "CoreCompany"), filter: "id = %@")
+			let deleter = Deleter(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest<CoreCompany>(entityName: "CoreCompany"), filter: "id = %@")
 			try deleter?.removeObject()
 		}
 		catch(let e){

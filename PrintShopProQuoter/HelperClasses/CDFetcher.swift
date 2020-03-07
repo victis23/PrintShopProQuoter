@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 /// FetchCompanies retrieves data from persistent container and returns an array of CoreCompany objects.
-class CoreDataFetcher<R,V,ReturnValue> : CoreDataFetcherProtocol where ReturnValue : NSFetchRequestResult {
+class Fetcher<R,V,ReturnValue> : CoreDataFetcherProtocol where ReturnValue : NSFetchRequestResult {
 	
 	typealias Root = R
 	typealias Value = V

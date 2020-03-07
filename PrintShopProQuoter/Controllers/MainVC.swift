@@ -17,7 +17,7 @@ class MainVC : UIHostingController<Main> {
 	@objc required dynamic init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder,
 				   rootView: Main(retrievedList:
-					CoreDataFetcher(sortBy: \CoreCompany.name,
+					Fetcher(sortBy: \CoreCompany.name,
 									request: NSFetchRequest<CoreCompany>(entityName: "CoreCompany"))
 						.fetchFromCoreData()))
 	}

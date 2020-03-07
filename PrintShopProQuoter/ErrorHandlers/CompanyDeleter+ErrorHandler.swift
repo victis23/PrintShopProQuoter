@@ -1,5 +1,5 @@
 //
-//  CompanyDeleter+ErrorHandler.swift
+//  Deleter+ErrorHandler.swift
 //  PrintShopProQuoter
 //
 //  Created by Scott Leonard on 3/4/20.
