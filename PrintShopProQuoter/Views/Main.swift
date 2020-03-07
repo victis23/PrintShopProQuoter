@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import CoreData
 
 /// Handles view that contains a list of current companies user is doing business with.
 struct Main : View {
