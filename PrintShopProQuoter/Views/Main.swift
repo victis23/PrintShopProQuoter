@@ -35,7 +35,7 @@ struct Main : View {
 		let id = customerList.companies[position].id
 		
 		do{
-			let deleter = CompanyDeleter(identifier: id)
+			let deleter = CompanyDeleter(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest<CoreCompany>(entityName: "CoreCompany"), filter: "id = %@")
 			try deleter?.removeObject()
 		}
 		catch(let e){
