@@ -17,7 +17,7 @@ class Saver {
 	func set() {}
 	
 	//Save values to persistent container.
-	public func save() {
+	open func save() {
 		
 		do {
 			try Saver.context.save()
