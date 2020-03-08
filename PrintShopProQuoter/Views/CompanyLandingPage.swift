@@ -71,11 +71,6 @@ struct ItemButton: View {
 					
 					//Checks which button is being drawn. Contact Info button is the primary button on this view so it needs to have a larger version of its icon drawn.
 					if text == CONTACT_INFO {
-						Text(text)
-							.foregroundColor(Color(.white))
-							.bold()
-							.font(.title)
-							.padding(.top)
 						
 						ZStack{
 							
@@ -83,11 +78,17 @@ struct ItemButton: View {
 								.stroke(Color.white, lineWidth: 5)
 								.foregroundColor(.white)
 							
-							
 							Image(text)
 								.resizable()
 								.aspectRatio(contentMode: .fit)
 						}
+						.padding()
+						
+						Text(text)
+							.foregroundColor(Color(.white))
+							.bold()
+							.font(.title)
+							.padding(.top)
 						Spacer()
 					}
 						
