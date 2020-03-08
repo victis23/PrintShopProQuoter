@@ -20,32 +20,32 @@ struct CompanyLandingPage : View {
 	
 	var body: some View {
 		
-			ZStack {
+		ZStack {
+			
+			//Sets background gradient for current view.
+			GradientBackground()
+			
+			VStack{
 				
-				//Sets background gradient for current view.
-				GradientBackground()
+				ItemButton(company: company, text: CONTACT_INFO)
+					.padding(.leading)
+					.padding(.trailing)
 				
-				VStack{
+				HStack {
 					
-					ItemButton(company: company, text: CONTACT_INFO)
-						.padding(.leading)
-						.padding(.trailing)
-					
-					HStack {
-						
-						VStack {
-							ItemButton(company: company, text: QUOTES)
-							ItemButton(company: company, text: ORDERS)
-						}
-						
-						VStack {
-							ItemButton(company: company, text: LOCATION)
-						}
+					VStack {
+						ItemButton(company: company, text: QUOTES)
+						ItemButton(company: company, text: ORDERS)
 					}
-					.padding()
 					
+					VStack {
+						ItemButton(company: company, text: LOCATION)
+					}
 				}
+				.padding()
+				
 			}
+		}
 		.navigationBarTitle(company?.name ?? NO_COMPANY_DEFAULT_STRING)
 	}
 }
@@ -77,23 +77,39 @@ struct ItemButton: View {
 							.font(.title)
 							.padding(.top)
 						
-						Image(text)
-							.resizable()
-							.aspectRatio(contentMode: .fit)
+						ZStack{
+							
+							Circle()
+								.stroke(Color.white, lineWidth: 5)
+								.foregroundColor(.white)
+							
+							
+							Image(text)
+								.resizable()
+								.aspectRatio(contentMode: .fit)
+						}
 						Spacer()
 					}
 						
 					else {
-					Text(text)
-						.foregroundColor(Color(.white))
-						.bold()
-						.padding(.top)
+						Text(text)
+							.foregroundColor(Color(.white))
+							.bold()
+							.padding(.top)
 						
 						ZStack{
-							if text != LOCATION {
-							Circle()
-								.foregroundColor(.white)
+							
+							if text == QUOTES {
+								Circle()
+									.foregroundColor(.white)
 							}
+							
+							if text == ORDERS {
+								Circle()
+									.stroke(Color.white, lineWidth: 2)
+									.foregroundColor(.white)
+							}
+							
 							SmallImages(text: text)
 								.aspectRatio(contentMode: .fit)
 						}
