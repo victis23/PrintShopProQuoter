@@ -63,9 +63,9 @@ struct ItemButton: View {
 		}){
 			
 			ZStack {
-				RoundedRectangle(cornerRadius: 10)
-					.foregroundColor(Color(.white))
-					.shadow(radius: 10)
+				ButtonBackground()
+				GradientBackground()
+					.mask(ButtonBackground())
 				
 				VStack{
 					
@@ -104,7 +104,35 @@ struct ItemButton: View {
 	}
 }
 
+struct ButtonBackground: View {
+	var body: some View {
+		RoundedRectangle(cornerRadius: 10)
+			.foregroundColor(Color(.white))
+			
+			//#242529
+			.shadow(color: Color(.sRGB, red: 0.36, green: 0.37, blue: 41, opacity: 0.8),
+					radius: 10, x: -5, y: -5)
+			
+			//#151518 0.21 - 0.21 - 0.24
+			.shadow(color: Color(.white)
+				.opacity(0.2),
+					radius: 10, x: 5, y: 5)
+	}
+}
 
+struct SmallImages: View {
+	
+	var text : String
+	
+	var body: some View {
+		Image(text)
+			.resizable()
+			.aspectRatio(contentMode: .fit)
+			.frame(alignment: .center)
+	}
+}
+
+//MARK: -
 struct Preview : PreviewProvider {
 	
 	static var previews: some View {
