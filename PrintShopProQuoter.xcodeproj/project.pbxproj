@@ -45,6 +45,7 @@
 		7D757BF3240CB1AB007ADD64 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF2240CB1AB007ADD64 /* Location.storyboard */; };
 		7D757BF5240CB1C8007ADD64 /* Contact Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */; };
 		7D7EFB40240EEC1000AD75AA /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7D7EFB3F240EEC1000AD75AA /* IQKeyboardManagerSwift */; };
+		7DA57A1624148B1300CE3119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA57A1524148B1300CE3119 /* Strings.swift */; };
 		7DACECC2240E62D6004A0F80 /* PushLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DACECC1240E62D6004A0F80 /* PushLink.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		7D757BF0240CB11E007ADD64 /* Quotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quotes.storyboard; sourceTree = "<group>"; };
 		7D757BF2240CB1AB007ADD64 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Contact Info.storyboard"; sourceTree = "<group>"; };
+		7DA57A1524148B1300CE3119 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7DACECC1240E62D6004A0F80 /* PushLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 		7D5DE3FD240BD56D00130319 /* PrintShopProQuoter */ = {
 			isa = PBXGroup;
 			children = (
+				7DA57A1424148B0000CE3119 /* Strings */,
 				7D468AFD24108FE200184813 /* Protocols */,
 				7D5DE434240BDAB600130319 /* AppStateManagment */,
 				7D5DE431240BD9A800130319 /* Models */,
@@ -290,6 +293,14 @@
 				7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		7DA57A1424148B0000CE3119 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				7DA57A1524148B1300CE3119 /* Strings.swift */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +466,7 @@
 				7D5DE437240BDBA500130319 /* Customers.swift in Sources */,
 				7D468AFC24108FB700184813 /* ContactViewController.swift in Sources */,
 				7D46F0BB240C0B9900B2EC35 /* AddCompany.swift in Sources */,
+				7DA57A1624148B1300CE3119 /* Strings.swift in Sources */,
 				7D357E542411D09900EC4F94 /* CDSaver.swift in Sources */,
 				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,
 				7D46F0C4240C848000B2EC35 /* GradientBackground.swift in Sources */,
