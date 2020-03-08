@@ -68,19 +68,26 @@ struct ItemButton: View {
 					.shadow(radius: 10)
 				
 				VStack{
+					
+					//Checks which button is being drawn. Contact Info button is the primary button on this view so it needs to have a larger version of its icon drawn.
+					if text == "Contact Info" {
+						Text(text)
+							.foregroundColor(Color(.link))
+							.bold()
+							.font(.largeTitle)
+							.padding(.top)
+						
+						Image(text)
+							.resizable()
+							.aspectRatio(contentMode: .fit)
+						Spacer()
+					}
+						
+					else {
 					Text(text)
 						.foregroundColor(Color(.link))
 						.bold()
 						.padding(.top)
-					
-					//Checks which button is being drawn. Contact Info button is the primary button on this view so it needs to have a larger version of its icon drawn.
-					if text == "Contact Info" {
-						Image(text)
-							.resizable()
-							.aspectRatio(contentMode: .fit)
-							.frame(width: 150, height: 150, alignment: .center)
-						Spacer()
-					}else{
 						
 						Image(text)
 							.resizable()
