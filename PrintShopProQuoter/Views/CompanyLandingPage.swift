@@ -72,9 +72,9 @@ struct ItemButton: View {
 					//Checks which button is being drawn. Contact Info button is the primary button on this view so it needs to have a larger version of its icon drawn.
 					if text == "Contact Info" {
 						Text(text)
-							.foregroundColor(Color(.link))
+							.foregroundColor(Color(.white))
 							.bold()
-							.font(.largeTitle)
+							.font(.title)
 							.padding(.top)
 						
 						Image(text)
@@ -85,14 +85,18 @@ struct ItemButton: View {
 						
 					else {
 					Text(text)
-						.foregroundColor(Color(.link))
+						.foregroundColor(Color(.white))
 						.bold()
 						.padding(.top)
 						
-						Image(text)
-							.resizable()
-							.aspectRatio(contentMode: .fit)
-							.frame(width: 100, height: 100, alignment: .center)
+						ZStack{
+							if text != "Location" {
+							Circle()
+								.foregroundColor(.white)
+							}
+							SmallImages(text: text)
+								.aspectRatio(contentMode: .fit)
+						}
 					}
 				}
 				.padding(.bottom)
@@ -142,4 +146,3 @@ struct Preview : PreviewProvider {
 		//			.previewLayout(.sizeThatFits)
 	}
 }
-
