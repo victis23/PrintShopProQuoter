@@ -1,0 +1,6 @@
+framework module Pods_PrintShopProQuoter {
+  umbrella header "Pods-PrintShopProQuoter-umbrella.h"
+
+  export *
+  module * { export * }
+}

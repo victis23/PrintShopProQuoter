@@ -1,11 +1,11 @@
+platform :ios, '13.0'
 target :PrintShopProQuoter do
     use_frameworks!
 
-    pod 'amplify-tools'
-
-    pod 'Amplify'
-    pod 'AWSPluginsCore'
-    pod 'AmplifyPlugins/AWSAPIPlugin'
+   # pod 'amplify-tools'
+   # pod 'Amplify'
+   # pod 'AWSPluginsCore'
+   # pod 'AmplifyPlugins/AWSAPIPlugin'
 
     # other pods
 end
