@@ -18,7 +18,7 @@ struct AddCompany: View {
 	@EnvironmentObject private var customerList : Customers
 	
 	//Properties that will be assigned to the instance of Company when user taps submit button..
-	@State private var name = ""
+	@State private var name = BLANK
 	@State private var address : Address = Address(street: nil, city: nil, state: nil, country: nil, zipcode: nil)
 	@State private var contact : Contact = Contact()
 	
@@ -36,16 +36,16 @@ struct AddCompany: View {
 					///List that handles fields for user input.
 					List(content: {
 						
-						TextField("Company Name", text: $name)
+						TextField(COMPANY_NAME, text: $name)
 							.padding()
 						
 						NavigationLink(destination: AddAddress(address: $address), label: {
-							Text("Address")
+							Text(ADDRESS)
 								.padding(.all, 20)
 						})
 						
 						NavigationLink(destination: AddContact(contact: $contact), label: {
-							Text("Contact Info")
+							Text(CONTACT_INFO)
 								.padding(.all, 20)
 						})
 					})
@@ -81,7 +81,7 @@ struct AddCompany: View {
 								.frame(height: 75, alignment: .center)
 								.shadow(color: Color(UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)), radius: 10, x: 0, y: 10)
 							
-							Text("Save New Company")
+							Text(SAVE_NEW_COMPANY)
 								.font(.largeTitle)
 								.foregroundColor(Color(.link))
 								.bold()
@@ -92,7 +92,7 @@ struct AddCompany: View {
 						.padding()
 				}
 			}
-			.navigationBarTitle("Add Company")
+			.navigationBarTitle(ADD_COMPANY)
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
 	}

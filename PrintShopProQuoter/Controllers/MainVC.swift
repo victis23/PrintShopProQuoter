@@ -18,7 +18,7 @@ class MainVC : UIHostingController<Main> {
 		super.init(coder: aDecoder,
 				   rootView: Main(retrievedList:
 					Fetcher(sortBy: \CoreCompany.name,
-									request: NSFetchRequest<CoreCompany>(entityName: "CoreCompany"))
+									request: NSFetchRequest<CoreCompany>(entityName: CORE_COMPANY))
 						.fetchFromCoreData()))
 	}
 	

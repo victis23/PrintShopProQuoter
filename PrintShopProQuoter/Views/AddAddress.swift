@@ -18,11 +18,11 @@ struct AddAddress: View {
 	@Binding private var address : Address
 	
 	//Properties that will be assigned to the class instance address property.
-	@State private var street : String = ""
-	@State private var city : String = ""
-	@State private var state : String = ""
-	@State private var country : String = ""
-	@State private var zipcode : String = ""
+	@State private var street : String = BLANK
+	@State private var city : String = BLANK
+	@State private var state : String = BLANK
+	@State private var country : String = BLANK
+	@State private var zipcode : String = BLANK
 	
 	//Captures Binding Address from Parent view.
 	init(address: Binding<Address>){

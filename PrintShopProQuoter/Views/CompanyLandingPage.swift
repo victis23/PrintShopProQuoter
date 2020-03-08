@@ -27,26 +27,26 @@ struct CompanyLandingPage : View {
 				
 				VStack{
 					
-					ItemButton(company: company, text: "Contact Info")
+					ItemButton(company: company, text: CONTACT_INFO)
 						.padding(.leading)
 						.padding(.trailing)
 					
 					HStack {
 						
 						VStack {
-							ItemButton(company: company, text: "Quotes")
-							ItemButton(company: company, text: "Orders")
+							ItemButton(company: company, text: QUOTES)
+							ItemButton(company: company, text: ORDERS)
 						}
 						
 						VStack {
-							ItemButton(company: company, text: "Location")
+							ItemButton(company: company, text: LOCATION)
 						}
 					}
 					.padding()
 					
 				}
 			}
-		.navigationBarTitle(company?.name ?? "No Company")
+		.navigationBarTitle(company?.name ?? NO_COMPANY_DEFAULT_STRING)
 	}
 }
 
@@ -70,7 +70,7 @@ struct ItemButton: View {
 				VStack{
 					
 					//Checks which button is being drawn. Contact Info button is the primary button on this view so it needs to have a larger version of its icon drawn.
-					if text == "Contact Info" {
+					if text == CONTACT_INFO {
 						Text(text)
 							.foregroundColor(Color(.white))
 							.bold()
@@ -90,7 +90,7 @@ struct ItemButton: View {
 						.padding(.top)
 						
 						ZStack{
-							if text != "Location" {
+							if text != LOCATION {
 							Circle()
 								.foregroundColor(.white)
 							}

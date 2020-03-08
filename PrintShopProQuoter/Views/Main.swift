@@ -35,7 +35,7 @@ struct Main : View {
 		let id = customerList.companies[position].id
 		
 		do{
-			let deleter = Deleter(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest<CoreCompany>(entityName: "CoreCompany"), filter: "id = %@")
+			let deleter = Deleter(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest<CoreCompany>(entityName: CORE_COMPANY), filter: "id = %@")
 			try deleter?.removeObject()
 		}
 		catch(let e){
@@ -69,12 +69,12 @@ struct Main : View {
 						.listRowBackground(Color.clear)
 					}
 				}
-				.navigationBarTitle("Customer List")
+				.navigationBarTitle(CUSTOMER_LIST)
 				.navigationBarItems(leading:
 					
 					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList), trailing: EditButton())
 					.foregroundColor(.white)
-					.navigationBarTitle("Customer List")
+					.navigationBarTitle(CUSTOMER_LIST)
 			}
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
@@ -83,7 +83,7 @@ struct Main : View {
 			/// - Note: `[CoreCompany] —> [Company]`
 			.onAppear {
 				let restoredList = self.retrievedList!.map { item -> Company in
-					Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? "No Value"), id: item.id!)
+					Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? ERROR_NO_VALUE), id: item.id!)
 				}
 				
 				self.customerList.companies = restoredList
@@ -102,11 +102,11 @@ struct ItemRow: View {
 			
 			VStack(alignment:.leading) {
 				
-				Text(company.name ?? "Error No Value")
+				Text(company.name ?? ERROR_NO_VALUE)
 					.fontWeight(.heavy)
 					.font(.headline)
 				
-				Text(company.address?.street ?? "Error No Value")
+				Text(company.address?.street ?? ERROR_NO_VALUE)
 					.fontWeight(.light)
 					.font(Font.system(size: 10))
 			}
@@ -116,14 +116,14 @@ struct ItemRow: View {
 			VStack{
 				company.quotes?.count != nil ? Text(String(describing: company.quotes?.count)) : Text("0")
 					.bold()
-				Text("Quotes")
+				Text(QUOTES)
 			}
 			.padding()
 			
 			VStack{
 				company.orders?.count != nil ? Text(String(describing: company.orders?.count)) : Text("0")
 					.bold()
-				Text("Orders")
+				Text(ORDERS)
 			}
 			.padding()
 		}
@@ -148,7 +148,7 @@ struct AddCompanyNavigationBarTrailingButton: View {
 				VStack{
 					Image(systemName: "plus")
 					
-					Text("Add Customer")
+					Text(ADD_CUSTOMER)
 						.font(Font.system(size: 10))
 						.bold()
 				}
