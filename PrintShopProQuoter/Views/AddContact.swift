@@ -18,9 +18,9 @@ struct AddContact: View {
 	@Binding private var contact : Contact
 	
 	//Properties that will be assigned to the class instance contact property.
-	@State private var name : String = ""
-	@State private var phoneNumber : String = ""
-	@State private var email : String = ""
+	@State private var name : String = BLANK
+	@State private var phoneNumber : String = BLANK
+	@State private var email : String = BLANK
 	
 	/// Initalizer that captures a binding property from parent view.
 	init(contact: Binding<Contact>){
@@ -38,13 +38,13 @@ struct AddContact: View {
 				
 				Form{
 					
-					TextField("Name", text: $name)
+					TextField(NAME, text: $name)
 						.padding()
 					
-					TextField("Phone Number", text: $phoneNumber)
+					TextField(PHONE_NUMBER, text: $phoneNumber)
 						.padding()
 					
-					TextField("Email", text: $email)
+					TextField(EMAIL, text: $email)
 						.padding()
 				}
 				.foregroundColor(.white)
@@ -57,12 +57,12 @@ struct AddContact: View {
 					
 				}) {
 					
-					Text("Submit")
+					Text(SUBMIT)
 						.foregroundColor(.white)
 				}
 			}
 		}
-		.navigationBarTitle("Contact")
+		.navigationBarTitle(CONTACT)
 	}
 }
 

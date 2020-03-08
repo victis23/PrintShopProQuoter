@@ -52,12 +52,12 @@ struct AddAddress: View {
 						//Dismiss current view.
 						self.presentationMode.wrappedValue.dismiss()
 					}) {
-						Text("Submit")
+						Text(SUBMIT)
 					}
 				}
 				.foregroundColor(.white)
 		}
-		.navigationBarTitle("Address")
+		.navigationBarTitle(ADDRESS)
 	}
 }
 
@@ -84,15 +84,15 @@ struct AddressForm: View {
 		
 		///Handles textfields for user input.
 		Form{
-			TextField("Street", text: $street)
+			TextField(STREET, text: $street)
 				.padding()
-			TextField("City", text: $city)
+			TextField(CITY, text: $city)
 				.padding()
-			TextField("State", text: $state)
+			TextField(STATE, text: $state)
 				.padding()
-			TextField("Country", text: $country)
+			TextField(COUNTRY, text: $country)
 				.padding()
-			TextField("Zipcode", text: $zipcode)
+			TextField(ZIPCODE, text: $zipcode)
 				.padding()
 		}
 		.font(.title)
