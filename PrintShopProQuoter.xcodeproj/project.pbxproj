@@ -46,6 +46,7 @@
 		7D757BF5240CB1C8007ADD64 /* Contact Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */; };
 		7D7EFB40240EEC1000AD75AA /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7D7EFB3F240EEC1000AD75AA /* IQKeyboardManagerSwift */; };
 		7DA57A1624148B1300CE3119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA57A1524148B1300CE3119 /* Strings.swift */; };
+		7DA57A1824158A1C00CE3119 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7DA57A1724158A1C00CE3119 /* podfile */; };
 		7DACECC2240E62D6004A0F80 /* PushLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DACECC1240E62D6004A0F80 /* PushLink.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		7D757BF2240CB1AB007ADD64 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Contact Info.storyboard"; sourceTree = "<group>"; };
 		7DA57A1524148B1300CE3119 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		7DA57A1724158A1C00CE3119 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7DACECC1240E62D6004A0F80 /* PushLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				7D5DE417240BD56E00130319 /* PrintShopProQuoterTests */,
 				7D5DE422240BD56E00130319 /* PrintShopProQuoterUITests */,
 				7D5DE3FC240BD56D00130319 /* Products */,
+				7DA57A1724158A1C00CE3119 /* podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -415,6 +418,7 @@
 			files = (
 				7D5DE40E240BD56E00130319 /* LaunchScreen.storyboard in Resources */,
 				7D5DE40B240BD56E00130319 /* Assets.xcassets in Resources */,
+				7DA57A1824158A1C00CE3119 /* podfile in Resources */,
 				7D5DE406240BD56D00130319 /* Main.storyboard in Resources */,
 				7D757BF3240CB1AB007ADD64 /* Location.storyboard in Resources */,
 				7D757BF5240CB1C8007ADD64 /* Contact Info.storyboard in Resources */,

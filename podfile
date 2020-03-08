@@ -1,0 +1,11 @@
+target :PrintShopProQuoter do
+    use_frameworks!
+
+    pod 'amplify-tools'
+
+    pod 'Amplify'
+    pod 'AWSPluginsCore'
+    pod 'AmplifyPlugins/AWSAPIPlugin'
+
+    # other pods
+end
