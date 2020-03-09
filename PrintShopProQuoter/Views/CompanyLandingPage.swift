@@ -27,19 +27,19 @@ struct CompanyLandingPage : View {
 			
 			VStack{
 				
-				ItemButton(company: company, text: CONTACT_INFO)
+				CatagoryButton(company: company, text: CONTACT_INFO)
 					.padding(.leading)
 					.padding(.trailing)
 				
 				HStack {
 					
 					VStack {
-						ItemButton(company: company, text: QUOTES)
-						ItemButton(company: company, text: ORDERS)
+						CatagoryButton(company: company, text: QUOTES)
+						CatagoryButton(company: company, text: ORDERS)
 					}
 					
 					VStack {
-						ItemButton(company: company, text: LOCATION)
+						CatagoryButton(company: company, text: LOCATION)
 					}
 				}
 				.padding()
@@ -50,7 +50,7 @@ struct CompanyLandingPage : View {
 	}
 }
 
-struct ItemButton: View {
+struct CatagoryButton: View {
 	
 	@State var isPresenting :Bool = false
 	
@@ -64,14 +64,14 @@ struct ItemButton: View {
 			
 			ZStack {
 				if text != LOCATION {
-				ButtonBackground()
+				ButtonBaseLayer()
 					.shadow(color: Color(UIColor(red: 0.0, green: 0.39, blue: 0.95, alpha: 1)),
 							radius: 15, x: -5, y: -5)
 					.opacity(0.8)
 				}
 				
 				if text == LOCATION {
-					ButtonBackground()
+					ButtonBaseLayer()
 						//Dark
 						.shadow(color: Color(UIColor(red: 0.0, green: 0.39, blue: 0.95, alpha: 1)),
 								radius: 10, x: -5, y: -5)
@@ -82,7 +82,7 @@ struct ItemButton: View {
 				}
 				
 				GradientBackground()
-					.mask(ButtonBackground())
+					.mask(ButtonBaseLayer())
 				
 				VStack{
 					
@@ -128,7 +128,7 @@ struct ItemButton: View {
 									.foregroundColor(.white)
 							}
 							
-							SmallImages(text: text)
+							ButtonIcon(text: text)
 								.aspectRatio(contentMode: .fit)
 						}
 					}
@@ -142,14 +142,14 @@ struct ItemButton: View {
 	}
 }
 
-struct ButtonBackground: View {
+struct ButtonBaseLayer: View {
 	var body: some View {
 		RoundedRectangle(cornerRadius: 10)
 			.foregroundColor(Color(.white))
 	}
 }
 
-struct SmallImages: View {
+struct ButtonIcon: View {
 	
 	var text : String
 	
