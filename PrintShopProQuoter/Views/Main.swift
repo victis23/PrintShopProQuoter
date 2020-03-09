@@ -94,7 +94,7 @@ struct Main : View {
 	}
 }
 
-struct ItemRow: View {
+struct CompanyListCell: View {
 	
 	
 	var company : Company
