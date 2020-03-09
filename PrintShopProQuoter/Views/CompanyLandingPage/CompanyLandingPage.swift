@@ -142,24 +142,9 @@ struct CatagoryButton: View {
 	}
 }
 
-struct ButtonBaseLayer: View {
-	var body: some View {
-		RoundedRectangle(cornerRadius: 10)
-			.foregroundColor(Color(.white))
-	}
-}
 
-struct ButtonIcon: View {
-	
-	var text : String
-	
-	var body: some View {
-		Image(text)
-			.resizable()
-			.aspectRatio(contentMode: .fit)
-			.frame(alignment: .center)
-	}
-}
+
+
 
 //MARK: -
 struct Preview : PreviewProvider {
