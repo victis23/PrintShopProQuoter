@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+/// Draws the basic shape of the button.
+/// - Note: This view is the one that sets the color of the text.
 struct ButtonBaseLayer: View {
 	var body: some View {
 		RoundedRectangle(cornerRadius: 10)
