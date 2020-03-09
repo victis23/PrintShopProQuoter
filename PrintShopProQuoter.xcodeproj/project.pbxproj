@@ -328,10 +328,10 @@
 			children = (
 				7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */,
 				7DEFAD892416CCE6006C47E6 /* CatagoryButton.swift */,
-				7DEFAD8D2416D207006C47E6 /* ButtonShadowLayer.swift */,
 				7DEFAD872416CB19006C47E6 /* ButtonBaseLayer.swift */,
-				7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */,
+				7DEFAD8D2416D207006C47E6 /* ButtonShadowLayer.swift */,
 				7DEFAD8B2416D1E6006C47E6 /* CircleAndTextLayer.swift */,
+				7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */,
 			);
 			path = CompanyLandingPage;
 			sourceTree = "<group>";
