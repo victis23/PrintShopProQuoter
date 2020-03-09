@@ -21,3 +21,17 @@ extension CoreDataDeleterError : LocalizedError {
 		}
 	}
 }
+
+enum ObjectSearchErr : Error {
+	case objectNotFound
+}
+
+extension ObjectSearchErr : LocalizedError {
+	var errorDescription: String? {
+		
+		switch self {
+		case .objectNotFound:
+			return NSLocalizedString("No object with this value exists.", comment: "")
+		}
+	}
+}
