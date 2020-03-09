@@ -18,7 +18,7 @@
 		7D468B032410AD8600184813 /* CDeleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468B022410AD8600184813 /* CDeleter.swift */; };
 		7D468B062410B49D00184813 /* CompanyDeleter+ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468B052410B49D00184813 /* CompanyDeleter+ErrorHandler.swift */; };
 		7D46F0B9240C0AB100B2EC35 /* CompanyLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */; };
-		7D46F0BB240C0B9900B2EC35 /* AddCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BA240C0B9900B2EC35 /* AddCompany.swift */; };
+		7D46F0BB240C0B9900B2EC35 /* AddCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BA240C0B9900B2EC35 /* AddCustomer.swift */; };
 		7D46F0BE240C0BB500B2EC35 /* AddAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */; };
 		7D46F0BF240C0BB500B2EC35 /* AddContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0BD240C0BB500B2EC35 /* AddContact.swift */; };
 		7D46F0C1240C165000B2EC35 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46F0C0240C165000B2EC35 /* MainVC.swift */; };
@@ -86,7 +86,7 @@
 		7D468B022410AD8600184813 /* CDeleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDeleter.swift; sourceTree = "<group>"; };
 		7D468B052410B49D00184813 /* CompanyDeleter+ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyDeleter+ErrorHandler.swift"; sourceTree = "<group>"; };
 		7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyLandingPage.swift; sourceTree = "<group>"; };
-		7D46F0BA240C0B9900B2EC35 /* AddCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompany.swift; sourceTree = "<group>"; };
+		7D46F0BA240C0B9900B2EC35 /* AddCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCustomer.swift; sourceTree = "<group>"; };
 		7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddress.swift; sourceTree = "<group>"; };
 		7D46F0BD240C0BB500B2EC35 /* AddContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContact.swift; sourceTree = "<group>"; };
 		7D46F0C0240C165000B2EC35 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 				7D46F0C2240C843300B2EC35 /* ComponentViews */,
 				7DEFAD842416CA7D006C47E6 /* CompanyLandingPage */,
 				7D5DE402240BD56D00130319 /* Main.swift */,
-				7D46F0BA240C0B9900B2EC35 /* AddCompany.swift */,
+				7D46F0BA240C0B9900B2EC35 /* AddCustomer.swift */,
 				7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */,
 				7D46F0BD240C0BB500B2EC35 /* AddContact.swift */,
 			);
@@ -546,7 +546,7 @@
 				7D5DE441240BDD4E00130319 /* QuoteOrderPrimaryElements.swift in Sources */,
 				7D5DE437240BDBA500130319 /* Customers.swift in Sources */,
 				7D468AFC24108FB700184813 /* ContactViewController.swift in Sources */,
-				7D46F0BB240C0B9900B2EC35 /* AddCompany.swift in Sources */,
+				7D46F0BB240C0B9900B2EC35 /* AddCustomer.swift in Sources */,
 				7DA57A1624148B1300CE3119 /* Strings.swift in Sources */,
 				7D357E542411D09900EC4F94 /* CDSaver.swift in Sources */,
 				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,

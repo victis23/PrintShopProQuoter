@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-/// View that allows user to add and address to AddCompany's environmental object Company...
+/// View that allows user to add and address to AddCustomer's environmental object Company...
 struct AddAddress: View {
 	
 	//Tracks and controls the state of the current view.

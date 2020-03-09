@@ -157,7 +157,7 @@ struct AddCompanyNavigationBarTrailingButton: View {
 				}
 			})
 				.sheet(isPresented: $isPresentingView, content: {
-					AddCompany()
+					AddCustomer()
 						.environmentObject(self.customerList)
 				})
 				.padding(.top, 5)

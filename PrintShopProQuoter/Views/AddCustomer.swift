@@ -9,7 +9,7 @@
 import SwiftUI
 
 /// View that allows user to add a company to main view.
-struct AddCompany: View {
+struct AddCustomer: View {
 	
 	//Tracks current state of view and dismissal.
 	@Environment(\.presentationMode) private var presentationMode
@@ -101,6 +101,6 @@ struct AddCompany: View {
 
 struct AddCustomer_Previews: PreviewProvider {
 	static var previews: some View {
-		AddCompany()
+		AddCustomer()
 	}
 }
