@@ -28,7 +28,7 @@ struct CatagoryButton: View {
 				GradientBackground()
 					.mask(ButtonBaseLayer())
 				
-				ButtonIconLayer(text: text)
+				CircleAndTextLayer(text: text)
 			}
 		}
 		.sheet(isPresented: $isPresenting) {
