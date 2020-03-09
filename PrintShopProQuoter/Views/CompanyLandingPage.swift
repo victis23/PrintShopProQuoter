@@ -63,7 +63,19 @@ struct ItemButton: View {
 		}){
 			
 			ZStack {
+				if text != LOCATION {
 				ButtonBackground()
+					.shadow(color: .black, radius: 15, x: -5, y: -5)
+					.opacity(0.1)
+				}
+				
+				if text == LOCATION {
+					ButtonBackground()
+						.shadow(color: .black, radius: 15, x: -5, y: -5)
+						.shadow(color: .white, radius: 15, x: 5, y: 15)
+						.opacity(0.1)
+				}
+				
 				GradientBackground()
 					.mask(ButtonBackground())
 				
@@ -129,15 +141,6 @@ struct ButtonBackground: View {
 	var body: some View {
 		RoundedRectangle(cornerRadius: 10)
 			.foregroundColor(Color(.white))
-			
-			//#242529
-			.shadow(color: Color(.sRGB, red: 0.36, green: 0.37, blue: 41, opacity: 0.8),
-					radius: 10, x: -5, y: -5)
-			
-			//#151518 0.21 - 0.21 - 0.24
-			.shadow(color: Color(.white)
-				.opacity(0.2),
-					radius: 10, x: 5, y: 5)
 	}
 }
 
