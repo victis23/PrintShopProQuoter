@@ -20,6 +20,7 @@ struct Main : View {
 	// Retrieved company list from coredata assigned in MainVC().
 	private var retrievedList : [CoreCompany]?
 	
+	// This value is set in MainVC.swift.
 	init(retrievedList : [CoreCompany]? = nil) {
 		self.retrievedList = retrievedList
 	}
@@ -34,6 +35,7 @@ struct Main : View {
 		// returns string value for item's identifier.
 		let id = customerList.companies[position].id
 		
+		// Uses instance of Deleter class to remove queried item.
 		do{
 			let deleter = Deleter(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest<CoreCompany>(entityName: CORE_COMPANY), filter: "id = %@")
 			try deleter?.removeObject()
@@ -52,6 +54,7 @@ struct Main : View {
 			
 			ZStack{
 				
+				//Makes the background of the view the app's custom blue gradient.
 				GradientBackground()
 				
 				VStack{
@@ -62,7 +65,7 @@ struct Main : View {
 							
 							NavigationLink(destination: CompanyLandingPage(company: company)) {
 								
-								ItemRow(company: company)
+								CompanyListCell(company: company)
 							}
 							}
 						.onDelete(perform: deleteItems)
