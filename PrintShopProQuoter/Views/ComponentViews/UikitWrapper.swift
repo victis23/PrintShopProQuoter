@@ -20,7 +20,10 @@ struct UIKitWrapper: UIViewControllerRepresentable {
 	//Determines which viewcontroller will be presented to user. This string corresponds to the name of the storyboard file in the main bundle.
 	private var storyboardPointer : String
 	
-	init(company: Company, storyboardPointer: String){
+	init(company: Company?, storyboardPointer: String) {
+		
+		guard let company = company else {fatalError()}
+		
 		self.company = company
 		self.storyboardPointer = storyboardPointer
 	}
