@@ -29,7 +29,6 @@ struct PushLink<Content:View,Destination:View>: View {
 			if self.isPresenting {
 				self.destination()
 					.transition(.move(edge: .trailing))
-					.edgesIgnoringSafeArea(.all)
 			} else {
 				self.content()
 			}
