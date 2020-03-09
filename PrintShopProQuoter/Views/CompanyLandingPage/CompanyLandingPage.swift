@@ -32,7 +32,6 @@ struct CompanyLandingPage : View {
 					.padding(.trailing)
 				
 				HStack {
-					
 					VStack {
 						CatagoryButton(company: company, text: QUOTES)
 						CatagoryButton(company: company, text: ORDERS)

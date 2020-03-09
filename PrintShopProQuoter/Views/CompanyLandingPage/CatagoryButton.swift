@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-
+/// Controls the actual action performed by the button upon taps.
 struct CatagoryButton: View {
 	
 	@State var isPresenting :Bool = false
