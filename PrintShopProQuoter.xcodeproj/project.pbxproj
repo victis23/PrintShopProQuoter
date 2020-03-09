@@ -52,6 +52,8 @@
 		7DEFAD862416CAF0006C47E6 /* ButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */; };
 		7DEFAD882416CB19006C47E6 /* ButtonBaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD872416CB19006C47E6 /* ButtonBaseLayer.swift */; };
 		7DEFAD8A2416CCE6006C47E6 /* CatagoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD892416CCE6006C47E6 /* CatagoryButton.swift */; };
+		7DEFAD8C2416D1E6006C47E6 /* ButtonIconLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD8B2416D1E6006C47E6 /* ButtonIconLayer.swift */; };
+		7DEFAD8E2416D207006C47E6 /* ButtonShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD8D2416D207006C47E6 /* ButtonShadowLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIcon.swift; sourceTree = "<group>"; };
 		7DEFAD872416CB19006C47E6 /* ButtonBaseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBaseLayer.swift; sourceTree = "<group>"; };
 		7DEFAD892416CCE6006C47E6 /* CatagoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoryButton.swift; sourceTree = "<group>"; };
+		7DEFAD8B2416D1E6006C47E6 /* ButtonIconLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIconLayer.swift; sourceTree = "<group>"; };
+		7DEFAD8D2416D207006C47E6 /* ButtonShadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShadowLayer.swift; sourceTree = "<group>"; };
 		8A9FD8AAB6453515E73F74A0 /* Pods-PrintShopProQuoter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintShopProQuoter.release.xcconfig"; path = "Target Support Files/Pods-PrintShopProQuoter/Pods-PrintShopProQuoter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -324,8 +328,10 @@
 			children = (
 				7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */,
 				7DEFAD892416CCE6006C47E6 /* CatagoryButton.swift */,
+				7DEFAD8D2416D207006C47E6 /* ButtonShadowLayer.swift */,
 				7DEFAD872416CB19006C47E6 /* ButtonBaseLayer.swift */,
 				7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */,
+				7DEFAD8B2416D1E6006C47E6 /* ButtonIconLayer.swift */,
 			);
 			path = CompanyLandingPage;
 			sourceTree = "<group>";
@@ -531,6 +537,8 @@
 				7D468AF624108F3200184813 /* OrdersViewController.swift in Sources */,
 				7D357E562412254100EC4F94 /* CoreDataFetcher+Protocol.swift in Sources */,
 				7DEFAD8A2416CCE6006C47E6 /* CatagoryButton.swift in Sources */,
+				7DEFAD8E2416D207006C47E6 /* ButtonShadowLayer.swift in Sources */,
+				7DEFAD8C2416D1E6006C47E6 /* ButtonIconLayer.swift in Sources */,
 				7D468AFA24108F8D00184813 /* LocationViewController.swift in Sources */,
 				7D468B062410B49D00184813 /* CompanyDeleter+ErrorHandler.swift in Sources */,
 				7D46F0C1240C165000B2EC35 /* MainVC.swift in Sources */,
