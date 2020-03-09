@@ -45,7 +45,7 @@
 		7D757BF1240CB11E007ADD64 /* Quotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF0240CB11E007ADD64 /* Quotes.storyboard */; };
 		7D757BF3240CB1AB007ADD64 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF2240CB1AB007ADD64 /* Location.storyboard */; };
 		7D757BF5240CB1C8007ADD64 /* Contact Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D757BF4240CB1C8007ADD64 /* Contact Info.storyboard */; };
-		7D7EFB40240EEC1000AD75AA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7D7EFB3F240EEC1000AD75AA /* SwiftPackageProductDependency */; };
+		7D7EFB40240EEC1000AD75AA /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7D7EFB3F240EEC1000AD75AA /* IQKeyboardManagerSwift */; };
 		7DA57A1624148B1300CE3119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA57A1524148B1300CE3119 /* Strings.swift */; };
 		7DA57A1824158A1C00CE3119 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7DA57A1724158A1C00CE3119 /* podfile */; };
 		7DACECC2240E62D6004A0F80 /* PushLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DACECC1240E62D6004A0F80 /* PushLink.swift */; };
@@ -125,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D7EFB40240EEC1000AD75AA /* BuildFile in Frameworks */,
+				7D7EFB40240EEC1000AD75AA /* IQKeyboardManagerSwift in Frameworks */,
 				6A726D3EA40476E3F016CDD2 /* Pods_PrintShopProQuoter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,9 +261,9 @@
 		7D5DE432240BD9AF00130319 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7DEFAD842416CA7D006C47E6 /* CompanyLandingPage */,
 				7D46F0C2240C843300B2EC35 /* ComponentViews */,
 				7D5DE402240BD56D00130319 /* Main.swift */,
-				7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */,
 				7D46F0BA240C0B9900B2EC35 /* AddCompany.swift */,
 				7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */,
 				7D46F0BD240C0BB500B2EC35 /* AddContact.swift */,
@@ -313,6 +313,14 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		7DEFAD842416CA7D006C47E6 /* CompanyLandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				7D46F0B8240C0AB100B2EC35 /* CompanyLandingPage.swift */,
+			);
+			path = CompanyLandingPage;
+			sourceTree = "<group>";
+		};
 		8D7B31AF7F173F7D04950F15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,7 +335,6 @@
 				43C8DE9832E27EB41AF917BC /* Pods-PrintShopProQuoter.debug.xcconfig */,
 				8A9FD8AAB6453515E73F74A0 /* Pods-PrintShopProQuoter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -349,7 +356,7 @@
 			);
 			name = PrintShopProQuoter;
 			packageProductDependencies = (
-				7D7EFB3F240EEC1000AD75AA /* SwiftPackageProductDependency */,
+				7D7EFB3F240EEC1000AD75AA /* IQKeyboardManagerSwift */,
 			);
 			productName = PrintShopProQuoter;
 			productReference = 7D5DE3FB240BD56D00130319 /* PrintShopProQuoter.app */;
@@ -424,7 +431,7 @@
 			);
 			mainGroup = 7D5DE3F2240BD56D00130319;
 			packageReferences = (
-				7D7EFB3E240EEC1000AD75AA /* RemoteSwiftPackageReference */,
+				7D7EFB3E240EEC1000AD75AA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 7D5DE3FC240BD56D00130319 /* Products */;
 			projectDirPath = "";
@@ -861,7 +868,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7D7EFB3E240EEC1000AD75AA /* RemoteSwiftPackageReference */ = {
+		7D7EFB3E240EEC1000AD75AA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -872,9 +879,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7D7EFB3F240EEC1000AD75AA /* SwiftPackageProductDependency */ = {
+		7D7EFB3F240EEC1000AD75AA /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7D7EFB3E240EEC1000AD75AA /* RemoteSwiftPackageReference */;
+			package = 7D7EFB3E240EEC1000AD75AA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
