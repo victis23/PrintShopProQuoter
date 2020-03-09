@@ -271,8 +271,8 @@
 		7D5DE432240BD9AF00130319 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7DEFAD842416CA7D006C47E6 /* CompanyLandingPage */,
 				7D46F0C2240C843300B2EC35 /* ComponentViews */,
+				7DEFAD842416CA7D006C47E6 /* CompanyLandingPage */,
 				7D5DE402240BD56D00130319 /* Main.swift */,
 				7D46F0BA240C0B9900B2EC35 /* AddCompany.swift */,
 				7D46F0BC240C0BB500B2EC35 /* AddAddress.swift */,
