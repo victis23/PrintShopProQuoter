@@ -8,7 +8,9 @@
 
 import SwiftUI
 
-
+/// Checks which button is being drawn. Contact Info button is the primary button on this view so it needs to have a larger version of its icon drawn.
+/// - Important: `Location` button is not included in the buttons that recieve a circle under their icon.
+/// - Note: `Contact Info` button has image above description instead of below as do the other buttons.
 struct ButtonIconLayer: View {
 	
 	private var text : String
@@ -20,7 +22,6 @@ struct ButtonIconLayer: View {
 	var body: some View {
 		VStack{
 			
-			//Checks which button is being drawn. Contact Info button is the primary button on this view so it needs to have a larger version of its icon drawn.
 			if text == CONTACT_INFO {
 				
 				ZStack{
@@ -62,6 +63,7 @@ struct ButtonIconLayer: View {
 							.foregroundColor(.white)
 					}
 					
+					//Everyone gets this one...
 					ButtonIcon(text: text)
 						.aspectRatio(contentMode: .fit)
 				}
