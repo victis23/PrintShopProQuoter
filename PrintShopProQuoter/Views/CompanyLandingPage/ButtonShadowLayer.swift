@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-
+/// Controls how shadow is applied to each button.
+/// - Important: The location button is located in the darkest portion of the user's screen. It recieves a white shadow in addtion to the standard dark blue shadow. This helps create the illusion of depth.
 struct ButtonShadowLayer: View {
 	
 	private var text : String
