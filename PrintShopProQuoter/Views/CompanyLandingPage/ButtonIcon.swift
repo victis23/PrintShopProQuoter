@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// Controls which image is set as button icon.
 struct ButtonIcon: View {
 	
 	var text : String
