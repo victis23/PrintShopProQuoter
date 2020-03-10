@@ -22,8 +22,8 @@ struct CatagoryButton: View {
 			.edgesIgnoringSafeArea(.all)
 			.navigationBarTitle(self.text),
 					   isActive: self.$isPresenting,
+					   
 					   label: {
-			
 			Button(action: {
 				self.isPresenting.toggle()
 				
