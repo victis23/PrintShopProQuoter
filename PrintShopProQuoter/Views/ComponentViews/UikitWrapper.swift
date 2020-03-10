@@ -12,7 +12,7 @@ import SwiftUI
 struct UIKitWrapper: UIViewControllerRepresentable {
 	
 	//Specify what type of controller is being wrapped in an associated type.
-	typealias UIViewControllerType = UINavigationController
+	typealias UIViewControllerType = UIViewController
 	
 	//Company property passed from parent view. Represents the company the user selected from main view.
 	private var company : Company
@@ -41,7 +41,7 @@ struct UIKitWrapper: UIViewControllerRepresentable {
 		viewController.company = company
 		
 		//Return UINavigationController with storyboard instance view controller as root controller.
-		return UINavigationController(rootViewController: viewController)
+		return viewController
 	}
 	
 	func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
