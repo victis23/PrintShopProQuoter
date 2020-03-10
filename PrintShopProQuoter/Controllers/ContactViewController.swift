@@ -14,6 +14,14 @@ class ContactViewController: UIViewController, AccessControllerProtocol {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		setGradientBackground()
+	}
+	
+	func setGradientBackground(){
+		let backgroundSetter = BackgroundGradientSetter()
+		let subView = backgroundSetter.setGradientToView(with: [DarkBlueHue_DEFAULT,LightBlueHue_DEFAULT],size: view.bounds)
 		
+		view.addSubview(subView)
+		view.sendSubviewToBack(subView)
 	}
 }
