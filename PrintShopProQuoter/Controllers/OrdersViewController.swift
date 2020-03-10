@@ -15,9 +15,5 @@ class OrdersViewController: UIViewController, AccessControllerProtocol {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		//		if let company = company {
-		//			companyNameLabel.text = company.name
-		//		}
 	}
 }

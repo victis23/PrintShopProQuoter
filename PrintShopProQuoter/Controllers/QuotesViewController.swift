@@ -15,12 +15,5 @@ class QuotesViewController: UIViewController, AccessControllerProtocol {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		self.title = "Quotes"
-		
-		self.navigationController?.navigationBar.titleTextAttributes = [
-			NSAttributedString.Key.foregroundColor : UIColor.blue,
-			NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .bold)
-		]
 	}
 }

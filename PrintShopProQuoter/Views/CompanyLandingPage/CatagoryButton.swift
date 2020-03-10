@@ -19,7 +19,8 @@ struct CatagoryButton: View {
 	var body: some View {
 		
 		NavigationLink(destination: UIKitWrapper(company: self.company, storyboardPointer: self.text)
-			.edgesIgnoringSafeArea(.all),
+			.edgesIgnoringSafeArea(.all)
+			.navigationBarTitle(self.text),
 					   isActive: self.$isPresenting,
 					   label: {
 			
