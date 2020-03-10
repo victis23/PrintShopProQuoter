@@ -21,7 +21,7 @@ class OrdersViewController: UIViewController, AccessControllerProtocol {
 	
 	func setBackgroundColor(){
 		
-		let backgroundGradient = BackgroundGradient()
+		let backgroundGradient = BackgroundGradientSetter()
 		let viewWithGradient = backgroundGradient.setGradientToView(with: [DarkBlueHue_DEFAULT,LightBlueHue_DEFAULT], size: view.bounds)
 		
 		view.addSubview(viewWithGradient)
@@ -29,23 +29,4 @@ class OrdersViewController: UIViewController, AccessControllerProtocol {
 	}
 }
 
-class BackgroundGradient {
-	
-	private func createView()-> UIView {
-		let view = UIView()
-		
-		return view
-	}
-	
-	func setGradientToView(with colors: [CGColor], size : CGRect) -> UIView {
-		let gradient = CAGradientLayer()
-		gradient.type = .axial
-		gradient.colors = colors
-		gradient.startPoint = CGPoint(x: 1, y: 0)
-		gradient.endPoint = CGPoint(x: 1, y: 1)
-		let view = createView()
-		gradient.frame = size
-		view.layer.addSublayer(gradient)
-		return view
-	}
-}
+

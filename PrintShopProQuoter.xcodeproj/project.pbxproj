@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6A726D3EA40476E3F016CDD2 /* Pods_PrintShopProQuoter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170A18A0BBF869C5B12DF286 /* Pods_PrintShopProQuoter.framework */; };
+		7D01B8A1241801C50068709E /* DefaultColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01B8A0241801C50068709E /* DefaultColors.swift */; };
+		7D01B8A3241802E90068709E /* BackgroundGradientSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01B8A2241802E90068709E /* BackgroundGradientSetter.swift */; };
 		7D357E542411D09900EC4F94 /* CDSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D357E532411D09900EC4F94 /* CDSaver.swift */; };
 		7D357E562412254100EC4F94 /* CoreDataFetcher+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D357E552412254100EC4F94 /* CoreDataFetcher+Protocol.swift */; };
 		7D468AF624108F3200184813 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D468AF524108F3200184813 /* OrdersViewController.swift */; };
@@ -76,6 +78,8 @@
 /* Begin PBXFileReference section */
 		170A18A0BBF869C5B12DF286 /* Pods_PrintShopProQuoter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrintShopProQuoter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C8DE9832E27EB41AF917BC /* Pods-PrintShopProQuoter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintShopProQuoter.debug.xcconfig"; path = "Target Support Files/Pods-PrintShopProQuoter/Pods-PrintShopProQuoter.debug.xcconfig"; sourceTree = "<group>"; };
+		7D01B8A0241801C50068709E /* DefaultColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultColors.swift; sourceTree = "<group>"; };
+		7D01B8A2241802E90068709E /* BackgroundGradientSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientSetter.swift; sourceTree = "<group>"; };
 		7D357E532411D09900EC4F94 /* CDSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSaver.swift; sourceTree = "<group>"; };
 		7D357E552412254100EC4F94 /* CoreDataFetcher+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFetcher+Protocol.swift"; sourceTree = "<group>"; };
 		7D468AF524108F3200184813 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D01B89F241801AA0068709E /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				7D01B8A0241801C50068709E /* DefaultColors.swift */,
+				7D01B8A2241802E90068709E /* BackgroundGradientSetter.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		7D468AFD24108FE200184813 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +233,7 @@
 		7D5DE3FD240BD56D00130319 /* PrintShopProQuoter */ = {
 			isa = PBXGroup;
 			children = (
+				7D01B89F241801AA0068709E /* Colors */,
 				7DA57A1424148B0000CE3119 /* Strings */,
 				7D468AFD24108FE200184813 /* Protocols */,
 				7D5DE434240BDAB600130319 /* AppStateManagment */,
@@ -542,6 +556,7 @@
 				7D468AFA24108F8D00184813 /* LocationViewController.swift in Sources */,
 				7D468B062410B49D00184813 /* CompanyDeleter+ErrorHandler.swift in Sources */,
 				7D46F0C1240C165000B2EC35 /* MainVC.swift in Sources */,
+				7D01B8A3241802E90068709E /* BackgroundGradientSetter.swift in Sources */,
 				7DACECC2240E62D6004A0F80 /* PushLink.swift in Sources */,
 				7D5DE441240BDD4E00130319 /* QuoteOrderPrimaryElements.swift in Sources */,
 				7D5DE437240BDBA500130319 /* Customers.swift in Sources */,
@@ -554,6 +569,7 @@
 				7D46F0BF240C0BB500B2EC35 /* AddContact.swift in Sources */,
 				7D5DE43D240BDCCF00130319 /* Address.swift in Sources */,
 				7D468AFF2410902F00184813 /* AccessController+Protocol.swift in Sources */,
+				7D01B8A1241801C50068709E /* DefaultColors.swift in Sources */,
 				7DEFAD862416CAF0006C47E6 /* ButtonIcon.swift in Sources */,
 				7D5DE43B240BDCA400130319 /* Contact.swift in Sources */,
 			);
