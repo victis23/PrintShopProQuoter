@@ -39,11 +39,6 @@ struct CatagoryButton: View {
 				}
 			}
 		})
-		
-//		.sheet(isPresented: $isPresenting) {
-//			UIKitWrapper(company: self.company!, storyboardPointer: self.text)
-//				.edgesIgnoringSafeArea(.all)
-//		}
 	}
 }
 
