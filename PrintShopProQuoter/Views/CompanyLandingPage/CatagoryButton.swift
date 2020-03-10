@@ -15,26 +15,35 @@ struct CatagoryButton: View {
 	
 	var company : Company?
 	var text : String
+	
 	var body: some View {
 		
-		Button(action: {
-			self.isPresenting.toggle()
-		}){
+		NavigationLink(destination: UIKitWrapper(company: self.company, storyboardPointer: self.text)
+			.edgesIgnoringSafeArea(.all),
+					   isActive: self.$isPresenting,
+					   label: {
 			
-			ZStack {
+			Button(action: {
+				self.isPresenting.toggle()
 				
-				ButtonShadowLayer(text: text)
+			}){
 				
-				GradientBackground()
-					.mask(ButtonBaseLayer())
-				
-				CircleAndTextLayer(text: text)
+				ZStack {
+					
+					ButtonShadowLayer(text: text)
+					
+					GradientBackground()
+						.mask(ButtonBaseLayer())
+					
+					CircleAndTextLayer(text: text)
+				}
 			}
-		}
-		.sheet(isPresented: $isPresenting) {
-			UIKitWrapper(company: self.company!, storyboardPointer: self.text)
-				.edgesIgnoringSafeArea(.all)
-		}
+		})
+		
+//		.sheet(isPresented: $isPresenting) {
+//			UIKitWrapper(company: self.company!, storyboardPointer: self.text)
+//				.edgesIgnoringSafeArea(.all)
+//		}
 	}
 }
 
