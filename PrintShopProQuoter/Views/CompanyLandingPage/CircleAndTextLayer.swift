@@ -26,13 +26,16 @@ struct CircleAndTextLayer: View {
 				
 				ZStack{
 					
-					Circle()
-						.stroke(Color.white, lineWidth: 5)
-						.foregroundColor(.white)
-					
-					Image(text)
-						.resizable()
-						.aspectRatio(contentMode: .fit)
+					Group{
+						Circle()
+							.stroke(Color.white, lineWidth: 5)
+							.foregroundColor(.white)
+						
+						Image(text)
+							.resizable()
+							.aspectRatio(contentMode: .fit)
+					}
+					.padding(.top)
 				}
 				.padding()
 				
