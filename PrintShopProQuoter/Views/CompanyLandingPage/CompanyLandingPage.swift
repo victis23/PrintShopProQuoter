@@ -30,6 +30,7 @@ struct CompanyLandingPage : View {
 				CatagoryButton(company: company, text: CONTACT_INFO)
 					.padding(.leading)
 					.padding(.trailing)
+					.padding(.top)
 				
 				HStack {
 					VStack {
