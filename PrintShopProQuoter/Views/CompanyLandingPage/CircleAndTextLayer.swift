@@ -31,9 +31,7 @@ struct CircleAndTextLayer: View {
 							.stroke(Color.white, lineWidth: 5)
 							.foregroundColor(.white)
 						
-						Image(text)
-							.resizable()
-							.aspectRatio(contentMode: .fit)
+						ButtonIcon(text: text)
 					}
 					.padding(.top)
 				}
@@ -66,7 +64,7 @@ struct CircleAndTextLayer: View {
 							.foregroundColor(.white)
 					}
 					
-					//Everyone gets this one...
+					//This is not used for Contact Info because that button requires different padding.
 					ButtonIcon(text: text)
 						.aspectRatio(contentMode: .fit)
 				}
