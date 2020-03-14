@@ -51,6 +51,8 @@ struct Main : View {
 	
 	var body : some View {
 		
+		//FIXME: When a background color property such as this one is added to the view the Title of the NavigationBar no longer has the correct animation.
+		
 		NavigationView{
 			
 			//Creates list of current companies user has added to application.
