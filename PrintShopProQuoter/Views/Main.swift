@@ -84,6 +84,38 @@ struct Main : View {
 	}
 }
 
+struct MainTableView: View {
+	
+	@Binding private var isPresentingView: Bool
+	private var customerList : Customers
+	private var deleteItems : (IndexSet)->Void
+	
+	init(isPresentingView: Binding<Bool>, customerList : Customers, deleteItems: @escaping (IndexSet)->Void){
+		self._isPresentingView = isPresentingView
+		self.customerList = customerList
+		self.deleteItems = deleteItems
+	}
+	
+	var body: some View {
+		
+		List{
+			ForEach(customerList.companies) { company in
+				
+				NavigationLink(destination: CompanyLandingPage(company: company)) {
+					
+					CompanyListCell(company: company)
+				}
+			}
+			.onDelete(perform: deleteItems)
+		}
+		.navigationBarTitle(CUSTOMER_LIST)
+		.navigationBarItems(leading: AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList),
+							trailing: EditButton())
+			.foregroundColor(.white)
+			.background(GradientBackground())
+	}
+}
+
 struct CompanyListCell: View {
 	
 	
