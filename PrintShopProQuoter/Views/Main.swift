@@ -58,19 +58,16 @@ struct Main : View {
 				//Makes the background of the view the app's custom blue gradient.
 				GradientBackground()
 				
-				VStack{
-					
-					//Creates list of current companies user has added to application.
-					List{
-						ForEach(customerList.companies) { company in
+				//Creates list of current companies user has added to application.
+				List{
+					ForEach(customerList.companies) { company in
+						
+						NavigationLink(destination: CompanyLandingPage(company: company)) {
 							
-							NavigationLink(destination: CompanyLandingPage(company: company)) {
-								
-								CompanyListCell(company: company)
-							}
-							}
-						.onDelete(perform: deleteItems)
+							CompanyListCell(company: company)
+						}
 					}
+					.onDelete(perform: deleteItems)
 				}
 				.navigationBarTitle(CUSTOMER_LIST)
 				.navigationBarItems(leading:
