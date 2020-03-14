@@ -77,7 +77,6 @@ struct Main : View {
 					
 					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList), trailing: EditButton())
 					.foregroundColor(.white)
-					.navigationBarTitle(CUSTOMER_LIST)
 			}
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
