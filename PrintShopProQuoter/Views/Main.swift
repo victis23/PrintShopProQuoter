@@ -54,20 +54,8 @@ struct Main : View {
 		NavigationView{
 			
 			//Creates list of current companies user has added to application.
-			List{
-				ForEach(customerList.companies) { company in
-					
-					NavigationLink(destination: CompanyLandingPage(company: company)) {
-						
-						CompanyListCell(company: company)
-					}
-				}
-				.onDelete(perform: deleteItems)
-			}
-			.navigationBarTitle(CUSTOMER_LIST)
-			.navigationBarItems(leading: AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList),
-								trailing: EditButton())
-				.foregroundColor(.white)
+			MainTableView(isPresentingView: $isPresentingView, customerList: customerList, deleteItems: deleteItems(at:))
+				//Sets created GradientView as background.
 				.background(GradientBackground())
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
