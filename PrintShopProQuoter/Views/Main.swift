@@ -70,11 +70,10 @@ struct Main : View {
 					.onDelete(perform: deleteItems)
 				}
 				.navigationBarTitle(CUSTOMER_LIST)
-				.navigationBarItems(leading:
-					
-					AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList), trailing: EditButton())
-					.foregroundColor(.white)
+				.navigationBarItems(leading: AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList),
+									trailing: EditButton())
 			}
+			.foregroundColor(.white)
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
 			
