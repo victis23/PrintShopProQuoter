@@ -35,6 +35,7 @@ class OrdersViewController: UIViewController, AccessControllerProtocol {
 		view.sendSubviewToBack(viewWithGradient)
 	}
 	
+	///Creates an instance of UIBarButtonItem
 	func createBarButton()->UIBarButtonItem {
 		UIBarButtonItem(title: "Add Order", style: .plain, target: self, action: nil)
 	}
