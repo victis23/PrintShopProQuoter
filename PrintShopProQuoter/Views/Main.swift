@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 import CoreData
+import Introspect
 
 /// Handles view that contains a list of current companies user is doing business with.
 struct Main : View {
@@ -69,7 +70,6 @@ struct Main : View {
 							}
 							}
 						.onDelete(perform: deleteItems)
-						.listRowBackground(Color.clear)
 					}
 				}
 				.navigationBarTitle(CUSTOMER_LIST)
@@ -133,7 +133,7 @@ struct CompanyListCell: View {
 }
 
 struct AddCompanyNavigationBarTrailingButton: View {
-		
+	
 	//Determines if view is being presented or not.
 	@Binding var isPresentingView : Bool
 	
