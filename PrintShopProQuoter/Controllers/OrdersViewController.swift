@@ -11,12 +11,19 @@ import UIKit
 class OrdersViewController: UIViewController, AccessControllerProtocol {
 	
 	var company : Company!
-	@IBOutlet var companyNameLabel : UILabel!
+	var addOrderBarButton : UIBarButtonItem!
+	
+	@IBOutlet weak var companyNameLabel : UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setBackgroundColor()
 		companyNameLabel.text = company.name
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super .viewDidAppear(animated)
+		setRightNavigationBarButton()
 	}
 	
 	func setBackgroundColor(){
@@ -26,6 +33,15 @@ class OrdersViewController: UIViewController, AccessControllerProtocol {
 		
 		view.addSubview(viewWithGradient)
 		view.sendSubviewToBack(viewWithGradient)
+	}
+	
+	func createBarButton()->UIBarButtonItem {
+		UIBarButtonItem(title: "Add Order", style: .plain, target: self, action: nil)
+	}
+	
+	func setRightNavigationBarButton(){
+		addOrderBarButton = createBarButton()
+		self.navigationController?.navigationBar.topItem?.rightBarButtonItems = [addOrderBarButton]
 	}
 }
 
