@@ -57,8 +57,18 @@ struct Main : View {
 			
 			//Creates list of current companies user has added to application.
 			MainTableView(isPresentingView: $isPresentingView, customerList: customerList, deleteItems: deleteItems(at:))
+				.introspectTableView(customize: {view in
+					
+					let gradientBuilder = BackgroundGradientSetter()
+					let backgroundView = UIView()
+					
+					let gradientView = gradientBuilder.setGradientToView(with: [DarkBlueHue_DEFAULT, LightBlueHue_DEFAULT], size: view.frame)
+					gradientView.center = backgroundView.center
+					backgroundView.addSubview(gradientView)
+					view.backgroundView = backgroundView
+				})
 				//Sets created GradientView as background.
-				.background(GradientBackground())
+//				.background(GradientBackground())
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
 			
@@ -102,7 +112,6 @@ struct MainTableView: View {
 		.navigationBarItems(leading: AddCompanyNavigationBarTrailingButton(isPresentingView: $isPresentingView, customerList: customerList),
 							trailing: EditButton())
 			.foregroundColor(.white)
-			.background(GradientBackground())
 	}
 }
 
