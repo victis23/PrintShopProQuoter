@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16117.1" systemVersion="19E242d" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E242d" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CoreAddress" representedClassName="CoreAddress" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="country" optional="YES" attributeType="String"/>
@@ -9,12 +9,13 @@
         <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreCompany" inverseName="companyAddress" inverseEntity="CoreCompany"/>
     </entity>
     <entity name="CoreCompany" representedClassName="CoreCompany" syncable="YES" codeGenerationType="class">
+        <attribute name="contactList" optional="YES" attributeType="Binary"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="companyAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreAddress" inverseName="company" inverseEntity="CoreAddress"/>
     </entity>
     <elements>
-        <element name="CoreCompany" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="CoreAddress" positionX="-54" positionY="9" width="128" height="133"/>
+        <element name="CoreCompany" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>
