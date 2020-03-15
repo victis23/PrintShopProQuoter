@@ -76,7 +76,10 @@ struct Main : View {
 			/// - Note: `[CoreCompany] —> [Company]`
 			.onAppear {
 				let restoredList = self.retrievedList!.map { item -> Company in
-					Company(name: item.name!, address: Address(street: item.companyAddress?.street ?? ERROR_NO_VALUE), id: item.id!)
+					let fetcher = ContactListFetcher(managedObject: item)
+					let contactList = fetcher.GetContactList()
+					print("These are the items in our contact list: \(contactList)")
+					return Company(name: item.name!,address: Address(street: item.companyAddress?.street ?? ERROR_NO_VALUE), contact: contactList, id: item.id!)
 				}
 				
 				self.customerList.companies = restoredList
