@@ -71,16 +71,35 @@ struct AddContact: View {
 						self.resetTextFields()
 					}) {
 						
-						Text(SUBMIT)
-							.foregroundColor(.white)
+						ZStack {
+							RoundedRectangle(cornerRadius: 10)
+								.fill(Color.white)
+								.padding()
+								.frame(height: 100, alignment: .leading)
+							
+							Text(SUBMIT)
+								.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
+								.fontWeight(.bold)
+								.font(.largeTitle)
+						}
 					}
 					
 					//Adds array of contacts to Company object.
 					Button(action: {
 						self.presentationMode.wrappedValue.dismiss()
 					}, label: {
-						Text("Save")
-							.foregroundColor(.white)
+						
+						ZStack {
+							RoundedRectangle(cornerRadius: 10)
+								.fill(Color.white)
+								.padding()
+								.frame(height: 100, alignment: .trailing)
+							
+							Text("Save")
+								.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
+								.fontWeight(.bold)
+								.font(.largeTitle)
+						}
 					})
 				}
 				
