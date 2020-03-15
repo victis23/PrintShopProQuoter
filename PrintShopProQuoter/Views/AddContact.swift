@@ -15,7 +15,7 @@ struct AddContact: View {
 	@Environment(\.presentationMode) private var presentationMode
 	
 	//Property recieved from parent view.
-	@Binding private var contact : Contact
+	@Binding private var contact : [Contact]
 	
 	//Properties that will be assigned to the class instance contact property.
 	@State private var name : String = BLANK
@@ -23,7 +23,7 @@ struct AddContact: View {
 	@State private var email : String = BLANK
 	
 	/// Initalizer that captures a binding property from parent view.
-	init(contact: Binding<Contact>){
+	init(contact: Binding<[Contact]>){
 		self._contact = contact
 	}
 	
@@ -50,9 +50,12 @@ struct AddContact: View {
 				.foregroundColor(.white)
 				
 				Button(action: {
-					self.contact.name = self.name
-					self.contact.phone = self.phoneNumber
-					self.contact.email = self.email
+					
+					var createdContact = Contact()
+					createdContact.name = self.name
+					createdContact.phone = self.phoneNumber
+					createdContact.email = self.email
+					self.contact.append(createdContact)
 					self.presentationMode.wrappedValue.dismiss()
 					
 				}) {
@@ -68,6 +71,6 @@ struct AddContact: View {
 
 struct AddContact_Previews: PreviewProvider {
 	static var previews: some View {
-		AddContact(contact: .constant(Contact()))
+		AddContact(contact: .constant([Contact()]))
 	}
 }

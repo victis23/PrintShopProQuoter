@@ -12,7 +12,7 @@ struct Company : Identifiable, Hashable {
 	
 	var name : String?
 	var address : Address?
-	var contact : Contact?
+	var contact : [Contact]?
 	var quotes : [Quotes]?
 	var orders : [Orders]?
 	

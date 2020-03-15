@@ -20,7 +20,7 @@ struct AddCustomer: View {
 	//Properties that will be assigned to the instance of Company when user taps submit button..
 	@State private var name = BLANK
 	@State private var address : Address = Address(street: nil, city: nil, state: nil, country: nil, zipcode: nil)
-	@State private var contact : Contact = Contact()
+	@State private var contact : [Contact] = []
 	
 	var body: some View {
 		
