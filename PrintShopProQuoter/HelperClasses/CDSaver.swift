@@ -57,7 +57,7 @@ class CompanySaver : Saver {
 		save()
 	}
 	
-	func encodeContactList(list:[Contact]?)-> Data?{
+	private func encodeContactList(list:[Contact]?)-> Data?{
 		guard let list = list else {return nil}
 		let encoder = JSONEncoder()
 		let data = try? encoder.encode(list)
