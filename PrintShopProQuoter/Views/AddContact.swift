@@ -116,10 +116,21 @@ struct ContactList_TableView : View {
 				.onDelete(perform: removeContact(_:))
 		}
 		.introspectTableView(customize: { tableView in
-			tableView.backgroundColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0.4)
-			tableView.layer.cornerRadius = 10
+			
 			tableView.separatorStyle = .none
 			tableView.separatorColor = .clear
+			
+			tableView.visibleCells.forEach({
+				$0.backgroundColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0.4)
+				$0.layer.cornerRadius = 10
+				let view = UIView()
+				view.layer.cornerRadius = 10
+				view.backgroundColor = .white
+				view.frame = CGRect(x: 0, y: 0, width: $0.contentView.frame.width - 10, height: $0.contentView.frame.height - 10)
+				view.center = $0.contentView.center
+				$0.contentView.addSubview(view)
+				$0.contentView.sendSubviewToBack(view)
+			})
 		})
 	}
 	
