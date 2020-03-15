@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Introspect
 
 ///Holds view that will be setting contact details for `Company's Contact Property`.
 struct AddContact: View {
@@ -63,6 +64,7 @@ struct AddContact: View {
 					Text(SUBMIT)
 						.foregroundColor(.white)
 				}
+				
 			}
 		}
 		.navigationBarTitle(CONTACT)
