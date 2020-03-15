@@ -50,19 +50,38 @@ struct AddContact: View {
 				}
 				.foregroundColor(.white)
 				
-				Button(action: {
+				Divider()
+					.foregroundColor(.white)
+					.shadow(color: .black, radius: 5, x: 0, y: -10)
+				
+				ContactList_TableView(contact: $contact)
+					.padding()
+				
+				HStack{
 					
-					var createdContact = Contact()
-					createdContact.name = self.name
-					createdContact.phone = self.phoneNumber
-					createdContact.email = self.email
-					self.contact.append(createdContact)
-					self.presentationMode.wrappedValue.dismiss()
+					//Adds contact to array of contacts.
+					Button(action: {
+						
+						var createdContact = Contact()
+						createdContact.name = self.name
+						createdContact.phone = self.phoneNumber
+						createdContact.email = self.email
+						self.contact.append(createdContact)
+						
+						self.resetTextFields()
+					}) {
+						
+						Text(SUBMIT)
+							.foregroundColor(.white)
+					}
 					
-				}) {
-					
-					Text(SUBMIT)
-						.foregroundColor(.white)
+					//Adds array of contacts to Company object.
+					Button(action: {
+						self.presentationMode.wrappedValue.dismiss()
+					}, label: {
+						Text("Save")
+							.foregroundColor(.white)
+					})
 				}
 				
 			}
