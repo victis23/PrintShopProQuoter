@@ -52,8 +52,29 @@ class CompanySaver : Saver {
 		company.companyAddress?.country = newCompany.address?.country
 		company.companyAddress?.zipcode = newCompany.address?.zipcode
 		
-		company.contactList = AddContactList(list: newCompany.contact)
+		company.contactList = encodeContactList(list: newCompany.contact)
 		
 		save()
 	}
+	
+	func encodeContactList(list:[Contact]?)-> Data?{
+		guard let list = list else {return nil}
+		let encoder = JSONEncoder()
+		let data = try? encoder.encode(list)
+		return data
+		
+//		var dataArray : Data?
+//
+//		do {
+//			let rawDataArray : Data = try NSKeyedArchiver.archivedData(withRootObject: newCompany.contact ?? [], requiringSecureCoding: true)
+//			dataArray = rawDataArray
+//		}
+//		catch(let e){
+//			print(e.localizedDescription)
+//		}
+//
+//		return dataArray ?? Data()
+	}
 }
+
+
