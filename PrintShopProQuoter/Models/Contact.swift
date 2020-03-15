@@ -12,4 +12,6 @@ struct Contact : Codable , Identifiable {
 	var name : String?
 	var phone : String?
 	var email : String?
+	
+	var id = UUID().uuidString
 }
