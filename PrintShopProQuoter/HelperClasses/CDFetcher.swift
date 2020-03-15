@@ -41,3 +41,19 @@ class Fetcher<R,V,ReturnValue> : CoreDataFetcherProtocol where ReturnValue : NSF
 		return response
 	}
 }
+
+class ContactListFetcher {
+	
+	private var managedObject:NSManagedObject
+	
+	init(managedObject:NSManagedObject){
+		self.managedObject = managedObject
+	}
+	
+	func GetContactList()-> [Contact]{
+		let company = managedObject as! CoreCompany
+		let decoder = JSONDecoder()
+		let value = try? decoder.decode([Contact].self, from: company.contactList ?? Data())
+		return value ?? []
+	}
+}
