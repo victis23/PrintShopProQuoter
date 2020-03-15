@@ -52,6 +52,8 @@ class CompanySaver : Saver {
 		company.companyAddress?.country = newCompany.address?.country
 		company.companyAddress?.zipcode = newCompany.address?.zipcode
 		
+		company.contactList = AddContactList(list: newCompany.contact)
+		
 		save()
 	}
 }
