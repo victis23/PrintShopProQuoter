@@ -69,6 +69,45 @@ struct AddContact: View {
 		}
 		.navigationBarTitle(CONTACT)
 	}
+	
+	func resetTextFields(){
+		self.name = BLANK
+		self.email = BLANK
+		self.phoneNumber = BLANK
+	}
+}
+
+struct ContactList_TableView : View {
+	
+	@Binding private var contact : [Contact]
+	
+	init(contact:Binding<[Contact]>){
+		self._contact = contact
+	}
+	
+	var body: some View {
+		List {
+			ForEach(contact, content: { contact in
+				Text(contact.name ?? "")
+					.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
+					.fontWeight(.bold)
+					.font(.title)
+					.padding()
+			})
+				.onDelete(perform: removeContact(_:))
+		}
+		.introspectTableView(customize: { tableView in
+			tableView.backgroundColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0.4)
+			tableView.layer.cornerRadius = 10
+			tableView.separatorStyle = .none
+			tableView.separatorColor = .clear
+		})
+	}
+	
+	//Same as Optional<(IndexSet)->Void> just cleaner in my opinion.
+	func removeContact(_ index : IndexSet){
+		self.contact.remove(atOffsets: index)
+	}
 }
 
 struct AddContact_Previews: PreviewProvider {
