@@ -51,7 +51,7 @@ struct Main : View {
 	
 	var body : some View {
 		
-		//FIXME: When a background color property such as this one is added to the view the Title of the NavigationBar no longer has the correct animation.
+		//FIXME: I wanted to use GradientBackground() to set the background of this view however when using this view whether in a Zstack or with the .background operator a bug was introduced that would stop the NavigationView's Title from having the proper animation and enter into inline mode when the user scrolled. Nothing would resolve this issue including using a scroll stack.
 		
 		NavigationView{
 			
