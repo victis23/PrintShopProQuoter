@@ -56,7 +56,8 @@ struct AddContact: View {
 					.shadow(color: .black, radius: 5, x: 0, y: -10)
 				
 				ContactList_TableView(contact: $contact)
-					.padding()
+					.padding(.leading)
+					.padding(.trailing)
 				
 				HStack{
 					
