@@ -50,11 +50,6 @@ struct AddContact: View {
 				}
 				.foregroundColor(.white)
 				
-				
-				Divider()
-					.foregroundColor(.white)
-					.shadow(color: .black, radius: 5, x: 0, y: -10)
-				
 				ContactList_TableView(contact: $contact)
 					.padding(.leading)
 					.padding(.trailing)
