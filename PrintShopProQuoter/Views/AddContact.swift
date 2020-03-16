@@ -78,6 +78,9 @@ struct AddContact: View {
 						
 						AddContact_Button(text: "Save")
 					})
+						.disabled(contact.isEmpty ? true : false)
+						.opacity(contact.isEmpty ? 0.2 : 1.0)
+						.animation(.easeIn(duration: 1))
 				}
 				
 			}
