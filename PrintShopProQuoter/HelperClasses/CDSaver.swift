@@ -9,7 +9,7 @@
 import CoreData
 import UIKit
 
-
+/// Super class that handles saving data to persistent container. 
 class Saver {
 	
 	public static var context : NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -29,6 +29,7 @@ class Saver {
 	}
 }
 
+/// Saves Company Object in persistent container.
 class CompanySaver : Saver {
 	
 	private var newCompany : Company
@@ -52,11 +53,13 @@ class CompanySaver : Saver {
 		company.companyAddress?.country = newCompany.address?.country
 		company.companyAddress?.zipcode = newCompany.address?.zipcode
 		
+		// Call creates json object data for storage in container.
 		company.contactList = encodeContactList(list: newCompany.contact)
 		
 		save()
 	}
 	
+	/// Converts list of contacts into json data.
 	private func encodeContactList(list:[Contact]?)-> Data?{
 		guard let list = list else {return nil}
 		let encoder = JSONEncoder()
