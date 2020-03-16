@@ -18,9 +18,9 @@ class Deleter<Object: NSFetchRequestResult, R, V> : CoreDataFetcherProtocol {
 	
 	typealias ManagedObject = Object
 	
-	var keypath: KeyPath<R, V>
-	var request: NSFetchRequest<Object>
-	var nsPredicateFormat : String
+	internal var keypath: KeyPath<R, V>
+	internal var request: NSFetchRequest<Object>
+	internal var nsPredicateFormat : String
 	
 	
 	private let itemIdentifier : String
