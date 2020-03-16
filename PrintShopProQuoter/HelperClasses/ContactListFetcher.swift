@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+///Retrieves contact list from `Core Data` persistent storage.
 class ContactListFetcher {
 	
 	private var managedObject:NSManagedObject
@@ -17,6 +18,8 @@ class ContactListFetcher {
 		self.managedObject = managedObject
 	}
 	
+	//FIXME: Eventually this method needs to be converted into a generic method for testing. Polymorphism ...
+	/// Uses json decoder to decode retrieved Contact List data.
 	func GetContactList()-> [Contact]{
 		let company = managedObject as! CoreCompany
 		let decoder = JSONDecoder()
