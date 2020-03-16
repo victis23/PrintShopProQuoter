@@ -71,17 +71,7 @@ struct AddContact: View {
 						self.resetTextFields()
 					}) {
 						
-						ZStack {
-							RoundedRectangle(cornerRadius: 10)
-								.fill(Color.white)
-								.padding()
-								.frame(height: 100, alignment: .leading)
-							
-							Text(SUBMIT)
-								.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
-								.fontWeight(.bold)
-								.font(.largeTitle)
-						}
+						AddContact_Button(text: SUBMIT)
 					}
 					
 					//Adds array of contacts to Company object.
@@ -89,17 +79,7 @@ struct AddContact: View {
 						self.presentationMode.wrappedValue.dismiss()
 					}, label: {
 						
-						ZStack {
-							RoundedRectangle(cornerRadius: 10)
-								.fill(Color.white)
-								.padding()
-								.frame(height: 100, alignment: .trailing)
-							
-							Text("Save")
-								.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
-								.fontWeight(.bold)
-								.font(.largeTitle)
-						}
+						AddContact_Button(text: "Save")
 					})
 				}
 				
@@ -156,6 +136,29 @@ struct ContactList_TableView : View {
 	//Same as Optional<(IndexSet)->Void> just cleaner in my opinion.
 	func removeContact(_ index : IndexSet){
 		self.contact.remove(atOffsets: index)
+	}
+}
+
+struct AddContact_Button: View {
+	
+	private var text : String
+	
+	init(text:String){
+		self.text = text
+	}
+	
+	var body: some View {
+		ZStack {
+			RoundedRectangle(cornerRadius: 10)
+				.fill(Color.white)
+				.padding()
+				.frame(height: 100, alignment: .leading)
+			
+			Text(text)
+				.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
+				.fontWeight(.bold)
+				.font(.largeTitle)
+		}
 	}
 }
 
