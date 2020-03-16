@@ -50,6 +50,7 @@ struct AddContact: View {
 				}
 				.foregroundColor(.white)
 				
+				
 				Divider()
 					.foregroundColor(.white)
 					.shadow(color: .black, radius: 5, x: 0, y: -10)
@@ -106,11 +107,30 @@ struct ContactList_TableView : View {
 	var body: some View {
 		List {
 			ForEach(contact, content: { contact in
-				Text(contact.name ?? "")
-					.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
-					.fontWeight(.bold)
-					.font(.title)
-					.padding()
+				HStack{
+					
+					Text(contact.name ?? "")
+						.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
+						.fontWeight(.bold)
+						.font(.title)
+						.padding()
+					
+					Spacer()
+					
+					VStack{
+						Text(contact.phone ?? "")
+							.foregroundColor(Color(UIColor(cgColor: LightBlueHue_DEFAULT)))
+							.fontWeight(.heavy)
+							.font(.body)
+							.padding()
+						
+						Text(contact.email ?? "")
+							.foregroundColor(Color(UIColor(cgColor: LightBlueHue_DEFAULT)))
+							.fontWeight(.heavy)
+							.font(.body)
+							.padding()
+					}
+				}
 			})
 				.onDelete(perform: removeContact(_:))
 		}
