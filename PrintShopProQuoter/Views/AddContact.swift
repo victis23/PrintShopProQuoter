@@ -122,13 +122,13 @@ struct ContactList_TableView : View {
 							.foregroundColor(Color(UIColor(cgColor: LightBlueHue_DEFAULT)))
 							.fontWeight(.heavy)
 							.font(.body)
-							.padding()
+							.padding(.trailing)
 						
 						Text(contact.email ?? "")
 							.foregroundColor(Color(UIColor(cgColor: LightBlueHue_DEFAULT)))
 							.fontWeight(.heavy)
 							.font(.body)
-							.padding()
+							.padding(.trailing)
 					}
 				}
 			})
