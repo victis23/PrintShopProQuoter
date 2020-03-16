@@ -119,13 +119,14 @@ struct ContactList_TableView : View {
 					
 					VStack{
 						Text(contact.phone ?? "")
-							.foregroundColor(Color(UIColor(cgColor: LightBlueHue_DEFAULT)))
+							.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
 							.fontWeight(.heavy)
 							.font(.body)
 							.padding(.trailing)
+							.padding(.bottom, 5)
 						
 						Text(contact.email ?? "")
-							.foregroundColor(Color(UIColor(cgColor: LightBlueHue_DEFAULT)))
+							.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
 							.fontWeight(.heavy)
 							.font(.body)
 							.padding(.trailing)
