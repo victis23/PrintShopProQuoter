@@ -40,8 +40,22 @@ struct AddCustomer: View {
 							.padding()
 						
 						NavigationLink(destination: AddAddress(address: $address), label: {
-							Text(ADDRESS)
-								.padding(.all, 20)
+							
+							HStack{
+								
+								Text(ADDRESS)
+									.padding(.all, 20)
+								Spacer()
+								VStack{
+									
+									Text(address.street ?? "")
+										.fontWeight(.bold)
+									Text("\(address.city ?? "") \(address.state ?? ""), \(address.country ?? ""), \(address.zipcode ?? "")")
+										.fontWeight(.bold)
+								}
+								.padding()
+								.font(.caption)
+							}
 						})
 						
 						NavigationLink(destination: AddContact(contact: $contact), label: {
