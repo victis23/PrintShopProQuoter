@@ -69,8 +69,13 @@ struct AddContact: View {
 					}) {
 						
 						SmallCircle_Button(imageName: "pencil.and.ellipsis.rectangle")
+							
 					}
 					.padding(.trailing, 100)
+					.disabled(self.name == "" || self.phoneNumber == "" || self.email == "" ? true : false)
+					.opacity(self.name == "" || self.phoneNumber == "" || self.email == "" ? 0.2 : 1.0)
+					.animation(.easeIn(duration: 1))
+					
 					//Adds array of contacts to Company object.
 					Button(action: {
 						self.presentationMode.wrappedValue.dismiss()
