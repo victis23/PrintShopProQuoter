@@ -52,7 +52,7 @@ struct AddAddress: View {
 						//Dismiss current view.
 						self.presentationMode.wrappedValue.dismiss()
 					}) {
-						Text(SUBMIT)
+						SmallCircle_Button(imageName: "tray.and.arrow.down.fill")
 					}
 				}
 				.foregroundColor(.white)
