@@ -31,34 +31,43 @@ struct AddAddress: View {
 	
 	var body: some View {
 		
-			ZStack{
+		ZStack{
+			
+			//Set background to gradient.
+			GradientBackground()
+			
+			VStack{
 				
-				//Set background to gradient.
-				GradientBackground()
+				//Calls instance of AddressForm which presents a form on parent view that access user input for given properties.
+				AddressForm(street: $street, city: $city, state: $state, country: $country, zipcode: $zipcode)
 				
-				VStack{
+				//Sets values to address property using gathered user input.
+				Button(action: {
+					self.address.street = self.street
+					self.address.city = self.city
+					self.address.state = self.state
+					self.address.country = self.country
+					self.address.zipcode = self.zipcode
 					
-					//Calls instance of AddressForm which presents a form on parent view that access user input for given properties.
-					AddressForm(street: $street, city: $city, state: $state, country: $country, zipcode: $zipcode)
-					
-					//Sets values to address property using gathered user input.
-					Button(action: {
-						self.address.street = self.street
-						self.address.city = self.city
-						self.address.state = self.state
-						self.address.country = self.country
-						self.address.zipcode = self.zipcode
-						
-						//Dismiss current view.
-						self.presentationMode.wrappedValue.dismiss()
-					}) {
-						SmallCircle_Button(imageName: "tray.and.arrow.down.fill")
-					}
+					//Dismiss current view.
+					self.presentationMode.wrappedValue.dismiss()
+				}) {
+					SmallCircle_Button(imageName: "tray.and.arrow.down.fill")
 				}
-				.foregroundColor(.white)
+				.opacity(validation() ? 1 : 0.2)
+					// functions as !isdisabled
+					.disabled(validation() ? false : true)
+					.animation(.easeIn(duration: 1))
+			}
+			.foregroundColor(.white)
 		}
 		.navigationBarTitle(ADDRESS)
 	}
+	
+	private func validation()->Bool{
+		street != "" && city != "" && state != "" && country != "" && zipcode != ""
+	}
+	
 }
 
 
