@@ -52,6 +52,7 @@
 		7D930B73241ED1EA004B784B /* ContactListFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930B72241ED1EA004B784B /* ContactListFetcher.swift */; };
 		7DA57A1624148B1300CE3119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA57A1524148B1300CE3119 /* Strings.swift */; };
 		7DA57A1824158A1C00CE3119 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7DA57A1724158A1C00CE3119 /* podfile */; };
+		7DDA86B7242058EF00BF3B09 /* SmallCircle_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA86B6242058EF00BF3B09 /* SmallCircle_Button.swift */; };
 		7DEFAD862416CAF0006C47E6 /* ButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */; };
 		7DEFAD882416CB19006C47E6 /* ButtonBaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD872416CB19006C47E6 /* ButtonBaseLayer.swift */; };
 		7DEFAD8A2416CCE6006C47E6 /* CatagoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD892416CCE6006C47E6 /* CatagoryButton.swift */; };
@@ -127,6 +128,7 @@
 		7D930B72241ED1EA004B784B /* ContactListFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListFetcher.swift; sourceTree = "<group>"; };
 		7DA57A1524148B1300CE3119 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7DA57A1724158A1C00CE3119 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7DDA86B6242058EF00BF3B09 /* SmallCircle_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCircle_Button.swift; sourceTree = "<group>"; };
 		7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIcon.swift; sourceTree = "<group>"; };
 		7DEFAD872416CB19006C47E6 /* ButtonBaseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBaseLayer.swift; sourceTree = "<group>"; };
 		7DEFAD892416CCE6006C47E6 /* CatagoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoryButton.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				7D46F0C3240C848000B2EC35 /* GradientBackground.swift */,
 				7D757BE9240CA8D7007ADD64 /* UikitWrapper.swift */,
+				7DDA86B6242058EF00BF3B09 /* SmallCircle_Button.swift */,
 			);
 			path = ComponentViews;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D46F0B9240C0AB100B2EC35 /* CompanyLandingPage.swift in Sources */,
+				7DDA86B7242058EF00BF3B09 /* SmallCircle_Button.swift in Sources */,
 				7D5DE403240BD56D00130319 /* Main.swift in Sources */,
 				7D5DE439240BDBFE00130319 /* Company.swift in Sources */,
 				7D757BEA240CA8D7007ADD64 /* UikitWrapper.swift in Sources */,
