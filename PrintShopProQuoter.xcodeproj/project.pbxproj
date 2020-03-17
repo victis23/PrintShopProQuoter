@@ -53,6 +53,7 @@
 		7DA57A1624148B1300CE3119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA57A1524148B1300CE3119 /* Strings.swift */; };
 		7DA57A1824158A1C00CE3119 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7DA57A1724158A1C00CE3119 /* podfile */; };
 		7DDA86B7242058EF00BF3B09 /* SmallCircle_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA86B6242058EF00BF3B09 /* SmallCircle_Button.swift */; };
+		7DDA86BA24205F3900BF3B09 /* OptionalStrings+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA86B924205F3900BF3B09 /* OptionalStrings+Extension.swift */; };
 		7DEFAD862416CAF0006C47E6 /* ButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */; };
 		7DEFAD882416CB19006C47E6 /* ButtonBaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD872416CB19006C47E6 /* ButtonBaseLayer.swift */; };
 		7DEFAD8A2416CCE6006C47E6 /* CatagoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD892416CCE6006C47E6 /* CatagoryButton.swift */; };
@@ -129,6 +130,7 @@
 		7DA57A1524148B1300CE3119 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7DA57A1724158A1C00CE3119 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7DDA86B6242058EF00BF3B09 /* SmallCircle_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCircle_Button.swift; sourceTree = "<group>"; };
+		7DDA86B924205F3900BF3B09 /* OptionalStrings+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionalStrings+Extension.swift"; sourceTree = "<group>"; };
 		7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIcon.swift; sourceTree = "<group>"; };
 		7DEFAD872416CB19006C47E6 /* ButtonBaseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBaseLayer.swift; sourceTree = "<group>"; };
 		7DEFAD892416CCE6006C47E6 /* CatagoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoryButton.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		7D5DE3FD240BD56D00130319 /* PrintShopProQuoter */ = {
 			isa = PBXGroup;
 			children = (
+				7DDA86B824205ECB00BF3B09 /* Extensions */,
 				7D01B89F241801AA0068709E /* Colors */,
 				7DA57A1424148B0000CE3119 /* Strings */,
 				7D468AFD24108FE200184813 /* Protocols */,
@@ -340,6 +343,14 @@
 				7DA57A1524148B1300CE3119 /* Strings.swift */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		7DDA86B824205ECB00BF3B09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7DDA86B924205F3900BF3B09 /* OptionalStrings+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7DEFAD842416CA7D006C47E6 /* CompanyLandingPage */ = {
@@ -575,6 +586,7 @@
 				7D5DE409240BD56D00130319 /* PrintShopProQuoter.xcdatamodeld in Sources */,
 				7D46F0C4240C848000B2EC35 /* GradientBackground.swift in Sources */,
 				7D46F0BF240C0BB500B2EC35 /* AddContact.swift in Sources */,
+				7DDA86BA24205F3900BF3B09 /* OptionalStrings+Extension.swift in Sources */,
 				7D5DE43D240BDCCF00130319 /* Address.swift in Sources */,
 				7D468AFF2410902F00184813 /* AccessController+Protocol.swift in Sources */,
 				7D01B8A1241801C50068709E /* DefaultColors.swift in Sources */,
