@@ -68,20 +68,22 @@ struct AddContact: View {
 						self.resetTextFields()
 					}) {
 						
-						AddContact_Button(text: SUBMIT)
+						SmallCircle_Button(imageName: "pencil.and.ellipsis.rectangle")
 					}
-					
+					.padding(.trailing, 100)
 					//Adds array of contacts to Company object.
 					Button(action: {
 						self.presentationMode.wrappedValue.dismiss()
 					}, label: {
 						
-						AddContact_Button(text: "Save")
+						SmallCircle_Button(imageName: "tray.and.arrow.down.fill")
 					})
 						.disabled(contact.isEmpty ? true : false)
 						.opacity(contact.isEmpty ? 0.2 : 1.0)
 						.animation(.easeIn(duration: 1))
 				}
+				.padding(.leading)
+				.padding(.trailing)
 				
 			}
 		}
@@ -156,30 +158,6 @@ struct ContactList_TableView : View {
 	//Same as Optional<(IndexSet)->Void> just cleaner in my opinion.
 	func removeContact(_ index : IndexSet){
 		self.contact.remove(atOffsets: index)
-	}
-}
-
-struct SmallCircle_Button: View {
-	
-	private var imageName: String
-	
-	init(imageName:String){
-		self.imageName = imageName
-	}
-	
-	var body: some View {
-		ZStack {
-			
-			GradientBackground().mask(Circle())
-				.padding()
-				.frame(width: 100, height: 100, alignment: .center)
-				.shadow(color: Color(UIColor(cgColor: LightBlueHue_DEFAULT)), radius: 5, x: 5, y: 5)
-				.opacity(0.35)
-				.shadow(color: Color(UIColor(cgColor: DarkBlueHue_DEFAULT)), radius: 5, x: -5, y: -5)
-			
-			Image(systemName: imageName)
-				.foregroundColor(.white)
-		}
 	}
 }
 
