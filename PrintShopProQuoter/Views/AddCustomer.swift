@@ -50,8 +50,9 @@ struct AddCustomer: View {
 									
 									Text(address.street ?? "")
 										.fontWeight(.bold)
-									Text("\(address.city ?? "") \(address.state ?? ""), \(address.country ?? ""), \(address.zipcode ?? "")")
+									Text("\(address.city ?? "") \(address.state ?? ""), \(address.country ?? "") \(address.zipcode ?? "")")
 										.fontWeight(.bold)
+										.opacity(address.street != nil ? 1 : 0)
 								}
 								.padding()
 								.font(.caption)
