@@ -91,7 +91,10 @@ struct AddCustomer: View {
 						/// Views for drawing save button and its corresponding label.
 							SmallCircle_Button(imageName: "tray.and.arrow.down.fill")
 					})
+						.disabled(name != "" ? false : true)
+						.opacity(name != "" ? 1 : 0.2)
 						.padding()
+						
 				}
 			}
 			.navigationBarTitle(ADD_COMPANY)
