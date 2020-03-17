@@ -74,20 +74,7 @@ struct AddCustomer: View {
 					}, label: {
 						
 						/// Views for drawing save button and its corresponding label.
-						ZStack {
-							
-							RoundedRectangle(cornerRadius: 10	 , style: .continuous)
-								.foregroundColor(.white)
-								.frame(height: 75, alignment: .center)
-								.shadow(color: Color(UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)), radius: 10, x: 0, y: 10)
-							
-							Text(SAVE_NEW_COMPANY)
-								.font(.largeTitle)
-								.foregroundColor(Color(.link))
-								.bold()
-								.padding(.horizontal, 10)
-							
-						}
+							SmallCircle_Button(imageName: "tray.and.arrow.down.fill")
 					})
 						.padding()
 				}
