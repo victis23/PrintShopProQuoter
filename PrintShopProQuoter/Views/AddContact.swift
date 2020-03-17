@@ -100,6 +100,10 @@ struct AddContact: View {
 		self.email = BLANK
 		self.phoneNumber = BLANK
 	}
+	
+	private func validation()->Bool{
+		name == "" || phoneNumber == "" || !email.isValidEmail
+	}
 }
 
 struct ContactList_TableView : View {
