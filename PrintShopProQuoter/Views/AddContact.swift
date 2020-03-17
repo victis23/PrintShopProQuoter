@@ -95,7 +95,7 @@ struct AddContact: View {
 		.navigationBarTitle(CONTACT)
 	}
 	
-	func resetTextFields(){
+	private func resetTextFields(){
 		self.name = BLANK
 		self.email = BLANK
 		self.phoneNumber = BLANK
