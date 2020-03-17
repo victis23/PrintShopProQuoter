@@ -159,25 +159,26 @@ struct ContactList_TableView : View {
 	}
 }
 
-struct AddContact_Button: View {
+struct SmallCircle_Button: View {
 	
-	private var text : String
+	private var imageName: String
 	
-	init(text:String){
-		self.text = text
+	init(imageName:String){
+		self.imageName = imageName
 	}
 	
 	var body: some View {
 		ZStack {
-			RoundedRectangle(cornerRadius: 10)
-				.fill(Color.white)
-				.padding()
-				.frame(height: 100, alignment: .leading)
 			
-			Text(text)
-				.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
-				.fontWeight(.bold)
-				.font(.largeTitle)
+			GradientBackground().mask(Circle())
+				.padding()
+				.frame(width: 100, height: 100, alignment: .center)
+				.shadow(color: Color(UIColor(cgColor: LightBlueHue_DEFAULT)), radius: 5, x: 5, y: 5)
+				.opacity(0.35)
+				.shadow(color: Color(UIColor(cgColor: DarkBlueHue_DEFAULT)), radius: 5, x: -5, y: -5)
+			
+			Image(systemName: imageName)
+				.foregroundColor(.white)
 		}
 	}
 }
