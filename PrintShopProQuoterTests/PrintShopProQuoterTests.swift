@@ -7,28 +7,24 @@
 //
 
 import XCTest
+import CoreData
 @testable import PrintShopProQuoter
 
 class PrintShopProQuoterTests: XCTestCase {
+	
+	var fetcher : Fetcher<CoreCompany, String?, CoreCompany>!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+		fetcher = Fetcher(sortBy: \CoreCompany.name, request: NSFetchRequest<CoreCompany>(entityName: CORE_COMPANY))
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        fetcher = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+	/// Tests whether or not fetch method is returning values from persistant container.
+	func testFetcherClass(){
+		XCTAssertNotNil(fetcher.fetchFromCoreData())
+	}
 
 }
