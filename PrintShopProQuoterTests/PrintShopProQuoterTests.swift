@@ -22,7 +22,7 @@ class PrintShopProQuoterTests: XCTestCase {
         fetcher = nil
     }
 
-	/// Tests whether or not fetch method is returning values from persistant container.
+	/// Tests whether or not fetch method is returning values from persistant container. If method should return Array<CoreCompany?>.
 	func testFetcherClass(){
 		XCTAssertNotNil(fetcher.fetchFromCoreData())
 	}
