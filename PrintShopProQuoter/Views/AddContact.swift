@@ -49,6 +49,7 @@ struct AddContact: View {
 						.padding()
 				}
 				.foregroundColor(.white)
+				.font(.title)
 				
 				ContactList_TableView(contact: $contact)
 					.padding(.leading)

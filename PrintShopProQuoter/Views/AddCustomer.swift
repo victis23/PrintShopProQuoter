@@ -37,7 +37,9 @@ struct AddCustomer: View {
 					List(content: {
 						
 						TextField(COMPANY_NAME, text: $name)
+							.font(.title)
 							.padding()
+						
 						
 						NavigationLink(destination: AddAddress(address: $address), label: {
 							
@@ -45,6 +47,7 @@ struct AddCustomer: View {
 								
 								Text(ADDRESS)
 									.padding(.all, 20)
+									.font(.title)
 								Spacer()
 								VStack{
 									
@@ -62,6 +65,7 @@ struct AddCustomer: View {
 						NavigationLink(destination: AddContact(contact: $contact), label: {
 							Text(CONTACT_INFO)
 								.padding(.all, 20)
+								.font(.title)
 						})
 					})
 						.foregroundColor(.white)
