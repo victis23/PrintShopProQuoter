@@ -20,7 +20,7 @@ class ContactListFetcher {
 	
 	//FIXME: Eventually this method needs to be converted into a generic method for testing. Polymorphism ...
 	/// Uses json decoder to decode retrieved Contact List data.
-	func GetContactList()-> [Contact]{
+	func getContactList()-> [Contact]{
 		let company = managedObject as! CoreCompany
 		let decoder = JSONDecoder()
 		let value = try? decoder.decode([Contact].self, from: company.contactList ?? Data())

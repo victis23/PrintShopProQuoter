@@ -77,7 +77,7 @@ struct Main : View {
 			.onAppear {
 				let restoredList = self.retrievedList!.map { item -> Company in
 					let fetcher = ContactListFetcher(managedObject: item)
-					let contactList = fetcher.GetContactList()
+					let contactList = fetcher.getContactList()
 					return Company(name: item.name!,address: Address(street: item.companyAddress?.street ?? ERROR_NO_VALUE), contact: contactList, id: item.id!)
 				}
 				
