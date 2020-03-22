@@ -26,6 +26,7 @@ class PrintShopProQuoterUITests: XCTestCase {
 		uiTestHelper = nil
     }
 
+	/// Checks that submit button becomes active once all fields are filled on the form presented by the AddCustomer view.
     func testAddAddressButtonActivation() throws {
         
 		app.launch()
