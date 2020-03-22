@@ -85,4 +85,25 @@ class PrintShopProQuoterTests: XCTestCase {
 		let savedCompany = _localFetcher.fetchFromCoreData(predicate: NSPredicate(format: "id = %@", id))
 		XCTAssertEqual(savedCompany, [])
 	}
+	
+	/// Verifies that contact retriever is retriving list of contacts from persistent container.
+	func testContactRetriever(){
+		
+		defer {
+			deleter(id: defaultCompany.id)
+		}
+		
+		saver.set()
+		
+		let _localFetcher = Fetcher<CoreCompany, String?, CoreCompany>(sortBy: \CoreCompany.id, request: NSFetchRequest(entityName: CORE_COMPANY))
+		
+		let savedCompany = _localFetcher.fetchFromCoreData(predicate: NSPredicate(format: "id = %@", defaultCompany.id))
+		
+		let firstItem = (savedCompany?.first)!
+		
+		let contractRetriver = ContactListFetcher(managedObject: firstItem)
+		let contacts = contractRetriver.getContactList()
+		
+		XCTAssertTrue(contacts.contains(where: { contact in contact.name == "Michael"}))
+	}
 }
