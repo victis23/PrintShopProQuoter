@@ -61,7 +61,7 @@ struct AddAddress: View {
 			}
 			.foregroundColor(.white)
 		}
-		.navigationBarTitle(ADDRESS)
+		.navigationBarTitle(ADD_ADDRESS)
 	}
 	
 	private func validation()->Bool{

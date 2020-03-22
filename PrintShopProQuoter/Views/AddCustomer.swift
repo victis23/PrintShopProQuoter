@@ -101,7 +101,7 @@ struct AddCustomer: View {
 						
 				}
 			}
-			.navigationBarTitle(ADD_COMPANY)
+			.navigationBarTitle(ADD_CUSTOMER)
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
 	}

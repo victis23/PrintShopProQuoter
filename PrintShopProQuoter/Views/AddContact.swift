@@ -93,7 +93,7 @@ struct AddContact: View {
 				
 			}
 		}
-		.navigationBarTitle(CONTACT)
+		.navigationBarTitle(ADD_CONTACT)
 	}
 	
 	private func resetTextFields(){
