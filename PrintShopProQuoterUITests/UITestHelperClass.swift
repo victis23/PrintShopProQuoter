@@ -93,3 +93,11 @@ class UITestingSupportClass {
 	
 }
 
+
+extension UITestingSupportClass {
+	
+	func randomTapper(){
+		let randomPointOnScreen = tablesQuery.textFields["Name"].coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 1))
+		randomPointOnScreen.press(forDuration: 0.5)
+	}
+}
