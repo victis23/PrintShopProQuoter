@@ -23,13 +23,46 @@ class PrintShopProQuoterUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAddAddressButtonActivation() throws {
+        
+		let app = XCUIApplication()
+		app.launch()
+		app.navigationBars["Customer List"].buttons["Add Customer"].tap()
+		
+		let tablesQuery = app.tables
+		
+		let companyField = tablesQuery/*@START_MENU_TOKEN@*/.textFields["Company Name"]/*[[".cells.textFields[\"Company Name\"]",".textFields[\"Company Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+		companyField.tap()
+		companyField.typeText("TestCompany")
+		
+		//Transition to Address Input Screen.
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.buttons["Address\n ,  "]/*[[".cells.buttons[\"Address\\n ,  \"]",".buttons[\"Address\\n ,  \"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		
+		let streetField = tablesQuery.textFields["Street"]
+		let cityField = tablesQuery.textFields["City"]
+		let stateField = tablesQuery.textFields["State"]
+		let countryField = tablesQuery.textFields["Country"]
+		let zipcodeField = tablesQuery.textFields["Zipcode"]
+		
+		streetField.tap()
+		streetField.typeText("test street")
+		
+		cityField.tap()
+		cityField.typeText("test city")
+		
+		stateField.tap()
+		stateField.typeText("test state")
+		
+		countryField.tap()
+		countryField.typeText("test country")
+		
+		zipcodeField.tap()
+		zipcodeField.typeText("test zipcode")
+		
+		let trayAndArrowDownFillButton = app.buttons["tray.and.arrow.down.fill"]
+		
+		XCTAssertTrue(trayAndArrowDownFillButton.isEnabled)
     }
 
     func testLaunchPerformance() throws {
