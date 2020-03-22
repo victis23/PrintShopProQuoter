@@ -18,7 +18,7 @@ class PrintShopProQuoterTests: XCTestCase {
 
     override func setUpWithError() throws {
 		
-		defaultCompany = Company(name: "TestValue", address: nil, contact: nil, quotes: nil, orders: nil, id: "test")
+		defaultCompany = Company(name: "TestValue", address: nil, contact: [Contact(name: "Michael", phone: "407-310-7310", email: "test@test.com", id: "tester")], quotes: nil, orders: nil, id: "test")
 		
 		fetcher = Fetcher(sortBy: \CoreCompany.name, request: NSFetchRequest<CoreCompany>(entityName: CORE_COMPANY))
 		
