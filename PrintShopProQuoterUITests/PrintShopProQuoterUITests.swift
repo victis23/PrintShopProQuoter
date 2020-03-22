@@ -16,7 +16,7 @@ class PrintShopProQuoterUITests: XCTestCase {
     override func setUpWithError() throws {
 		
 		app = XCUIApplication()
-		uiTestHelper = UITestingSupportClass(withQueryElement: app.tables)
+		uiTestHelper = UITestingSupportClass(withQueryElement: app.tables, on: app)
 		
         continueAfterFailure = false
     }
