@@ -13,13 +13,23 @@ import CoreData
 class PrintShopProQuoterTests: XCTestCase {
 	
 	var fetcher : Fetcher<CoreCompany, String?, CoreCompany>!
+	var saver : CompanySaver!
+	var defaultCompany : Company!
 
     override func setUpWithError() throws {
+		
+		defaultCompany = Company(name: "TestValue", address: nil, contact: nil, quotes: nil, orders: nil, id: "test")
+		
 		fetcher = Fetcher(sortBy: \CoreCompany.name, request: NSFetchRequest<CoreCompany>(entityName: CORE_COMPANY))
+		
+		saver = CompanySaver(company: defaultCompany)
     }
 
     override func tearDownWithError() throws {
+		
         fetcher = nil
+		saver = nil
+		defaultCompany = nil
     }
 
 	/// Tests whether or not fetch method is returning values from persistant container. If method should return Array<CoreCompany?>, but could technically be used to return an array of any NSManaged Object. 
