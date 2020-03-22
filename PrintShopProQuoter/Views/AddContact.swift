@@ -39,13 +39,13 @@ struct AddContact: View {
 				
 				Form{
 					
-					TextField(NAME, text: $name)
+					TextField(self.name == BLANK ? NAME : self.name, text: $name)
 						.padding()
 					
-					TextField(PHONE_NUMBER, text: $phoneNumber)
+					TextField(self.phoneNumber == BLANK ? PHONE_NUMBER : self.phoneNumber, text: $phoneNumber)
 						.padding()
 					
-					TextField(EMAIL, text: $email)
+					TextField(self.email == BLANK ? EMAIL : self.email, text: $email)
 						.padding()
 				}
 				.foregroundColor(.white)
