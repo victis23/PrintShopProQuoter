@@ -52,6 +52,7 @@
 		7D930B73241ED1EA004B784B /* ContactListFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D930B72241ED1EA004B784B /* ContactListFetcher.swift */; };
 		7DA57A1624148B1300CE3119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA57A1524148B1300CE3119 /* Strings.swift */; };
 		7DA57A1824158A1C00CE3119 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7DA57A1724158A1C00CE3119 /* podfile */; };
+		7DD633B524281CB6005DBB35 /* UITestHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD633B424281CB6005DBB35 /* UITestHelperClass.swift */; };
 		7DDA86B7242058EF00BF3B09 /* SmallCircle_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA86B6242058EF00BF3B09 /* SmallCircle_Button.swift */; };
 		7DDA86BA24205F3900BF3B09 /* OptionalStrings+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA86B924205F3900BF3B09 /* OptionalStrings+Extension.swift */; };
 		7DEFAD862416CAF0006C47E6 /* ButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */; };
@@ -129,6 +130,7 @@
 		7D930B72241ED1EA004B784B /* ContactListFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListFetcher.swift; sourceTree = "<group>"; };
 		7DA57A1524148B1300CE3119 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7DA57A1724158A1C00CE3119 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7DD633B424281CB6005DBB35 /* UITestHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelperClass.swift; sourceTree = "<group>"; };
 		7DDA86B6242058EF00BF3B09 /* SmallCircle_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCircle_Button.swift; sourceTree = "<group>"; };
 		7DDA86B924205F3900BF3B09 /* OptionalStrings+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionalStrings+Extension.swift"; sourceTree = "<group>"; };
 		7DEFAD852416CAF0006C47E6 /* ButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIcon.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5DE423240BD56E00130319 /* PrintShopProQuoterUITests.swift */,
+				7DD633B424281CB6005DBB35 /* UITestHelperClass.swift */,
 				7D5DE425240BD56E00130319 /* Info.plist */,
 			);
 			path = PrintShopProQuoterUITests;
@@ -607,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD633B524281CB6005DBB35 /* UITestHelperClass.swift in Sources */,
 				7D5DE424240BD56E00130319 /* PrintShopProQuoterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
