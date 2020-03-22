@@ -75,6 +75,24 @@ class PrintShopProQuoterUITests: XCTestCase {
 		let submitButton = app.buttons["pencil.and.ellipsis.rectangle"]
 		XCTAssertFalse(submitButton.isEnabled)
 	}
+	
+	func testSubmitContactlist() throws {
+		
+		app.launch()
+		app.navigationBars["Customer List"].buttons["Add Customer"].tap()
+		
+		uiTestHelper.setupContactWithValidEmail()
+		
+		let addContact = app.buttons["pencil.and.ellipsis.rectangle"]
+		
+		uiTestHelper.randomTapper()
+		
+		addContact.tap()
+		
+		let submitContact = app.buttons["tray.and.arrow.down.fill"]
+		
+		XCTAssertTrue(submitContact.isEnabled)
+	}
 }
 
 
