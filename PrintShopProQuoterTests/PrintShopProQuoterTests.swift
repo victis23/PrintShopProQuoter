@@ -64,5 +64,22 @@ class PrintShopProQuoterTests: XCTestCase {
 		let deleter = Deleter<NSFetchRequestResult, CoreCompany, String?>(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest(entityName: CORE_COMPANY), filter: "id = %@")
 		try? deleter?.removeObject()
 	}
-
+	
+	/// Tests whether persistant container is holding the correct value once Saver Class calls `set()` method.
+	/// - Note: This is not a mock test, object needs to be removed from persistent container once test is finished.
+	func testSaverClassFail(){
+		
+		defer {
+			deleter(id: defaultCompany.id)
+		}
+		
+		saver.set()
+		
+		let id = "AnotherValue"
+		
+		let _localFetcher = Fetcher<CoreCompany, String?, CoreCompany>(sortBy: \CoreCompany.id, request: NSFetchRequest(entityName: CORE_COMPANY))
+		
+		let savedCompany = _localFetcher.fetchFromCoreData(predicate: NSPredicate(format: "id = %@", id))
+		XCTAssertEqual(savedCompany, [])
+	}
 }
