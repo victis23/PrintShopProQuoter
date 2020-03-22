@@ -37,10 +37,12 @@ class PrintShopProQuoterTests: XCTestCase {
 		XCTAssertNotNil(fetcher.fetchFromCoreData())
 	}
 	
+	/// Verifies that context is being created from static property on Saver class.
 	func testContext() {
 		XCTAssertNotNil(Saver.context)
 	}
 	
+	/// Checks to see if default company is being saved to core data persistent container.
 	func testSaverClass(){
 		
 		defer {
@@ -60,6 +62,7 @@ class PrintShopProQuoterTests: XCTestCase {
 		XCTAssertTrue(savedCompany?[0].id == id)
 	}
 	
+	/// Removes item with specified id from persistent container.
 	func deleter(id:String){
 		let deleter = Deleter<NSFetchRequestResult, CoreCompany, String?>(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest(entityName: CORE_COMPANY), filter: "id = %@")
 		try? deleter?.removeObject()
