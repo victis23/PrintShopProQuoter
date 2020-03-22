@@ -62,6 +62,15 @@ class PrintShopProQuoterTests: XCTestCase {
 		XCTAssertTrue(savedCompany?[0].id == id)
 	}
 	
+	/// Checks to make sure deleter class successfully removes item from persistent container. 
+	func testDeleter(){
+		
+		saver.set()
+		let deleter = Deleter<NSFetchRequestResult, CoreCompany, String?>(identifier: defaultCompany.id, keypath: \CoreCompany.name, CDType: NSFetchRequest(entityName: CORE_COMPANY), filter: "id = %@")
+		XCTAssertNoThrow(try deleter?.removeObject())
+		
+	}
+	
 	/// Removes item with specified id from persistent container.
 	func deleter(id:String){
 		let deleter = Deleter<NSFetchRequestResult, CoreCompany, String?>(identifier: id, keypath: \CoreCompany.name, CDType: NSFetchRequest(entityName: CORE_COMPANY), filter: "id = %@")
