@@ -54,7 +54,7 @@ class PrintShopProQuoterTests: XCTestCase {
 		
 		saver.set()
 		
-		let id = "test"
+		let id = defaultCompany.id
 		
 		let _localFetcher = Fetcher<CoreCompany, String?, CoreCompany>(sortBy: \CoreCompany.id, request: NSFetchRequest(entityName: CORE_COMPANY))
 		
