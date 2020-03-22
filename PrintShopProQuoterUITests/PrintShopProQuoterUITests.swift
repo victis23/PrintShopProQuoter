@@ -52,57 +52,29 @@ class PrintShopProQuoterUITests: XCTestCase {
         }
     }
 	
-	func testRemoveListMemeber() throws {
+	/// For user to submit a contact email address must be valid. This test checks that validation is functioning properly when email address is valid.
+	func testAddContactWithValidEmail() throws {
 		
 		app.launch()
+		app.navigationBars["Customer List"].buttons["Add Customer"].tap()
 		
+		uiTestHelper.setupContactWithValidEmail()
+		
+		let submitButton = app.buttons["pencil.and.ellipsis.rectangle"]
+		XCTAssertTrue(submitButton.isEnabled)
+	}
+	
+	/// For user to submit a contact email address must be valid. This test checks that validation is functioning properly when email address is invalid.
+	func testAddContactWithINVALIDEmail() throws {
+		
+		app.launch()
+		app.navigationBars["Customer List"].buttons["Add Customer"].tap()
+		
+		uiTestHelper.setupContactWithINVALIDEmail()
+		
+		let submitButton = app.buttons["pencil.and.ellipsis.rectangle"]
+		XCTAssertFalse(submitButton.isEnabled)
 	}
 }
 
 
-class UITestingSupportClass {
-	
-	private var tablesQuery : XCUIElementQuery
-	
-	init(withQueryElement tablesQuery: XCUIElementQuery){
-		self.tablesQuery = tablesQuery
-	}
-	
-	func getTableQuery()-> XCUIElementQuery {
-		return tablesQuery
-	}
-	
-	func setupCompanyName(){
-		
-		let companyField = tablesQuery/*@START_MENU_TOKEN@*/.textFields["Company Name"]/*[[".cells.textFields[\"Company Name\"]",".textFields[\"Company Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-		companyField.tap()
-		companyField.typeText("TestCompany")
-	}
-	
-	func setupAddress() {
-		
-		tablesQuery/*@START_MENU_TOKEN@*/.buttons["Address\n ,  "]/*[[".cells.buttons[\"Address\\n ,  \"]",".buttons[\"Address\\n ,  \"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		
-		let streetField = tablesQuery.textFields["Street"]
-		let cityField = tablesQuery.textFields["City"]
-		let stateField = tablesQuery.textFields["State"]
-		let countryField = tablesQuery.textFields["Country"]
-		let zipcodeField = tablesQuery.textFields["Zipcode"]
-		
-		streetField.tap()
-		streetField.typeText("test street")
-		
-		cityField.tap()
-		cityField.typeText("test city")
-		
-		stateField.tap()
-		stateField.typeText("test state")
-		
-		countryField.tap()
-		countryField.typeText("test country")
-		
-		zipcodeField.tap()
-		zipcodeField.typeText("test zipcode")
-	}
-	
-}
