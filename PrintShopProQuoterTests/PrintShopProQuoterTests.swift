@@ -43,6 +43,13 @@ class PrintShopProQuoterTests: XCTestCase {
 	
 	func testSaverClass(){
 		
+		defer {
+			// Erase test value from Coredata as part of our cleanup.
+			if !(savedCompany?.isEmpty ?? false)  {
+				deleter(id: id)
+			}
+		}
+		
 		saver.set()
 		
 		let id = "test"
@@ -51,11 +58,6 @@ class PrintShopProQuoterTests: XCTestCase {
 		
 		let savedCompany = _localFetcher.fetchFromCoreData(predicate: NSPredicate(format: "id = %@", id))
 		XCTAssertTrue(savedCompany?[0].id == id)
-		
-		// Erase test value from Coredata as part of our cleanup.
-		if !(savedCompany?.isEmpty ?? false)  {
-			deleter(id: id)
-		}
 	}
 	
 	func deleter(id:String){
