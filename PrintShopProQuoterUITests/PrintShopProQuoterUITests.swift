@@ -19,6 +19,9 @@ class PrintShopProQuoterUITests: XCTestCase {
 		uiTestHelper = UITestingSupportClass(withQueryElement: app.tables, on: app)
 		
 		continueAfterFailure = false
+		
+		//This value is checked in application delegate.
+		app.launchArguments.append("--uitesting")
 	}
 	
 	override func tearDownWithError() throws {
