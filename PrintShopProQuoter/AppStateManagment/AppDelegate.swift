@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
+		// Control-flow-statement checks whether we are in unit testing mode.
+		if CommandLine.arguments.contains("--unitTesting"){
+			resetApplicationState()
+		}
+		
 		// IQKeyboard Manager
 		let keyboardManager = IQKeyboardManager.shared
 		keyboardManager.enable = true
@@ -34,6 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
 		
 		return true
+	}
+	
+	func resetApplicationState(){
+		
 	}
 
 	// MARK: UISceneSession Lifecycle
