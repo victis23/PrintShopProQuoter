@@ -76,6 +76,7 @@ class PrintShopProQuoterUITests: XCTestCase {
 		XCTAssertFalse(submitButton.isEnabled)
 	}
 	
+	/// Verify that after a contact is added to the contact list tableview the submit button becomes active.
 	func testSubmitContactlist() throws {
 		
 		app.launch()
