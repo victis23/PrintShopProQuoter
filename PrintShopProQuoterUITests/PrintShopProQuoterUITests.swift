@@ -85,8 +85,6 @@ class PrintShopProQuoterUITests: XCTestCase {
 		
 		let addContact = app.buttons["pencil.and.ellipsis.rectangle"]
 		
-		uiTestHelper.randomTapper()
-		
 		addContact.tap()
 		
 		let submitContact = app.buttons["tray.and.arrow.down.fill"]
