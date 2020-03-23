@@ -52,7 +52,7 @@ class UITestingSupportClass {
 		countryField.typeText("test country")
 		
 		zipcodeField.tap()
-		zipcodeField.typeText("test zipcode")
+		zipcodeField.typeText("test zipcode \n")
 	}
 	
 	func setupContactWithValidEmail(){
