@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
 		// Control-flow-statement checks whether we are in unit testing mode.
-		if CommandLine.arguments.contains("--unitTesting"){
-			resetApplicationState()
-		}
+//		if CommandLine.arguments.contains("--unitTesting"){
+//			resetApplicationState()
+//		}
 		
 		// IQKeyboard Manager
 		let keyboardManager = IQKeyboardManager.shared
@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return true
 	}
 	
+	//FIXME: Things that need to be reset when in test mode.
 	func resetApplicationState(){
 		
 	}

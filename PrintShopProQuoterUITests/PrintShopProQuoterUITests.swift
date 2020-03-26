@@ -21,7 +21,7 @@ class PrintShopProQuoterUITests: XCTestCase {
 		continueAfterFailure = false
 		
 		//This value is checked in application delegate.
-		app.launchArguments.append("--uitesting")
+//		app.launchArguments.append("--uitesting")
 	}
 	
 	override func tearDownWithError() throws {
