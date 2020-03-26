@@ -117,12 +117,7 @@ class PrintShopProQuoterUITests: XCTestCase {
 		app.buttons["tray.and.arrow.down.fill"].tap()
 		app.buttons["tray.and.arrow.down.fill"].tap()
 		
-		//		XCTAssertTrue(app.navigationBars["Customer List"].buttons["Add Customer"].isHittable)
-		
-		//Clean up after test.
-		//		uiTestHelper.getTableQuery()/*@START_MENU_TOKEN@*/.buttons["Address Test\nTest\n0\nQuotes\n0\nOrders"]/*[[".cells.buttons[\"Address Test\\nTest\\n0\\nQuotes\\n0\\nOrders\"]",".buttons[\"Address Test\\nTest\\n0\\nQuotes\\n0\\nOrders\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeLeft()
-		//		uiTestHelper.getTableQuery()/*@START_MENU_TOKEN@*/.buttons["trailing0"]/*[[".cells",".buttons[\"Delete\"]",".buttons[\"trailing0\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-		
+		print(app.navigationBars["Customer List"].otherElements.containing(.button, identifier: "Add Customer").element.exists)
 		
 	}
 }
