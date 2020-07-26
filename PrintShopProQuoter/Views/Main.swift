@@ -104,9 +104,9 @@ struct MainTableView: View {
 			ForEach(customerList.companies) { company in
 				
 				NavigationLink(destination: CompanyLandingPage(company: company)) {
-					
 					CompanyListCell(company: company)
 				}
+				.listRowBackground(Color(.clear))
 			}
 			.onDelete(perform: deleteItems)
 		}

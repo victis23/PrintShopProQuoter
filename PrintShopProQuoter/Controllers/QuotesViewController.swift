@@ -24,7 +24,7 @@ class QuotesViewController: UIViewController, AccessControllerProtocol {
 		setNavigationBarButton()
 	}
 	
-	func setGradientBackground(){
+	func setGradientBackground() {
 		let backgroundSetter = BackgroundGradientSetter()
 		let subView = backgroundSetter.setGradientToView(with: [DarkBlueHue_DEFAULT,LightBlueHue_DEFAULT],size: view.bounds)
 		
@@ -32,11 +32,11 @@ class QuotesViewController: UIViewController, AccessControllerProtocol {
 		view.sendSubviewToBack(subView)
 	}
 	
-	func createAddQuoteBarButton()->UIBarButtonItem{
+	func createAddQuoteBarButton() -> UIBarButtonItem {
 		UIBarButtonItem(title: "Add Quote", style: .plain, target: self, action: nil)
 	}
 	
-	func setNavigationBarButton(){
+	func setNavigationBarButton() {
 		addQuoteBarButton = createAddQuoteBarButton()
 		self.navigationController?.navigationBar.topItem?.rightBarButtonItems = [addQuoteBarButton]
 	}

@@ -94,14 +94,19 @@ struct AddressForm: View {
 		///Handles textfields for user input.
 		Form{
 			TextField(STREET, text: $street)
+				.listRowBackground(Color(.clear))
 				.padding()
 			TextField(CITY, text: $city)
+				.listRowBackground(Color(.clear))
 				.padding()
 			TextField(STATE, text: $state)
+				.listRowBackground(Color(.clear))
 				.padding()
 			TextField(COUNTRY, text: $country)
+				.listRowBackground(Color(.clear))
 				.padding()
 			TextField(ZIPCODE, text: $zipcode)
+				.listRowBackground(Color(.clear))
 				.padding()
 		}
 		.font(.title)

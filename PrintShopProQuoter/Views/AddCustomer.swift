@@ -39,6 +39,7 @@ struct AddCustomer: View {
 						TextField(COMPANY_NAME, text: $name)
 							.font(.title)
 							.padding()
+							.listRowBackground(Color(.clear))
 						
 						
 						NavigationLink(destination: AddAddress(address: $address), label: {
@@ -61,12 +62,14 @@ struct AddCustomer: View {
 								.font(.caption)
 							}
 						})
+						.listRowBackground(Color(.clear))
 						
 						NavigationLink(destination: AddContact(contact: $contact), label: {
 							Text(CONTACT_INFO)
 								.padding(.all, 20)
 								.font(.title)
 						})
+						.listRowBackground(Color(.clear))
 					})
 						.foregroundColor(.white)
 					

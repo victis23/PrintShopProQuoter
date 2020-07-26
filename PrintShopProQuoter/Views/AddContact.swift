@@ -40,12 +40,15 @@ struct AddContact: View {
 				Form{
 					
 					TextField(self.name == BLANK ? NAME : self.name, text: $name)
+						.listRowBackground(Color(.clear))
 						.padding()
 					
 					TextField(self.phoneNumber == BLANK ? PHONE_NUMBER : self.phoneNumber, text: $phoneNumber)
+						.listRowBackground(Color(.clear))
 						.padding()
 					
 					TextField(self.email == BLANK ? EMAIL : self.email, text: $email)
+						.listRowBackground(Color(.clear))
 						.padding()
 				}
 				.foregroundColor(.white)
@@ -121,7 +124,7 @@ struct ContactList_TableView : View {
 				HStack{
 					
 					Text(contact.name ?? "")
-						.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
+//						.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
 						.fontWeight(.bold)
 						.font(.title)
 						.padding()
@@ -130,19 +133,21 @@ struct ContactList_TableView : View {
 					
 					VStack{
 						Text(contact.phone ?? "")
-							.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
+//							.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
 							.fontWeight(.heavy)
 							.font(.body)
 							.padding(.trailing)
 							.padding(.bottom, 5)
 						
 						Text(contact.email ?? "")
-							.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
+//							.foregroundColor(Color(UIColor(cgColor: DarkBlueHue_DEFAULT)))
 							.fontWeight(.heavy)
 							.font(.body)
 							.padding(.trailing)
 					}
 				}
+				.foregroundColor(.white)
+				.listRowBackground(Color(.clear))
 			})
 				.onDelete(perform: removeContact(_:))
 		}
